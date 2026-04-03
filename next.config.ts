@@ -1,13 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  distDir: 'dist',
-  output: 'export',
   images: {
     unoptimized: true,
-  },
-  turbopack: {
-    root: __dirname,
   },
 };
 

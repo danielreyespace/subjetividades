@@ -36,7 +36,7 @@ export default function DanielReyes_CentroSection() {
             className="rounded-[14px] overflow-hidden aspect-[4/3] shadow-lg"
           >
             <Image
-              src="/clients/daniel-reyes/photos/clinic-corridor.png"
+              src="/daniel-reyes/assets/atmosphere-office.png"
               alt="Interior del centro de psicología clínica"
               width={800}
               height={600}

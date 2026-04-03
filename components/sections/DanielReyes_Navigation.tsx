@@ -9,6 +9,7 @@ const navLinks = [
   { href: '#servicios', label: 'Servicios' },
   { href: '#equipo', label: 'Equipo' },
   { href: '#testimonios', label: 'Testimonios' },
+  { href: '/blog', label: 'Blog' },
 ];
 
 export default function DanielReyes_Navigation() {

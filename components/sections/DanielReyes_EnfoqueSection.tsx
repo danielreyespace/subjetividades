@@ -84,7 +84,7 @@ export default function DanielReyes_EnfoqueSection() {
             className="rounded-[14px] overflow-hidden aspect-[4/3] shadow-lg order-first md:order-last"
           >
             <Image
-              src="/clients/daniel-reyes/photos/consultation-session.png"
+              src="/daniel-reyes/assets/atmosphere-calm.png"
               alt="Sesión de consulta en el centro de psicología"
               width={800}
               height={600}

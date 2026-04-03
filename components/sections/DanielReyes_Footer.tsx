@@ -13,12 +13,18 @@ export default function DanielReyes_Footer() {
             Ñuñoa, Santiago de Chile | Atención online para todo Chile
           </div>
         </div>
-        <div className="flex gap-6">
-          <a href="#" className="text-[13px] text-slate-400 no-underline transition-colors hover:text-white">
-            Privacidad
+        <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center md:justify-end">
+          <a href="/blog" className="text-[13px] text-slate-400 no-underline transition-colors hover:text-white">
+            Blog
+          </a>
+          <a href="/blog/cuando-ir-al-psicologo" className="text-[13px] text-slate-400 no-underline transition-colors hover:text-white">
+            ¿Cuándo ir al psicólogo?
+          </a>
+          <a href="/blog/terapia-de-pareja-como-funciona" className="text-[13px] text-slate-400 no-underline transition-colors hover:text-white">
+            Terapia de pareja
           </a>
           <a href="#" className="text-[13px] text-slate-400 no-underline transition-colors hover:text-white">
-            Términos y condiciones
+            Privacidad
           </a>
         </div>
       </div>

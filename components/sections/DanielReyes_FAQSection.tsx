@@ -27,7 +27,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: '¿Puedo agendar sin llamar por teléfono?',
-    answer: 'Sí. Puedes agendar directamente desde esta página usando el botón de Calendly, completar el formulario de contacto, o escribirnos por WhatsApp. Respondemos en menos de 2 horas.',
+    answer: 'Sí. Puedes agendar completando el formulario de contacto en esta página o escribiéndonos directamente por WhatsApp al +56 9 9319 2583. Respondemos en menos de 2 horas en día hábil.',
   },
   {
     question: '¿Qué pasa si necesito cancelar una sesión?',

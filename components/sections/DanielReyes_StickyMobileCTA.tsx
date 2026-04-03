@@ -2,7 +2,7 @@
 
 import { Calendar, MessageCircle } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '56920115198';
+const WHATSAPP_NUMBER = '56993192583';
 const WHATSAPP_MSG = 'Hola, me gustaría agendar una consulta.';
 
 export default function DanielReyes_StickyMobileCTA() {

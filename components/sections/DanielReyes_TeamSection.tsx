@@ -1,8 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { GraduationCap, Heart, Users, Brain } from 'lucide-react';
-import Image from 'next/image';
 
 interface TeamMember {
   name: string;
@@ -16,23 +16,23 @@ const team: TeamMember[] = [
   {
     name: 'Dr. Daniel Reyes Pace',
     role: 'Director Clínico y Fundador',
-    photo: '/clients/daniel-reyes/photos/headshot-professional.png',
-    specialties: ['Terapia individual', 'Terapia de pareja', 'Terapia sexual'],
-    bio: 'Psicólogo clínico con doctorado de la Universidad de Chile y más de 20 años de experiencia. Consultor internacional especializado en psicoterapia basada en evidencia.',
+    photo: 'https://psicologiaclinicachile.cl/wp-content/uploads/2025/05/daniel-reyes.jpg',
+    specialties: ['Ansiedad y crisis vitales', 'Terapia de pareja', 'Sexualidad y deseo'],
+    bio: 'Si la ansiedad, una crisis vital o tu relación te están desbordando, Daniel ofrece un trabajo riguroso y sin juicios desde el primer día. Psicólogo y Doctor en Psicología de la Universidad de Chile, con más de 20 años de experiencia y consultoría internacional en psicoterapia basada en evidencia.',
   },
   {
-    name: 'Allison Díaz',
+    name: 'Fernando Bravo Matheu',
+    role: 'Psicólogo Clínico',
+    photo: 'https://psicologiaclinicachile.cl/wp-content/uploads/2025/05/Fernando-Bravo.jpg',
+    specialties: ['Adolescentes y adultos', 'Vínculos y emociones', 'Terapia de pareja'],
+    bio: 'Para quienes buscan entender qué les pasa por dentro, no solo manejar síntomas. Fernando crea un espacio de confianza genuina donde puedas habitar tu experiencia emocional y resignificar tu historia. Psicólogo de la Universidad Diego Portales con formación en clínica psicoanalítica de Winnicott.',
+  },
+  {
+    name: 'Allison Rowe Carrasco',
     role: 'Psicóloga Clínica',
-    photo: null,
-    specialties: ['Terapia individual', 'Ansiedad y estrés', 'Autoestima'],
-    bio: 'Profesional dedicada al acompañamiento terapéutico con enfoque integrativo. Comprometida con el bienestar emocional de cada paciente.',
-  },
-  {
-    name: 'Próximo profesional',
-    role: 'En proceso de incorporación',
-    photo: null,
-    specialties: ['Por confirmar'],
-    bio: 'Nuestro centro está en expansión. Pronto incorporaremos un nuevo profesional al equipo clínico.',
+    photo: 'https://psicologiaclinicachile.cl/wp-content/uploads/2025/05/allison-rowe-2.jpg',
+    specialties: ['Adultos y adolescentes', 'Terapia de pareja', 'Enfoque sistémico'],
+    bio: 'Especializada en acompañar a personas que sienten que algo en sus vínculos o en su historia familiar las frena. Trabaja no solo la persona sino también sus relaciones y el contexto que las rodea. Psicóloga de la Universidad de Chile, diplomada en Terapia Sistémica y Familiar, con 8 años de experiencia.',
   },
 ];
 
@@ -48,29 +48,15 @@ const cardVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
-function AvatarPlaceholder({ name }: { name: string }) {
-  const initials = name
-    .split(' ')
-    .map((w) => w[0])
-    .slice(0, 2)
-    .join('')
-    .toUpperCase();
-
-  return (
-    <div className="w-full h-full bg-gradient-to-br from-teal-50 to-teal-100 flex items-center justify-center">
-      <span className="text-4xl font-bold text-teal-600/60">{initials}</span>
-    </div>
-  );
-}
-
 function TeamCard({ member }: { member: TeamMember }) {
   const iconMap: Record<string, typeof Heart> = {
-    'Terapia individual': Users,
+    'Ansiedad y crisis vitales': Brain,
     'Terapia de pareja': Heart,
-    'Terapia sexual': Heart,
-    'Ansiedad y estrés': Brain,
-    'Autoestima': Brain,
-    'Por confirmar': GraduationCap,
+    'Sexualidad y deseo': Heart,
+    'Adolescentes y adultos': Users,
+    'Vínculos y emociones': Heart,
+    'Adultos y adolescentes': Users,
+    'Enfoque sistémico': GraduationCap,
   };
 
   return (
@@ -79,19 +65,17 @@ function TeamCard({ member }: { member: TeamMember }) {
       className="group bg-white rounded-[14px] border border-slate-100 overflow-hidden transition-all hover:shadow-[0_4px_16px_rgba(26,35,50,0.08)] hover:-translate-y-[3px]"
     >
       {/* Photo */}
-      <div className="aspect-[3/4] overflow-hidden relative">
-        {member.photo ? (
+      {member.photo && (
+        <div className="relative w-full h-[420px] bg-slate-100 overflow-hidden">
           <Image
             src={member.photo}
-            alt={member.name}
-            width={380}
-            height={507}
-            className="w-full h-full object-cover transition-transform group-hover:scale-[1.02]"
+            alt={`Foto de ${member.name}`}
+            fill
+            className="object-cover object-top"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
-        ) : (
-          <AvatarPlaceholder name={member.name} />
-        )}
-      </div>
+        </div>
+      )}
 
       {/* Info */}
       <div className="p-6">

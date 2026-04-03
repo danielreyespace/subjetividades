@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Calendar, MessageCircle } from 'lucide-react';
 import Image from 'next/image';
 
-const WHATSAPP_NUMBER = '56920115198';
+const WHATSAPP_NUMBER = '56993192583';
 const WHATSAPP_MSG = 'Hola, me gustaría agendar una consulta en el centro de psicología clínica.';
 
 export default function DanielReyes_HeroSection() {
@@ -13,7 +13,7 @@ export default function DanielReyes_HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/clients/daniel-reyes/photos/waiting-room.png"
+          src="/daniel-reyes/photos/waiting-room.png"
           alt="Sala de espera del centro de psicología clínica"
           fill
           className="object-cover"
@@ -43,14 +43,14 @@ export default function DanielReyes_HeroSection() {
           SUBJETIVIDADES
         </motion.h1>
 
-        <motion.p
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
-          className="text-[clamp(16px,2vw,19px)] text-white/75 max-w-[600px] mx-auto mb-9 leading-relaxed"
+          className="text-[clamp(16px,2vw,19px)] text-white/75 max-w-[600px] mx-auto mb-9 leading-relaxed font-normal"
         >
-          Un espacio profesional dedicado al bienestar emocional. Psicoterapia individual, de pareja y sexual con enfoque clínico basado en evidencia. Más de 20 años de experiencia al servicio de tu salud mental.
-        </motion.p>
+          Psicólogo clínico en Ñuñoa, Santiago. Psicoterapia individual, de pareja y sexual con enfoque clínico basado en evidencia. Más de 20 años de experiencia al servicio de tu salud mental.
+        </motion.h2>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
