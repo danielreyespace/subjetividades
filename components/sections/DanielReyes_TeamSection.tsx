@@ -16,23 +16,23 @@ const team: TeamMember[] = [
   {
     name: 'Dr. Daniel Reyes Pace',
     role: 'Director Clínico y Fundador',
-    photo: 'https://psicologiaclinicachile.cl/wp-content/uploads/2025/05/daniel-reyes.jpg',
-    specialties: ['Ansiedad y crisis vitales', 'Terapia de pareja', 'Sexualidad y deseo'],
-    bio: 'Si la ansiedad, una crisis vital o tu relación te están desbordando, Daniel ofrece un trabajo riguroso y sin juicios desde el primer día. Psicólogo y Doctor en Psicología de la Universidad de Chile, con más de 20 años de experiencia y consultoría internacional en psicoterapia basada en evidencia.',
+    photo: '/daniel-reyes/photos/headshot-professional.png',
+    specialties: ['Terapeuta para adultos', 'Terapia de pareja', 'Sexualidad y deseo'],
+    bio: 'Psicólogo y Doctor en Psicología de la Universidad de Chile, con más de 20 años de experiencia como terapeuta, docente universitario y consultor internacional.',
   },
   {
     name: 'Fernando Bravo Matheu',
     role: 'Psicólogo Clínico',
     photo: 'https://psicologiaclinicachile.cl/wp-content/uploads/2025/05/Fernando-Bravo.jpg',
     specialties: ['Adolescentes y adultos', 'Vínculos y emociones', 'Terapia de pareja'],
-    bio: 'Para quienes buscan entender qué les pasa por dentro, no solo manejar síntomas. Fernando crea un espacio de confianza genuina donde puedas habitar tu experiencia emocional y resignificar tu historia. Psicólogo de la Universidad Diego Portales con formación en clínica psicoanalítica de Winnicott.',
+    bio: 'Psicólogo clínico de la Universidad Diego Portales, con formación en clínica psicoanalítica de Winnicott. Con experiencia en la atención de adolescentes, adultos y parejas, en contextos comunitarios y en centros de salud mental.',
   },
   {
     name: 'Allison Rowe Carrasco',
     role: 'Psicóloga Clínica',
     photo: 'https://psicologiaclinicachile.cl/wp-content/uploads/2025/05/allison-rowe-2.jpg',
     specialties: ['Adultos y adolescentes', 'Terapia de pareja', 'Enfoque sistémico'],
-    bio: 'Especializada en acompañar a personas que sienten que algo en sus vínculos o en su historia familiar las frena. Trabaja no solo la persona sino también sus relaciones y el contexto que las rodea. Psicóloga de la Universidad de Chile, diplomada en Terapia Sistémica y Familiar, con 8 años de experiencia.',
+    bio: 'Psicóloga de la Universidad de Chile, con diplomado en Terapia Sistémica y Familiar. Trabaja con población adulta y adolescente. Posee formación y experiencia en atención clínica, tanto en modalidad individual como en terapia de parejas.',
   },
 ];
 
@@ -50,7 +50,7 @@ const cardVariants = {
 
 function TeamCard({ member }: { member: TeamMember }) {
   const iconMap: Record<string, typeof Heart> = {
-    'Ansiedad y crisis vitales': Brain,
+    'Terapeuta para adultos': Brain,
     'Terapia de pareja': Heart,
     'Sexualidad y deseo': Heart,
     'Adolescentes y adultos': Users,
@@ -66,12 +66,12 @@ function TeamCard({ member }: { member: TeamMember }) {
     >
       {/* Photo */}
       {member.photo && (
-        <div className="relative w-full h-[420px] bg-slate-100 overflow-hidden">
+        <div className="relative w-full h-[380px] bg-slate-50 overflow-hidden">
           <Image
             src={member.photo}
             alt={`Foto de ${member.name}`}
             fill
-            className="object-cover object-top"
+            className="object-contain"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         </div>

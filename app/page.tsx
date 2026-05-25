@@ -14,6 +14,7 @@ import {
   DanielReyes_WhatsAppFloat,
   DanielReyes_StickyMobileCTA,
   DanielReyes_MapSection,
+  DanielReyes_VideoSection,
   DanielReyes_PressSection,
 } from '@/components/sections';
 
@@ -257,6 +258,7 @@ export default function HomePage() {
           <DanielReyes_TeamSection />
           <DanielReyes_EnfoqueSection />
           <DanielReyes_PressSection />
+          <DanielReyes_VideoSection />
           <DanielReyes_TestimonialsSection />
           <DanielReyes_FAQSection />
           <DanielReyes_ContactSection />

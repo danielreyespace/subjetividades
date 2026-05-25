@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
@@ -32,13 +33,15 @@ export default function DanielReyes_Navigation() {
       >
         <div className="max-w-[1140px] mx-auto flex items-center justify-between h-[72px] px-6">
           {/* Brand */}
-          <a href="#inicio" className="flex flex-col leading-tight no-underline">
-            <span className="text-[15px] font-bold text-slate-900 tracking-tight" style={{ fontFamily: "'Courier Prime', Courier, monospace" }}>
-              SUBJETIVIDADES
-            </span>
-            <span className="text-[10px] font-medium text-teal-600 tracking-wider uppercase">
-              Centro Psicología Clínica
-            </span>
+          <a href="#inicio" className="flex items-center no-underline">
+            <Image
+              src="/daniel-reyes/assets/logos/brand/subjetividades-horizontal.svg"
+              alt="SUBJETIVIDADES Psicología Clínica"
+              width={190}
+              height={32}
+              priority
+              className="h-9 w-auto"
+            />
           </a>
 
           {/* Desktop links */}

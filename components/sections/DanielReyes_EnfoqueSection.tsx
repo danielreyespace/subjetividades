@@ -54,7 +54,7 @@ export default function DanielReyes_EnfoqueSection() {
               Trabajamos con un enfoque integrativo que prioriza las intervenciones con mayor respaldo científico, adaptándolas a la realidad y necesidades de cada paciente.
             </motion.p>
             <motion.p variants={itemVariants} className="text-base text-slate-600 leading-relaxed mb-4">
-              No creemos en recetas universales. Cada proceso es único, pero siempre parte de una evaluación rigurosa y objetivos claros.
+              Cada proceso es único, y se supervisa por todo el equipo. Con evaluación permanente y orientada a resultados.
             </motion.p>
 
             <motion.div variants={containerVariants} className="flex flex-col gap-4 mt-7">
@@ -81,13 +81,13 @@ export default function DanielReyes_EnfoqueSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="rounded-[14px] overflow-hidden aspect-[4/3] shadow-lg order-first md:order-last"
+            className="rounded-[14px] overflow-hidden aspect-[3/4] shadow-lg order-first md:order-last"
           >
             <Image
               src="/daniel-reyes/assets/atmosphere-calm.png"
               alt="Sesión de consulta en el centro de psicología"
-              width={800}
-              height={600}
+              width={600}
+              height={800}
               className="w-full h-full object-cover"
             />
           </motion.div>
