@@ -14,6 +14,9 @@ export default function DanielReyes_Footer() {
           </div>
         </div>
         <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center md:justify-end">
+          <a href="/prensa" className="text-[13px] text-slate-400 no-underline transition-colors hover:text-white">
+            Prensa
+          </a>
           <a href="/blog" className="text-[13px] text-slate-400 no-underline transition-colors hover:text-white">
             Blog
           </a>

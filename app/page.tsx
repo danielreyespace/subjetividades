@@ -14,6 +14,7 @@ import {
   DanielReyes_WhatsAppFloat,
   DanielReyes_StickyMobileCTA,
   DanielReyes_MapSection,
+  DanielReyes_PressSection,
 } from '@/components/sections';
 
 const BASE_URL = 'https://subjetividades.cl';
@@ -255,6 +256,7 @@ export default function HomePage() {
           <DanielReyes_ServicesSection />
           <DanielReyes_TeamSection />
           <DanielReyes_EnfoqueSection />
+          <DanielReyes_PressSection />
           <DanielReyes_TestimonialsSection />
           <DanielReyes_FAQSection />
           <DanielReyes_ContactSection />

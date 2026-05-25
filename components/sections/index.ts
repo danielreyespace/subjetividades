@@ -12,3 +12,4 @@ export { default as DanielReyes_Footer } from './DanielReyes_Footer';
 export { default as DanielReyes_WhatsAppFloat } from './DanielReyes_WhatsAppFloat';
 export { default as DanielReyes_StickyMobileCTA } from './DanielReyes_StickyMobileCTA';
 export { default as DanielReyes_MapSection } from './DanielReyes_MapSection';
+export { default as DanielReyes_PressSection } from './DanielReyes_PressSection';
