@@ -24,7 +24,7 @@ export default function DanielReyes_PressSection() {
               Presencia académica, institucional y en medios
             </h2>
             <p className="text-base text-slate-600 leading-relaxed mb-6">
-              Además de su trabajo clínico, el Dr. Daniel Reyes Pace ha participado en debates públicos sobre educación sexual, salud y subjetividades desde medios, universidades y organismos internacionales.
+              Además de su trabajo clínico, los profesionales del equipo han participado en el debate público sobre psicología, educación, y salud sexual desde medios, universidades y organismos internacionales.
             </p>
             <a
               href="/prensa"
