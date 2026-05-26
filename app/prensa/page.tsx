@@ -149,7 +149,7 @@ export default function PressPage() {
                 Trayectoria
               </div>
               <h1 className="text-[clamp(30px,5vw,52px)] font-bold leading-tight tracking-tight">
-                Daniel Reyes Pace en los medios
+                Nuestro aporte en el debate público
               </h1>
               <p className="mx-auto mt-5 max-w-[620px] text-base leading-relaxed text-slate-300">
                 Columnas de opinión, apariciones en prensa, participación institucional y publicaciones académicas sobre psicología, sexualidad y salud mental.

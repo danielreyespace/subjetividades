@@ -14,7 +14,7 @@ export type PressSection = {
 };
 
 export const pressIntro = [
-  'El Daniel Reyes Pace es psicólogo clínico y Doctor en Psicología de la Universidad de Chile, con más de 20 años de ejercicio profesional. Es Director Clínico y fundador de SUBJETIVIDADES, Centro de Psicología Clínica en Ñuñoa, y uno de los referentes públicos más reconocidos en Chile en las áreas de sexualidad, salud sexual y psicología clínica.',
+  'Daniel Reyes Pace es psicólogo clínico y Doctor en Psicología de la Universidad de Chile, con más de 20 años de ejercicio profesional. Es Director Clínico y fundador de SUBJETIVIDADES, Centro de Psicología Clínica en Ñuñoa, y uno de los referentes públicos más reconocidos en Chile en las áreas de sexualidad, salud sexual y psicología clínica.',
   'A lo largo de su trayectoria ha publicado para la UNESCO como autor principal, impartido cursos en la Universidad de Chile con más de 17.000 participantes en toda América Latina, colaborado con medios de comunicación nacionales, publicado en Ediciones UAH, y sido convocado como experto por el Congreso Nacional.',
 ];
 
