@@ -78,11 +78,11 @@ export default function DanielReyes_ContactSection() {
           <div className="text-[13px] font-semibold text-teal-500 tracking-widest uppercase mb-3.5">
             Contacto
           </div>
-          <h2 className="text-[clamp(32px,4.5vw,48px)] font-bold text-white leading-tight tracking-tight max-w-[720px] mx-auto">
-            Agenda tu primera consulta o déjanos tus datos.
+          <h2 className="text-[clamp(26px,3.5vw,38px)] font-bold text-white leading-tight tracking-tight max-w-[600px] mx-auto">
+            El primer paso es el más difícil.<br />Pero no tienes que darlo solo.
           </h2>
           <p className="text-base text-white/60 mt-3.5 max-w-[580px] mx-auto leading-relaxed mb-10">
-            Te contactamos dentro de 2 horas en día hábil.
+            Agenda tu primera consulta o déjanos tus datos. Te contactamos dentro de 2 horas en día hábil.
           </p>
         </div>
 

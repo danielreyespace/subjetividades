@@ -19,7 +19,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: '¿Atienden con Isapre?',
-    answer: 'Emitimos boleta de honorarios para que puedas solicitar reembolso parcial en tu Isapre (Banmédica, Colmena, Consalud, Cruz Blanca, Vida Tres). El porcentaje de reembolso depende de tu plan.',
+    answer: 'Emitimos boleta de honorarios para que puedas solicitar reembolso parcial en tu Isapre (Banmédica, Colmena, Consalud, Cruz Blanca, Vida Tres) o Fonasa. El porcentaje de reembolso depende de tu plan.',
   },
   {
     question: '¿La terapia online funciona igual que presencial?',
@@ -27,11 +27,11 @@ const faqs: FAQItem[] = [
   },
   {
     question: '¿Puedo agendar sin llamar por teléfono?',
-    answer: 'Sí. Puedes agendar completando el formulario de contacto en esta página o escribiéndonos directamente por WhatsApp al +56 9 3738 9719. Respondemos en menos de 2 horas en día hábil.',
+    answer: 'Sí. Puedes agendar completando el formulario de contacto en esta página o escribiéndonos directamente por WhatsApp al +56 9 9319 2583. Respondemos en menos de 2 horas en día hábil.',
   },
   {
     question: '¿Qué pasa si necesito cancelar una sesión?',
-    answer: 'Pedimos aviso con al menos 24 horas de anticipación. Las cancelaciones con menos de 24 horas se cobran como sesión tomada.',
+    answer: 'Pedimos aviso con al menos 24 horas de anticipación. Las cancelaciones con menos de 24 horas se cobran como sesión tomada, salvo emergencias justificadas.',
   },
 ];
 

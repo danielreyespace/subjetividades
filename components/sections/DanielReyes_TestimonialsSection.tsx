@@ -186,6 +186,7 @@ export default function DanielReyes_TestimonialsSection() {
           <h2 className="text-[clamp(26px,3.5vw,38px)] font-bold text-slate-900 leading-tight tracking-tight">
             Lo que dicen quienes han pasado por nuestro centro
           </h2>
+          <p className="text-base text-slate-500 mt-3.5">17 reseñas reales de Google</p>
         </div>
 
         <motion.div

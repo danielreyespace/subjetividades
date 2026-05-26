@@ -22,14 +22,14 @@ const services: ServiceData[] = [
   {
     icon: Users,
     title: 'Terapia de Pareja',
-    description: 'Un espacio de comunicación, observación y toma de conciencia conjunta que permite a las parejas establecer nuevas bases para una relación plena.',
+    description: 'La terapia de pareja no es el último recurso. Es una inversión en lo que más importa. Herramientas concretas desde la primera sesión.',
     topics: ['Conflictos de comunicación', 'Crisis de pareja', 'Infidelidad', 'Distancia emocional'],
     price: '$70.000 - $80.000 CLP / sesión',
   },
   {
     icon: Heart,
     title: 'Terapia Sexual',
-    description: 'Un área que afecta a muchas personas, pero que tiene soluciones concretas y basadas en evidencia. Atención profesional y sin prejuicios.',
+    description: 'Un área que sigue siendo tabú, pero que tiene soluciones concretas y basadas en evidencia. Atención profesional y sin prejuicios.',
     topics: ['Disfunciones sexuales', 'Deseo e intimidad', 'Identidad sexual', 'Salud sexual integral'],
     price: '$50.000 - $60.000 CLP / sesión',
   },
