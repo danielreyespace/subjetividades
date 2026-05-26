@@ -16,6 +16,16 @@ export const metadata: Metadata = {
     locale: 'es_CL',
     authors: ['Dr. Daniel Reyes Pace'],
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 const schemaData = {

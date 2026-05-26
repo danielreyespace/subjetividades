@@ -1,19 +1,29 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '¿Cuánto cuesta una sesión de psicología en Santiago 2025?',
+  title: '¿Cuánto cuesta una sesión de psicología en Santiago 2026?',
   description:
-    'Rangos de precio de una sesión de psicología en Santiago, Chile (2025). Cómo funciona el reembolso de Isapre y Fonasa, y cómo reducir el costo real de la terapia.',
+    'Rangos de precio de una sesión de psicología en Santiago, Chile (2026). Cómo funciona el reembolso de Isapre y Fonasa, y cómo reducir el costo real de la terapia.',
   alternates: {
     canonical: 'https://subjetividades.cl/blog/costo-sesion-psicologia-santiago',
   },
   openGraph: {
-    title: '¿Cuánto cuesta una sesión de psicología en Santiago 2025?',
+    title: '¿Cuánto cuesta una sesión de psicología en Santiago 2026?',
     description:
-      'Rangos de precio reales de la psicología en Santiago y cómo funciona el reembolso de Isapre. Información del equipo de SUBJETIVIDADES.',
+      'Rangos de precio reales de la psicología en Santiago 2026 y cómo funciona el reembolso de Isapre. Información del equipo de SUBJETIVIDADES.',
     url: 'https://subjetividades.cl/blog/costo-sesion-psicologia-santiago',
     type: 'article',
     locale: 'es_CL',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -22,9 +32,9 @@ const schemaData = {
   '@graph': [
     {
       '@type': 'Article',
-      headline: '¿Cuánto cuesta una sesión de psicología en Santiago 2025?',
+      headline: '¿Cuánto cuesta una sesión de psicología en Santiago 2026?',
       datePublished: '2025-04-02',
-      dateModified: '2025-04-02',
+      dateModified: '2026-05-26',
       inLanguage: 'es-CL',
       author: {
         '@type': 'Physician',
@@ -42,10 +52,10 @@ const schemaData = {
       mainEntity: [
         {
           '@type': 'Question',
-          name: '¿Cuánto cuesta una sesión de psicología en Santiago en 2025?',
+          name: '¿Cuánto cuesta una sesión de psicología en Santiago en 2026?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'En Santiago, el precio de una sesión de psicología varía entre $40.000 y $120.000 CLP según el profesional, su formación y la modalidad (presencial u online). El rango más común para psicólogos con especialización y experiencia es $60.000-$90.000 CLP por sesión de 50-60 minutos.',
+            text: 'En Santiago, el precio de una sesión de psicología varía entre $36.000 y $120.000 CLP según el profesional, su formación y la modalidad (presencial u online). El arancel sugerido por el Colegio de Psicólogos de Chile vigente desde febrero de 2026 es $36.000 CLP. El rango más común para psicólogos con especialización y experiencia es $60.000–$90.000 CLP por sesión de 50–60 minutos.',
           },
         },
         {
@@ -88,10 +98,10 @@ export default function CostoSesionPage() {
         <header className="mb-10">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-[12px] font-semibold text-teal-600 bg-teal-50 px-2.5 py-1 rounded-md">Información práctica</span>
-            <span className="text-[12px] text-slate-400">2 de abril, 2025 · 5 min lectura</span>
+            <span className="text-[12px] text-slate-400">Actualizado mayo 2026 · 5 min lectura</span>
           </div>
           <h1 className="text-[clamp(26px,4vw,38px)] font-bold text-slate-900 leading-tight tracking-tight mb-5">
-            ¿Cuánto cuesta una sesión de psicología en Santiago 2025?
+            ¿Cuánto cuesta una sesión de psicología en Santiago 2026?
           </h1>
           <p className="text-lg text-slate-500 leading-relaxed">
             El costo de la terapia es una de las primeras preguntas que recibimos. Aquí explicamos los rangos reales de precio, cómo funciona el reembolso de Isapre, y qué debes considerar para calcular el costo real de tu proceso terapéutico.
@@ -103,9 +113,9 @@ export default function CostoSesionPage() {
         </header>
 
         <article className="prose prose-slate max-w-none">
-          <h2 className="text-[22px] font-bold text-slate-900 mt-2 mb-4">Rangos de precio en Santiago (2025)</h2>
+          <h2 className="text-[22px] font-bold text-slate-900 mt-2 mb-4">Rangos de precio en Santiago (2026)</h2>
           <p className="text-[16px] text-slate-600 leading-relaxed mb-6">
-            El precio de una sesión de psicología en Santiago varía considerablemente. Los factores que más influyen son: nivel de formación del profesional, años de experiencia, tipo de especialización y modalidad de atención.
+            El precio de una sesión de psicología en Santiago varía considerablemente. Los factores que más influyen son: nivel de formación del profesional, años de experiencia, tipo de especialización y modalidad de atención. El <strong>Colegio de Psicólogos de Chile fijó el arancel sugerido en $36.000 CLP desde febrero de 2026</strong>.
           </p>
 
           <div className="overflow-x-auto mb-8">
@@ -118,9 +128,9 @@ export default function CostoSesionPage() {
               </thead>
               <tbody>
                 {[
-                  ['Psicólogo recién titulado (sin especialización)', '$30.000 – $50.000 CLP'],
+                  ['Psicólogo recién titulado (sin especialización)', '$36.000 – $50.000 CLP'],
                   ['Psicólogo con magíster o especialización', '$55.000 – $80.000 CLP'],
-                  ['Psicólogo clínico con doctorado y experiencia', '$75.000 – $120.000 CLP'],
+                  ['Psicólogo clínico con doctorado y experiencia', '$80.000 – $120.000 CLP'],
                   ['Psicología online (general)', '$40.000 – $70.000 CLP'],
                 ].map(([perfil, rango]) => (
                   <tr key={perfil} className="border-b border-slate-100">
@@ -133,7 +143,7 @@ export default function CostoSesionPage() {
           </div>
 
           <p className="text-[15px] text-slate-500 italic mb-8">
-            * Precios referenciales 2025. Pueden variar según el profesional y el centro. Estos rangos corresponden a sesiones individuales de 50-60 minutos.
+            * Precios referenciales 2026. Arancel mínimo sugerido por el Colegio de Psicólogos de Chile vigente desde febrero 2026: $36.000 CLP. Pueden variar según el profesional y el centro. Corresponden a sesiones individuales de 50–60 minutos.
           </p>
 
           <h2 className="text-[22px] font-bold text-slate-900 mt-10 mb-4">¿Qué incluye el precio de una sesión?</h2>
