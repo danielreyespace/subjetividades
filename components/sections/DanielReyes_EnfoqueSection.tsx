@@ -81,13 +81,13 @@ export default function DanielReyes_EnfoqueSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="rounded-[14px] overflow-hidden aspect-[4/3] shadow-lg order-first md:order-last"
+            className="rounded-[14px] overflow-hidden aspect-[3/4] shadow-lg order-first md:order-last"
           >
             <Image
               src="/daniel-reyes/assets/atmosphere-calm.png"
               alt="Sesión de consulta en el centro de psicología"
-              width={800}
-              height={600}
+              width={600}
+              height={800}
               className="w-full h-full object-cover"
             />
           </motion.div>
