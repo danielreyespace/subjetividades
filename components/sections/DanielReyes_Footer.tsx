@@ -6,8 +6,8 @@ export default function DanielReyes_Footer() {
           <div className="text-base font-bold text-white" style={{ fontFamily: "'Courier Prime', Courier, monospace" }}>
             SUBJETIVIDADES
           </div>
-          <div className="text-[10px] font-medium text-teal-500 tracking-wider uppercase mt-0.5">
-            Centro Psicología Clínica
+          <div className="font-medium text-teal-500 uppercase mt-0.5" style={{ fontFamily: "'Courier Prime', Courier, monospace", fontSize: '11px', letterSpacing: '0em' }}>
+            Psicología Clínica
           </div>
           <div className="text-[13px] text-slate-400 mt-1">
             Ñuñoa, Santiago de Chile | Atención online para todo Chile
