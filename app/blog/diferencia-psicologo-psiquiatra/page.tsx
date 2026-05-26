@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     url: 'https://subjetividades.cl/blog/diferencia-psicologo-psiquiatra',
     type: 'article',
     locale: 'es_CL',
-    authors: ['Dr. Daniel Reyes Pace'],
+    authors: ['Daniel Reyes Pace'],
     images: [
       {
         url: 'https://subjetividades.cl/daniel-reyes/photos/credentials-wall.png',
@@ -50,7 +50,7 @@ const schemaData = {
       inLanguage: 'es-CL',
       author: {
         '@type': 'Physician',
-        name: 'Dr. Daniel Reyes Pace',
+        name: 'Daniel Reyes Pace',
         jobTitle: 'Psicólogo clínico, Director SUBJETIVIDADES',
       },
       publisher: {
@@ -120,7 +120,7 @@ export default function DiferenciaPsicologoPsiquiatraPage() {
             La confusión entre ambas profesiones es muy común. Entender la diferencia te ayuda a tomar la decisión correcta y llegar al profesional que realmente puede ayudarte.
           </p>
           <div className="mt-5 pt-5 border-t border-slate-100">
-            <div className="text-sm font-semibold text-slate-800">Dr. Daniel Reyes Pace</div>
+            <div className="text-sm font-semibold text-slate-800">Daniel Reyes Pace</div>
             <div className="text-[13px] text-slate-400">Psicólogo clínico · Director SUBJETIVIDADES</div>
           </div>
         </header>

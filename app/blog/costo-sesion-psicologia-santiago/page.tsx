@@ -46,7 +46,7 @@ const schemaData = {
       inLanguage: 'es-CL',
       author: {
         '@type': 'Physician',
-        name: 'Dr. Daniel Reyes Pace',
+        name: 'Daniel Reyes Pace',
         jobTitle: 'Psicólogo clínico, Director SUBJETIVIDADES',
       },
       publisher: {
@@ -115,7 +115,7 @@ export default function CostoSesionPage() {
             El costo de la terapia es una de las primeras preguntas que recibimos. Aquí explicamos los rangos reales de precio, cómo funciona el reembolso de Isapre, y qué debes considerar para calcular el costo real de tu proceso terapéutico.
           </p>
           <div className="mt-5 pt-5 border-t border-slate-100">
-            <div className="text-sm font-semibold text-slate-800">Dr. Daniel Reyes Pace</div>
+            <div className="text-sm font-semibold text-slate-800">Daniel Reyes Pace</div>
             <div className="text-[13px] text-slate-400">Psicólogo clínico · Director SUBJETIVIDADES</div>
           </div>
         </header>

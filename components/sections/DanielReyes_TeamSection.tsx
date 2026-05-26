@@ -14,7 +14,7 @@ interface TeamMember {
 
 const team: TeamMember[] = [
   {
-    name: 'Dr. Daniel Reyes Pace',
+    name: 'Daniel Reyes Pace',
     role: 'Director Clínico y Fundador',
     photo: '/daniel-reyes/photos/team-daniel-reyes.jpg',
     specialties: ['Terapeuta para adultos', 'Terapia de pareja', 'Sexualidad y deseo'],
@@ -82,7 +82,7 @@ function TeamCard({ member }: { member: TeamMember }) {
         <h3 className="text-lg font-bold text-slate-900 mb-0.5">{member.name}</h3>
         <p className="text-[13px] font-medium text-teal-600 mb-3">{member.role}</p>
         <p className="text-sm text-slate-500 leading-relaxed mb-4">{member.bio}</p>
-        {member.name === 'Dr. Daniel Reyes Pace' && (
+        {member.name === 'Daniel Reyes Pace' && (
           <a
             href="/prensa"
             className="mb-4 inline-flex text-sm font-semibold text-teal-600 no-underline transition-colors hover:text-teal-700"

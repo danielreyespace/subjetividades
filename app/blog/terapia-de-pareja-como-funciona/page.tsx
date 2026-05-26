@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     url: 'https://subjetividades.cl/blog/terapia-de-pareja-como-funciona',
     type: 'article',
     locale: 'es_CL',
-    authors: ['Dr. Daniel Reyes Pace'],
+    authors: ['Daniel Reyes Pace'],
     images: [
       {
         url: 'https://subjetividades.cl/daniel-reyes/assets/service-couples.png',
@@ -47,7 +47,7 @@ const schemaData = {
       inLanguage: 'es-CL',
       author: {
         '@type': 'Physician',
-        name: 'Dr. Daniel Reyes Pace',
+        name: 'Daniel Reyes Pace',
         jobTitle: 'Psicólogo clínico, Director SUBJETIVIDADES',
       },
       publisher: {
@@ -124,7 +124,7 @@ export default function TerapiaDeParejaPage() {
             La terapia de pareja no es solo para relaciones en crisis. Es una herramienta preventiva que fortalece la comunicación y la intimidad antes de que los problemas escalen — y también un espacio donde, si llega a ser necesario, se puede decidir el futuro de la relación con claridad y respeto.
           </p>
           <div className="mt-5 pt-5 border-t border-slate-100">
-            <div className="text-sm font-semibold text-slate-800">Dr. Daniel Reyes Pace</div>
+            <div className="text-sm font-semibold text-slate-800">Daniel Reyes Pace</div>
             <div className="text-[13px] text-slate-400">Psicólogo clínico · Especialista en terapia de pareja y sexual</div>
           </div>
         </header>

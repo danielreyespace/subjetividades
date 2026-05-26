@@ -16,12 +16,12 @@ import {
 const BASE_URL = 'https://subjetividades.cl';
 
 export const metadata: Metadata = {
-  title: 'Dr. Daniel Reyes Pace en los medios | SUBJETIVIDADES',
+  title: 'Daniel Reyes Pace en los medios | SUBJETIVIDADES',
   description:
-    'Publicaciones académicas, columnas de opinión y apariciones mediáticas del Dr. Daniel Reyes Pace, Director de SUBJETIVIDADES.',
+    'Publicaciones académicas, columnas de opinión y apariciones mediáticas de Daniel Reyes Pace, Director de SUBJETIVIDADES.',
   alternates: { canonical: `${BASE_URL}/prensa` },
   openGraph: {
-    title: 'Dr. Daniel Reyes Pace en los medios | SUBJETIVIDADES',
+    title: 'Daniel Reyes Pace en los medios | SUBJETIVIDADES',
     description:
       'Columnas de opinión, apariciones en prensa, participación institucional y publicaciones académicas sobre psicología, sexualidad y salud mental.',
     url: `${BASE_URL}/prensa`,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         url: `${BASE_URL}/daniel-reyes/photos/headshot-professional.png`,
         width: 1200,
         height: 630,
-        alt: 'Dr. Daniel Reyes Pace — Psicólogo clínico, Director SUBJETIVIDADES',
+        alt: 'Daniel Reyes Pace — Psicólogo clínico, Director SUBJETIVIDADES',
       },
     ],
   },
@@ -149,7 +149,7 @@ export default function PressPage() {
                 Trayectoria
               </div>
               <h1 className="text-[clamp(30px,5vw,52px)] font-bold leading-tight tracking-tight">
-                Dr. Daniel Reyes Pace en los medios
+                Daniel Reyes Pace en los medios
               </h1>
               <p className="mx-auto mt-5 max-w-[620px] text-base leading-relaxed text-slate-300">
                 Columnas de opinión, apariciones en prensa, participación institucional y publicaciones académicas sobre psicología, sexualidad y salud mental.
@@ -192,7 +192,7 @@ export default function PressPage() {
                   <div className="relative aspect-video bg-black">
                     <iframe
                       src="https://www.youtube.com/embed/KWNL4NTPetA?start=288&rel=0&modestbranding=1"
-                      title="Dr. Daniel Reyes Pace - Presentación ante la Cámara de Diputados de Chile"
+                      title="Daniel Reyes Pace - Presentación ante la Cámara de Diputados de Chile"
                       loading="lazy"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowFullScreen
@@ -208,7 +208,7 @@ export default function PressPage() {
                       Presentación ante la Cámara de Diputados
                     </h2>
                     <p className="text-sm leading-relaxed text-slate-300">
-                      Registro completo de la exposición del Dr. Daniel Reyes Pace como experto invitado ante una comisión legislativa de la Cámara de Diputados de Chile, abril 2020.
+                      Registro completo de la exposición del Daniel Reyes Pace como experto invitado ante una comisión legislativa de la Cámara de Diputados de Chile, abril 2020.
                     </p>
                   </div>
                 </div>

@@ -14,7 +14,7 @@ export type PressSection = {
 };
 
 export const pressIntro = [
-  'El Dr. Daniel Reyes Pace es psicólogo clínico y Doctor en Psicología de la Universidad de Chile, con más de 20 años de ejercicio profesional. Es Director Clínico y fundador de SUBJETIVIDADES, Centro de Psicología Clínica en Ñuñoa, y uno de los referentes públicos más reconocidos en Chile en las áreas de sexualidad, salud sexual y psicología clínica.',
+  'El Daniel Reyes Pace es psicólogo clínico y Doctor en Psicología de la Universidad de Chile, con más de 20 años de ejercicio profesional. Es Director Clínico y fundador de SUBJETIVIDADES, Centro de Psicología Clínica en Ñuñoa, y uno de los referentes públicos más reconocidos en Chile en las áreas de sexualidad, salud sexual y psicología clínica.',
   'A lo largo de su trayectoria ha publicado para la UNESCO como autor principal, impartido cursos en la Universidad de Chile con más de 17.000 participantes en toda América Latina, colaborado con medios de comunicación nacionales, publicado en Ediciones UAH, y sido convocado como experto por el Congreso Nacional.',
 ];
 
@@ -124,7 +124,7 @@ export const featuredPublication = {
   date: '2019',
   title: 'La pedagogía de la Sexualidad',
   description:
-    'Publicación de la Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura (UNESCO), elaborada por el Dr. Daniel Reyes Pace en calidad de autor principal y consultor internacional.',
+    'Publicación de la Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura (UNESCO), elaborada por el Daniel Reyes Pace en calidad de autor principal y consultor internacional.',
   href: 'https://unesdoc.unesco.org/ark:/48223/pf0000369032',
   action: 'Ver publicación',
 };

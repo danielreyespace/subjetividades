@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     url: 'https://subjetividades.cl/blog/cuando-ir-al-psicologo',
     type: 'article',
     locale: 'es_CL',
-    authors: ['Dr. Daniel Reyes Pace'],
+    authors: ['Daniel Reyes Pace'],
     images: [
       {
         url: 'https://subjetividades.cl/daniel-reyes/photos/consultation-session.png',
@@ -50,7 +50,7 @@ const schemaData = {
       inLanguage: 'es-CL',
       author: {
         '@type': 'Physician',
-        name: 'Dr. Daniel Reyes Pace',
+        name: 'Daniel Reyes Pace',
         jobTitle: 'Psicólogo clínico, Director SUBJETIVIDADES',
       },
       publisher: {
@@ -136,7 +136,7 @@ export default function CuandoIrAlPsicologoPage() {
           </p>
           <div className="mt-5 pt-5 border-t border-slate-100 flex items-center gap-3">
             <div>
-              <div className="text-sm font-semibold text-slate-800">Dr. Daniel Reyes Pace</div>
+              <div className="text-sm font-semibold text-slate-800">Daniel Reyes Pace</div>
               <div className="text-[13px] text-slate-400">Psicólogo clínico · Director SUBJETIVIDADES</div>
             </div>
           </div>
