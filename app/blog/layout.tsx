@@ -25,8 +25,11 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
             >
               SUBJETIVIDADES
             </span>
-            <span className="text-[10px] font-medium text-teal-600 tracking-wider uppercase">
-              Centro Psicología Clínica
+            <span
+              className="font-medium text-teal-600 uppercase"
+              style={{ fontFamily: "'Courier Prime', Courier, monospace", fontSize: '10px', letterSpacing: '0em' }}
+            >
+              Psicología Clínica
             </span>
           </a>
           <div className="flex items-center gap-5">
@@ -56,6 +59,12 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
               style={{ fontFamily: "'Courier Prime', Courier, monospace" }}
             >
               SUBJETIVIDADES
+            </div>
+            <div
+              className="font-medium text-teal-500 uppercase mt-0.5"
+              style={{ fontFamily: "'Courier Prime', Courier, monospace", fontSize: '11px', letterSpacing: '0em' }}
+            >
+              Psicología Clínica
             </div>
             <div className="text-[13px] text-slate-400 mt-1">
               Ñuñoa, Santiago de Chile · Atención online para todo Chile
