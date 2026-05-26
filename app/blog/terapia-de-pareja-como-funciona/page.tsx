@@ -15,6 +15,14 @@ export const metadata: Metadata = {
     type: 'article',
     locale: 'es_CL',
     authors: ['Dr. Daniel Reyes Pace'],
+    images: [
+      {
+        url: 'https://subjetividades.cl/daniel-reyes/assets/service-couples.png',
+        width: 1200,
+        height: 630,
+        alt: 'Terapia de pareja en SUBJETIVIDADES, centro de psicología en Ñuñoa, Santiago',
+      },
+    ],
   },
   robots: {
     index: true,

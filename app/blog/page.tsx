@@ -11,6 +11,24 @@ export const metadata: Metadata = {
     url: 'https://subjetividades.cl/blog',
     type: 'website',
     locale: 'es_CL',
+    images: [
+      {
+        url: 'https://subjetividades.cl/daniel-reyes/photos/waiting-room.png',
+        width: 1200,
+        height: 630,
+        alt: 'Blog de psicología clínica — SUBJETIVIDADES, Ñuñoa, Santiago',
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -33,9 +51,9 @@ const posts = [
   },
   {
     slug: 'costo-sesion-psicologia-santiago',
-    title: '¿Cuánto cuesta una sesión de psicología en Santiago 2025?',
-    excerpt: 'El costo de la terapia es una de las primeras preguntas que recibimos. En este artículo explicamos los rangos de precio y cómo el reembolso de Isapre puede hacer la terapia más accesible.',
-    date: '2 de abril, 2025',
+    title: '¿Cuánto cuesta una sesión de psicología en Santiago 2026?',
+    excerpt: 'El costo de la terapia es una de las primeras preguntas que recibimos. Explicamos los rangos de precio reales en 2026 (arancel mínimo $36.000 CLP) y cómo el reembolso de Isapre puede reducir el costo.',
+    date: 'Actualizado mayo 2026',
     readTime: '5 min',
     category: 'Información práctica',
   },

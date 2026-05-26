@@ -14,6 +14,14 @@ export const metadata: Metadata = {
     url: 'https://subjetividades.cl/blog/costo-sesion-psicologia-santiago',
     type: 'article',
     locale: 'es_CL',
+    images: [
+      {
+        url: 'https://subjetividades.cl/daniel-reyes/assets/atmosphere-office.png',
+        width: 1200,
+        height: 630,
+        alt: '¿Cuánto cuesta una sesión de psicología en Santiago 2026? — SUBJETIVIDADES',
+      },
+    ],
   },
   robots: {
     index: true,

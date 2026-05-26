@@ -15,6 +15,14 @@ export const metadata: Metadata = {
     type: 'article',
     locale: 'es_CL',
     authors: ['Dr. Daniel Reyes Pace'],
+    images: [
+      {
+        url: 'https://subjetividades.cl/daniel-reyes/photos/credentials-wall.png',
+        width: 1200,
+        height: 630,
+        alt: 'Credenciales y títulos académicos en SUBJETIVIDADES — Psicólogo vs psiquiatra',
+      },
+    ],
   },
   robots: {
     index: true,

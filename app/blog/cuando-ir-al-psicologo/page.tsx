@@ -15,6 +15,14 @@ export const metadata: Metadata = {
     type: 'article',
     locale: 'es_CL',
     authors: ['Dr. Daniel Reyes Pace'],
+    images: [
+      {
+        url: 'https://subjetividades.cl/daniel-reyes/photos/consultation-session.png',
+        width: 1200,
+        height: 630,
+        alt: 'Sesión de consulta psicológica en SUBJETIVIDADES, Ñuñoa, Santiago',
+      },
+    ],
   },
   robots: {
     index: true,

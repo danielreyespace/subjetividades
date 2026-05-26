@@ -28,6 +28,24 @@ export const metadata: Metadata = {
     siteName: 'SUBJETIVIDADES',
     locale: 'es_CL',
     type: 'profile',
+    images: [
+      {
+        url: `${BASE_URL}/daniel-reyes/photos/headshot-professional.png`,
+        width: 1200,
+        height: 630,
+        alt: 'Dr. Daniel Reyes Pace — Psicólogo clínico, Director SUBJETIVIDADES',
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
