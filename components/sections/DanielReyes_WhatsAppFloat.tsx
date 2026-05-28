@@ -1,14 +1,16 @@
 'use client';
 
 import { MessageCircle } from 'lucide-react';
+import { trackWhatsAppConversion } from '@/lib/gtag';
 
-const WHATSAPP_NUMBER = '56993192583';
+const WHATSAPP_NUMBER = '56937389719';
 const WHATSAPP_MSG = 'Hola, me gustaría agendar una consulta.';
 
 export default function DanielReyes_WhatsAppFloat() {
   return (
     <a
       href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MSG)}`}
+      onClick={trackWhatsAppConversion}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"

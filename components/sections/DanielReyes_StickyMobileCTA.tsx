@@ -1,8 +1,9 @@
 'use client';
 
 import { Calendar, MessageCircle } from 'lucide-react';
+import { trackWhatsAppConversion } from '@/lib/gtag';
 
-const WHATSAPP_NUMBER = '56993192583';
+const WHATSAPP_NUMBER = '56937389719';
 const WHATSAPP_MSG = 'Hola, me gustaría agendar una consulta.';
 
 export default function DanielReyes_StickyMobileCTA() {
@@ -18,6 +19,7 @@ export default function DanielReyes_StickyMobileCTA() {
         </a>
         <a
           href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MSG)}`}
+          onClick={trackWhatsAppConversion}
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 bg-[#25D366] text-white rounded-[9px] text-sm font-semibold transition-colors hover:bg-[#1fb855]"

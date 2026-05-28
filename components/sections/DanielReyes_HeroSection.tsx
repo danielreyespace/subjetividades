@@ -3,8 +3,9 @@
 import { motion } from 'framer-motion';
 import { Calendar, MessageCircle } from 'lucide-react';
 import Image from 'next/image';
+import { trackWhatsAppConversion } from '@/lib/gtag';
 
-const WHATSAPP_NUMBER = '56993192583';
+const WHATSAPP_NUMBER = '56937389719';
 const WHATSAPP_MSG = 'Hola, me gustaría agendar una consulta en el centro de psicología clínica.';
 
 export default function DanielReyes_HeroSection() {
@@ -67,6 +68,7 @@ export default function DanielReyes_HeroSection() {
           </a>
           <a
             href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MSG)}`}
+            onClick={trackWhatsAppConversion}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-7 py-3.5 bg-white/[0.12] text-white border-[1.5px] border-white/25 backdrop-blur-sm rounded-[9px] text-[15px] font-semibold transition-all hover:bg-white/20 hover:border-white/40"

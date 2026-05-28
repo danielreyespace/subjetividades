@@ -84,7 +84,7 @@ const schemaData = {
       description:
         'Centro de psicología clínica en Ñuñoa, Santiago. Psicoterapia individual, de pareja y sexual con enfoque basado en evidencia. Más de 20 años de experiencia.',
       url: BASE_URL,
-      telephone: '+56993192583',
+      telephone: '+56937389719',
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Alonso de Ercilla 2959',
@@ -210,7 +210,7 @@ const schemaData = {
           name: '¿Puedo agendar sin llamar por teléfono?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Sí. Puedes agendar completando el formulario de contacto en esta página o escribiéndonos directamente por WhatsApp al +56 9 9319 2583. Respondemos en menos de 2 horas en día hábil.',
+            text: 'Sí. Puedes agendar completando el formulario de contacto en esta página o escribiéndonos directamente por WhatsApp al +56 9 3738 9719. Respondemos en menos de 2 horas en día hábil.',
           },
         },
         {
