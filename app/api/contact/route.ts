@@ -33,10 +33,20 @@ function getConsultationLabel(value?: string) {
   return value ? consultationLabels[value] || value : 'No especificado';
 }
 
+function splitName(fullName: string) {
+  const parts = fullName.trim().split(/\s+/).filter(Boolean);
+  const firstName = parts.shift() || fullName;
+  const lastName = parts.join(' ');
+  return { firstName, lastName };
+}
+
 async function sendContactNotification(payload: ContactPayload) {
   if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
     return { skipped: true };
   }
+
+  const { firstName, lastName } = splitName(payload.name);
+  const consultationType = getConsultationLabel(payload.consultationType);
 
   const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
     method: 'POST',
@@ -49,11 +59,17 @@ async function sendContactNotification(payload: ContactPayload) {
       template_params: {
         to_email: CONTACT_NOTIFY_TO.join(','),
         subject: `Nuevo contacto desde subjetividades.cl: ${payload.name}`,
+        firstName,
+        lastName,
+        email: payload.email,
+        phone: payload.phone || 'No informado',
+        company: 'SUBJETIVIDADES',
+        role: consultationType,
+        services: consultationType,
         from_name: payload.name,
         from_email: payload.email,
         reply_to: payload.email,
-        phone: payload.phone || 'No informado',
-        consultation_type: getConsultationLabel(payload.consultationType),
+        consultation_type: consultationType,
         message: payload.message || 'Sin mensaje',
         submitted_at: new Date().toLocaleString('es-CL', { timeZone: 'America/Santiago' }),
       },
