@@ -47,42 +47,49 @@ async function sendContactNotification(payload: ContactPayload) {
 
   const { firstName, lastName } = splitName(payload.name);
   const consultationType = getConsultationLabel(payload.consultationType);
+  const submittedAt = new Date().toLocaleString('es-CL', { timeZone: 'America/Santiago' });
 
-  const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      service_id: EMAILJS_SERVICE_ID,
-      template_id: EMAILJS_TEMPLATE_ID,
-      user_id: EMAILJS_PUBLIC_KEY,
-      ...(EMAILJS_PRIVATE_KEY && { accessToken: EMAILJS_PRIVATE_KEY }),
-      template_params: {
-        to_email: CONTACT_NOTIFY_TO.join(','),
-        subject: `Nuevo contacto desde subjetividades.cl: ${payload.name}`,
-        firstName,
-        lastName,
-        email: payload.email,
-        phone: payload.phone || 'No informado',
-        company: 'SUBJETIVIDADES',
-        role: consultationType,
-        services: consultationType,
-        from_name: payload.name,
-        from_email: payload.email,
-        reply_to: payload.email,
-        consultation_type: consultationType,
-        message: payload.message || 'Sin mensaje',
-        submitted_at: new Date().toLocaleString('es-CL', { timeZone: 'America/Santiago' }),
-      },
-    }),
-  });
+  const results = await Promise.all(
+    CONTACT_NOTIFY_TO.map(async (toEmail) => {
+      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          service_id: EMAILJS_SERVICE_ID,
+          template_id: EMAILJS_TEMPLATE_ID,
+          user_id: EMAILJS_PUBLIC_KEY,
+          ...(EMAILJS_PRIVATE_KEY && { accessToken: EMAILJS_PRIVATE_KEY }),
+          template_params: {
+            to_email: toEmail,
+            subject: `Nuevo contacto desde subjetividades.cl: ${payload.name}`,
+            firstName,
+            lastName,
+            email: payload.email,
+            phone: payload.phone || 'No informado',
+            company: 'SUBJETIVIDADES',
+            role: consultationType,
+            services: consultationType,
+            from_name: payload.name,
+            from_email: payload.email,
+            reply_to: payload.email,
+            consultation_type: consultationType,
+            message: payload.message || 'Sin mensaje',
+            submitted_at: submittedAt,
+          },
+        }),
+      });
 
-  const data = await response.text();
+      const text = await response.text();
 
-  if (!response.ok) {
-    throw new Error(data || `EmailJS error ${response.status}`);
-  }
+      if (!response.ok) {
+        throw new Error(text || `EmailJS error ${response.status}`);
+      }
 
-  return { status: response.status, text: data };
+      return { toEmail, status: response.status, text };
+    })
+  );
+
+  return { sent: results.length, results };
 }
 
 export async function POST(req: NextRequest) {
