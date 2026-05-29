@@ -5,13 +5,14 @@ export const runtime = 'edge';
 const FIDELIDAPP_API_URL = process.env.FIDELIDAPP_API_URL || 'https://fidelidapp.cl';
 const FIDELIDAPP_MCP_API_KEY = process.env.FIDELIDAPP_MCP_API_KEY || '';
 const FIDELIDAPP_SLUG = process.env.FIDELIDAPP_SLUG || 'daniel-reyes';
-const RESEND_API_KEY = process.env.RESEND_API_KEY || '';
-const CONTACT_NOTIFY_TO = (process.env.CONTACT_NOTIFY_TO || 'alvaro.villena@gmail.com')
+const EMAILJS_SERVICE_ID = process.env.EMAILJS_SERVICE_ID || '';
+const EMAILJS_TEMPLATE_ID = process.env.EMAILJS_TEMPLATE_ID || '';
+const EMAILJS_PUBLIC_KEY = process.env.EMAILJS_PUBLIC_KEY || '';
+const EMAILJS_PRIVATE_KEY = process.env.EMAILJS_PRIVATE_KEY || '';
+const CONTACT_NOTIFY_TO = (process.env.CONTACT_NOTIFY_TO || 'danielreyespace@gmail.com,alvaro.villena@gmail.com')
   .split(',')
   .map((email) => email.trim())
   .filter(Boolean);
-const CONTACT_NOTIFY_FROM =
-  process.env.CONTACT_NOTIFY_FROM || 'SUBJETIVIDADES <onboarding@resend.dev>';
 
 type ContactPayload = {
   name: string;
@@ -32,80 +33,40 @@ function getConsultationLabel(value?: string) {
   return value ? consultationLabels[value] || value : 'No especificado';
 }
 
-function escapeHtml(value: string) {
-  return value
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-}
-
-function buildNotificationEmail({ name, email, phone, consultationType, message }: ContactPayload) {
-  const rows = [
-    ['Nombre', name],
-    ['Email', email],
-    ['Telefono', phone || 'No informado'],
-    ['Tipo de consulta', getConsultationLabel(consultationType)],
-    ['Mensaje', message || 'Sin mensaje'],
-  ];
-
-  const text = [
-    'Nuevo contacto desde subjetividades.cl',
-    '',
-    ...rows.map(([label, value]) => `${label}: ${value}`),
-  ].join('\n');
-
-  const htmlRows = rows
-    .map(
-      ([label, value]) => `
-        <tr>
-          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;font-weight:600;color:#334155;">${escapeHtml(label)}</td>
-          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;color:#0f172a;">${escapeHtml(value)}</td>
-        </tr>`
-    )
-    .join('');
-
-  const html = `
-    <div style="font-family:Arial,sans-serif;line-height:1.5;color:#0f172a;">
-      <h1 style="font-size:20px;margin:0 0 12px;">Nuevo contacto desde subjetividades.cl</h1>
-      <table style="border-collapse:collapse;width:100%;max-width:640px;border-top:1px solid #e2e8f0;">
-        ${htmlRows}
-      </table>
-    </div>`;
-
-  return { text, html };
-}
-
 async function sendContactNotification(payload: ContactPayload) {
-  if (!RESEND_API_KEY || CONTACT_NOTIFY_TO.length === 0) {
+  if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
     return { skipped: true };
   }
 
-  const { text, html } = buildNotificationEmail(payload);
-  const response = await fetch('https://api.resend.com/emails', {
+  const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
     method: 'POST',
-    headers: {
-      Authorization: `Bearer ${RESEND_API_KEY}`,
-      'Content-Type': 'application/json',
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      from: CONTACT_NOTIFY_FROM,
-      to: CONTACT_NOTIFY_TO,
-      subject: `Nuevo contacto: ${payload.name}`,
-      text,
-      html,
-      reply_to: payload.email,
+      service_id: EMAILJS_SERVICE_ID,
+      template_id: EMAILJS_TEMPLATE_ID,
+      user_id: EMAILJS_PUBLIC_KEY,
+      ...(EMAILJS_PRIVATE_KEY && { accessToken: EMAILJS_PRIVATE_KEY }),
+      template_params: {
+        to_email: CONTACT_NOTIFY_TO.join(','),
+        subject: `Nuevo contacto desde subjetividades.cl: ${payload.name}`,
+        from_name: payload.name,
+        from_email: payload.email,
+        reply_to: payload.email,
+        phone: payload.phone || 'No informado',
+        consultation_type: getConsultationLabel(payload.consultationType),
+        message: payload.message || 'Sin mensaje',
+        submitted_at: new Date().toLocaleString('es-CL', { timeZone: 'America/Santiago' }),
+      },
     }),
   });
 
-  const data = await response.json().catch(() => ({}));
+  const data = await response.text();
 
   if (!response.ok) {
-    throw new Error(data?.message || `Resend error ${response.status}`);
+    throw new Error(data || `EmailJS error ${response.status}`);
   }
 
-  return data;
+  return { status: response.status, text: data };
 }
 
 export async function POST(req: NextRequest) {
@@ -119,7 +80,7 @@ export async function POST(req: NextRequest) {
     const notification = sendContactNotification({ name, email, phone, consultationType, message })
       .then((data) => ({ ok: true, data }))
       .catch((error) => {
-        console.error('[contact] Resend error:', error);
+        console.error('[contact] EmailJS error:', error);
         return { ok: false };
       });
 
