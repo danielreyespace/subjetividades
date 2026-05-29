@@ -6,9 +6,7 @@ const FIDELIDAPP_API_URL = process.env.FIDELIDAPP_API_URL || 'https://fidelidapp
 const FIDELIDAPP_MCP_API_KEY = process.env.FIDELIDAPP_MCP_API_KEY || '';
 const FIDELIDAPP_SLUG = process.env.FIDELIDAPP_SLUG || 'daniel-reyes';
 const RESEND_API_KEY = process.env.RESEND_API_KEY || '';
-const CONTACT_NOTIFY_TO = (
-  process.env.CONTACT_NOTIFY_TO || 'danielreyespace@gmail.com,alvaro.villena@gmail.com'
-)
+const CONTACT_NOTIFY_TO = (process.env.CONTACT_NOTIFY_TO || 'alvaro.villena@gmail.com')
   .split(',')
   .map((email) => email.trim())
   .filter(Boolean);
