@@ -3,7 +3,7 @@
 import { useState, type FormEvent } from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
-import { trackWhatsAppConversion } from '@/lib/gtag';
+import { trackContactFormConversion, trackWhatsAppConversion } from '@/lib/gtag';
 
 const WHATSAPP_NUMBER = '56937389719';
 const WHATSAPP_MSG = 'Hola, me gustaría agendar una consulta en el centro de psicología clínica.';
@@ -62,7 +62,7 @@ export default function DanielReyes_ContactSection() {
 
     // 2. Always redirect to WhatsApp with form data pre-loaded
     const msg = buildWhatsAppMsg(formData);
-    trackWhatsAppConversion();
+    trackContactFormConversion();
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
 
     setIsSubmitting(false);

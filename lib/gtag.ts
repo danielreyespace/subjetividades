@@ -1,25 +1,22 @@
 declare global {
   interface Window {
-    gtag?: (
-      command: 'event',
-      action: 'conversion',
-      params: {
-        send_to: string;
-        value: number;
-        currency: string;
-        event_timeout?: number;
-      },
-    ) => void;
+    gtag_report_conversion?: (sendTo: string, url?: string) => boolean;
+  }
+}
+
+const WHATSAPP_CONVERSION = 'AW-17550627973/QFz_CPmcpbccEIWp5bBB';
+const CONTACT_FORM_CONVERSION = 'AW-17550627973/9VBcCIHYjrccEIWp5bBB';
+
+function reportConversion(sendTo: string) {
+  if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+    window.gtag_report_conversion(sendTo);
   }
 }
 
 export function trackWhatsAppConversion() {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'conversion', {
-      send_to: 'AW-17550627973/YFCDCNDA0bQcEIWp5bBB',
-      value: 5000,
-      currency: 'CLP',
-      event_timeout: 1200,
-    });
-  }
+  reportConversion(WHATSAPP_CONVERSION);
+}
+
+export function trackContactFormConversion() {
+  reportConversion(CONTACT_FORM_CONVERSION);
 }

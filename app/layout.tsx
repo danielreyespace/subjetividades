@@ -18,6 +18,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-17550627973');
+
+            window.gtag_report_conversion = function(send_to, url) {
+              var callback = function() {
+                if (typeof(url) !== 'undefined') window.location = url;
+              };
+              gtag('event', 'conversion', {
+                'send_to': send_to,
+                'value': 1.0,
+                'currency': 'CLP',
+                'event_callback': callback
+              });
+              return false;
+            }
           `}
         </Script>
       </head>
