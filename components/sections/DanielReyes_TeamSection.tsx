@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { GraduationCap, Heart, Users, Brain } from 'lucide-react';
+import { CalendarDays, GraduationCap, Heart, Users, Brain } from 'lucide-react';
 
 interface TeamMember {
   name: string;
@@ -49,6 +49,7 @@ const cardVariants = {
 };
 
 function TeamCard({ member }: { member: TeamMember }) {
+  const isDaniel = member.name === 'Daniel Reyes Pace';
   const iconMap: Record<string, typeof Heart> = {
     'Terapeuta para adultos': Brain,
     'Terapia de pareja': Heart,
@@ -62,18 +63,33 @@ function TeamCard({ member }: { member: TeamMember }) {
   return (
     <motion.div
       variants={cardVariants}
-      className="group bg-white rounded-[14px] border border-slate-100 overflow-hidden transition-all hover:shadow-[0_4px_16px_rgba(26,35,50,0.08)] hover:-translate-y-[3px]"
+      className="bg-white rounded-[14px] border border-slate-100 overflow-hidden transition-all hover:shadow-[0_4px_16px_rgba(26,35,50,0.08)] hover:-translate-y-[3px]"
     >
       {/* Photo */}
       {member.photo && (
-        <div className="relative w-full h-[420px] bg-slate-100 overflow-hidden">
+        <div className={`relative w-full h-[420px] bg-slate-100 overflow-hidden ${isDaniel ? 'group' : ''}`}>
           <Image
             src={member.photo}
             alt={`Foto de ${member.name}`}
             fill
-            className="object-cover object-top"
+            className={`object-cover object-top ${isDaniel ? 'transition-all duration-300 group-hover:brightness-[0.38]' : ''}`}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
+          {isDaniel && (
+            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <a
+                href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2v0skIM06AfjXvgc6XLIl2dwRRR-ZM5Kza7z_6-0ojv1tRu7cfYG_U80NXtj54fOwxKGmxc5GB?gv=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-teal-600 text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-teal-700 transition-colors"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <CalendarDays className="w-4 h-4" />
+                Agendar con Daniel
+              </a>
+              <span className="text-white/75 text-xs">Confirmación inmediata por correo</span>
+            </div>
+          )}
         </div>
       )}
 
@@ -82,7 +98,7 @@ function TeamCard({ member }: { member: TeamMember }) {
         <h3 className="text-lg font-bold text-slate-900 mb-0.5">{member.name}</h3>
         <p className="text-[13px] font-medium text-teal-600 mb-3">{member.role}</p>
         <p className="text-sm text-slate-500 leading-relaxed mb-4">{member.bio}</p>
-        {member.name === 'Daniel Reyes Pace' && (
+        {isDaniel && (
           <a
             href="/prensa"
             className="mb-4 inline-flex text-sm font-semibold text-teal-600 no-underline transition-colors hover:text-teal-700"
