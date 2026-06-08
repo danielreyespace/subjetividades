@@ -253,7 +253,7 @@ export default function TerapiaDeParejaPage() {
         <div className="mt-12 bg-slate-900 rounded-[14px] p-8 text-center">
           <h2 className="text-xl font-bold text-white mb-2">¿Quieres saber más sobre nuestra terapia de pareja?</h2>
           <p className="text-slate-400 text-sm mb-5">
-            Primera consulta presencial en Ñuñoa, Santiago u online para toda Chile. Sin compromiso.
+            Primera consulta presencial en Ñuñoa, Santiago u online para todo Chile. Sin compromiso.
           </p>
           <a
             href="/#contacto"

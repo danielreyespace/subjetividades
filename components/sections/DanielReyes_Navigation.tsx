@@ -56,7 +56,7 @@ export default function DanielReyes_Navigation() {
               href="#contacto"
               className="text-sm font-semibold text-white bg-teal-600 px-[22px] py-2.5 rounded-lg transition-all hover:bg-teal-700 hover:-translate-y-px no-underline"
             >
-              Agendar consulta
+              Contacto
             </a>
           </div>
 
