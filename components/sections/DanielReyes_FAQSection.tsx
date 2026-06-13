@@ -27,7 +27,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: '¿Puedo agendar sin llamar por teléfono?',
-    answer: 'Sí. Puedes agendar completando el formulario de contacto en esta página o escribiéndonos directamente por WhatsApp al +56 9 3738 9719. Respondemos en menos de 2 horas en día hábil.',
+    answer: 'Sí. Puedes agendar directamente con cada profesional desde la sección Equipo, o completando el formulario de contacto en esta página. Respondemos en menos de 2 horas en día hábil.',
   },
   {
     question: '¿Qué pasa si necesito cancelar una sesión?',

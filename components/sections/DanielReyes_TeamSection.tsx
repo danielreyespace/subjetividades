@@ -10,6 +10,7 @@ interface TeamMember {
   photo: string | null;
   specialties: string[];
   bio: string;
+  calendarUrl: string;
 }
 
 const team: TeamMember[] = [
@@ -19,6 +20,8 @@ const team: TeamMember[] = [
     photo: '/daniel-reyes/photos/team-daniel-reyes.jpg',
     specialties: ['Terapeuta para adultos', 'Terapia de pareja', 'Sexualidad y deseo'],
     bio: 'Psicólogo y Doctor en Psicología de la Universidad de Chile, con más de 20 años de experiencia como terapeuta, docente universitario y consultor internacional.',
+    calendarUrl:
+      'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2v0skIM06AfjXvgc6XLIl2dwRRR-ZM5Kza7z_6-0ojv1tRu7cfYG_U80NXtj54fOwxKGmxc5GB?gv=true',
   },
   {
     name: 'Fernando Bravo Matheu',
@@ -26,6 +29,8 @@ const team: TeamMember[] = [
     photo: '/daniel-reyes/photos/team-fernando-bravo.jpg',
     specialties: ['Adolescentes y adultos', 'Vínculos y emociones', 'Terapia de pareja'],
     bio: 'Psicólogo clínico de la Universidad Diego Portales, con formación en clínica psicoanalítica de Winnicott. Con experiencia en la atención de adolescentes, adultos y parejas, en contextos comunitarios y en centros de salud mental.',
+    calendarUrl:
+      'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3qj1T7bbIEsun5MXkJ00SCkoilXMR8OFSfNMyYxmLZGE-NXz076BawJz_4EAcfa2-gUKCIScop?gv=true',
   },
   {
     name: 'Allison Rowe Carrasco',
@@ -33,6 +38,8 @@ const team: TeamMember[] = [
     photo: '/daniel-reyes/photos/team-allison-rowe.jpg',
     specialties: ['Adultos y adolescentes', 'Terapia de pareja', 'Enfoque sistémico'],
     bio: 'Psicóloga de la Universidad de Chile, con diplomado en Terapia Sistémica y Familiar. Trabaja con población adulta y adolescente. Posee formación y experiencia en atención clínica, tanto en modalidad individual como en terapia de parejas.',
+    calendarUrl:
+      'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cKfTR9fotDssOfS-8i_9P3JLkY4X5aVw_SWASs7HlWu90kcpx_R8liDq8rXmZM5UqF7J53k9B?gv=true',
   },
 ];
 
@@ -50,6 +57,7 @@ const cardVariants = {
 
 function TeamCard({ member }: { member: TeamMember }) {
   const isDaniel = member.name === 'Daniel Reyes Pace';
+  const firstName = member.name.split(' ')[0];
   const iconMap: Record<string, typeof Heart> = {
     'Terapeuta para adultos': Brain,
     'Terapia de pareja': Heart,
@@ -67,29 +75,14 @@ function TeamCard({ member }: { member: TeamMember }) {
     >
       {/* Photo */}
       {member.photo && (
-        <div className={`relative w-full h-[420px] bg-slate-100 overflow-hidden ${isDaniel ? 'group' : ''}`}>
+        <div className="relative w-full h-[420px] bg-slate-100 overflow-hidden">
           <Image
             src={member.photo}
             alt={`Foto de ${member.name}`}
             fill
-            className={`object-cover object-top ${isDaniel ? 'transition-all duration-300 group-hover:brightness-[0.38]' : ''}`}
+            className="object-cover object-top"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
-          {isDaniel && (
-            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <a
-                href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2v0skIM06AfjXvgc6XLIl2dwRRR-ZM5Kza7z_6-0ojv1tRu7cfYG_U80NXtj54fOwxKGmxc5GB?gv=true"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-teal-600 text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-teal-700 transition-colors"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <CalendarDays className="w-4 h-4" />
-                Agendar con Daniel
-              </a>
-              <span className="text-white/75 text-xs">Confirmación inmediata por correo</span>
-            </div>
-          )}
         </div>
       )}
 
@@ -122,6 +115,18 @@ function TeamCard({ member }: { member: TeamMember }) {
             );
           })}
         </div>
+
+        {/* Booking CTA */}
+        <a
+          href={member.calendarUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-5 w-full inline-flex items-center justify-center gap-2 bg-teal-600 text-white text-sm font-semibold px-5 py-2.5 rounded-[9px] hover:bg-teal-700 transition-colors"
+        >
+          <CalendarDays className="w-4 h-4" />
+          Agendar con {firstName}
+        </a>
+        <p className="mt-2 text-center text-xs text-slate-400">Confirmación inmediata por correo</p>
       </div>
     </motion.div>
   );

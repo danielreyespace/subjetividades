@@ -9,7 +9,6 @@ import {
 } from '@/lib/press';
 import {
   DanielReyes_Footer,
-  DanielReyes_WhatsAppFloat,
   DanielReyes_StickyMobileCTA,
 } from '@/components/sections';
 
@@ -269,7 +268,6 @@ export default function PressPage() {
           </section>
         </main>
         <DanielReyes_Footer />
-        <DanielReyes_WhatsAppFloat />
         <DanielReyes_StickyMobileCTA />
       </div>
     </>

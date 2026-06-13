@@ -2,29 +2,7 @@
 
 import { useState, type FormEvent } from 'react';
 import { motion } from 'framer-motion';
-import { MessageCircle } from 'lucide-react';
-import { trackContactFormConversion, trackWhatsAppConversion } from '@/lib/gtag';
-
-const WHATSAPP_NUMBER = '56937389719';
-const WHATSAPP_MSG = 'Hola, me gustaría agendar una consulta en el centro de psicología clínica.';
-
-function buildWhatsAppMsg(data: FormData): string {
-  const tipo = {
-    individual: 'Terapia individual',
-    pareja: 'Terapia de pareja',
-    sexual: 'Terapia sexual',
-    'no-seguro': 'No estoy seguro/a',
-  }[data.consultationType] || 'No especificado';
-
-  return [
-    '¡Hola! Completé el formulario del sitio web:',
-    `👤 Nombre: ${data.name}`,
-    `📧 Email: ${data.email}`,
-    data.phone ? `📱 Teléfono: ${data.phone}` : null,
-    `🗂 Consulta: ${tipo}`,
-    data.message ? `💬 Mensaje: ${data.message}` : null,
-  ].filter(Boolean).join('\n');
-}
+import { trackContactFormConversion } from '@/lib/gtag';
 
 interface FormData {
   name: string;
@@ -49,7 +27,7 @@ export default function DanielReyes_ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // 1. Save lead to Fidelidapp via secure proxy
+    // Save lead to Fidelidapp + email notification via secure proxy
     try {
       await fetch('/api/contact', {
         method: 'POST',
@@ -57,13 +35,10 @@ export default function DanielReyes_ContactSection() {
         body: JSON.stringify(formData),
       });
     } catch {
-      // Silent — WhatsApp redirect is the guaranteed delivery channel
+      // Silent — the server proxy also persists the lead in Fidelidapp
     }
 
-    // 2. Always redirect to WhatsApp with form data pre-loaded
-    const msg = buildWhatsAppMsg(formData);
     trackContactFormConversion();
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
 
     setIsSubmitting(false);
     setSubmitted(true);
@@ -87,26 +62,6 @@ export default function DanielReyes_ContactSection() {
             Te contactamos dentro de 2 horas en día hábil.
           </p>
         </div>
-
-        {/* CTA Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="flex gap-4 justify-center flex-wrap mb-12"
-        >
-          <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MSG)}`}
-            onClick={trackWhatsAppConversion}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] text-white rounded-[9px] font-semibold transition-all hover:bg-[#1fb855]"
-          >
-            <MessageCircle className="w-5 h-5" />
-            Escribir por WhatsApp
-          </a>
-        </motion.div>
 
         {/* Contact Form */}
         <motion.div

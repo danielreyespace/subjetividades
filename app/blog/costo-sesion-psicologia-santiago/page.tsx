@@ -245,7 +245,7 @@ export default function CostoSesionPage() {
 
         <div className="mt-12 bg-slate-900 rounded-[14px] p-8 text-center">
           <h2 className="text-xl font-bold text-white mb-2">¿Quieres conocer nuestras tarifas?</h2>
-          <p className="text-slate-400 text-sm mb-5">Escríbenos por WhatsApp o completa el formulario. Te respondemos en menos de 2 horas en día hábil.</p>
+          <p className="text-slate-400 text-sm mb-5">Completa el formulario de contacto y te respondemos en menos de 2 horas en día hábil.</p>
           <a href="/#contacto" className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold text-sm no-underline hover:bg-teal-700 transition-colors">
             Consultar tarifas
           </a>

@@ -11,7 +11,6 @@ import {
   DanielReyes_FAQSection,
   DanielReyes_ContactSection,
   DanielReyes_Footer,
-  DanielReyes_WhatsAppFloat,
   DanielReyes_StickyMobileCTA,
   DanielReyes_MapSection,
   DanielReyes_PressSection,
@@ -210,7 +209,7 @@ const schemaData = {
           name: '¿Puedo agendar sin llamar por teléfono?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Sí. Puedes agendar completando el formulario de contacto en esta página o escribiéndonos directamente por WhatsApp al +56 9 3738 9719. Respondemos en menos de 2 horas en día hábil.',
+            text: 'Sí. Puedes agendar directamente con cada profesional desde la sección Equipo, o completando el formulario de contacto en esta página. Respondemos en menos de 2 horas en día hábil.',
           },
         },
         {
@@ -263,7 +262,6 @@ export default function HomePage() {
           <DanielReyes_MapSection />
         </main>
         <DanielReyes_Footer />
-        <DanielReyes_WhatsAppFloat />
         <DanielReyes_StickyMobileCTA />
       </div>
     </>

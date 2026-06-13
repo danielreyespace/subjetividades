@@ -60,10 +60,6 @@ export function trackCTAClick(ctaName: string, location: string) {
   });
 }
 
-export function trackWhatsAppClick(location: string) {
-  pushEvent('whatsapp_click', { click_location: location });
-}
-
 export function trackPhoneClick(location: string) {
   pushEvent('phone_click', { click_location: location });
 }

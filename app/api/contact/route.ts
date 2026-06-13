@@ -128,7 +128,7 @@ export async function POST(req: NextRequest) {
 
     if (!response.ok) {
       console.error('[contact] Fidelidapp error:', response.status, data);
-      // Don't block the user — WhatsApp redirect still happens client-side
+      // Don't block the user — the email notification still goes out
       return NextResponse.json({ ok: false, fidelidapp: data, notification: await notification }, { status: 200 });
     }
 
