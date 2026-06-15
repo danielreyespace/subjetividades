@@ -69,6 +69,9 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
             <div className="text-[13px] text-slate-400 mt-1">
               Ñuñoa, Santiago de Chile · Atención online para todo Chile
             </div>
+            <div className="text-[12px] text-slate-500 mt-2">
+              © 2026 SUBJETIVIDADES · Todos los derechos reservados.
+            </div>
           </div>
           <div className="flex gap-5">
             <a href="/" className="text-[13px] text-slate-400 no-underline hover:text-white transition-colors">
