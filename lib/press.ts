@@ -156,6 +156,15 @@ export const publications: PressItem[] = [
     action: 'Acceder en préstamo digital',
   },
   {
+    source: 'Municipalidad de Santiago',
+    date: '2016',
+    title: '100 Preguntas sobre Sexualidad Adolescente',
+    description:
+      'Integrante del comité de expertos de este material de educación sexual para adolescentes, publicado por la Municipalidad de Santiago. Disponible para descarga libre en la Biblioteca Pública Digital.',
+    href: 'https://www.bpdigital.cl/info/100-preguntas-sobre-sexualidad-adolescente-descarga-libre-00030310',
+    action: 'Descargar libro',
+  },
+  {
     source: 'Revista Docencia N°49',
     date: 'Mayo 2013',
     title: 'Educación sexual en Chile: Pluralismo y libertad de elección que esconde una propuesta gubernamental conservadora',
