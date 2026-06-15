@@ -129,7 +129,7 @@ const schemaData = {
       '@type': 'Physician',
       '@id': `${BASE_URL}/#dr-daniel-reyes`,
       name: 'Daniel Reyes Pace',
-      jobTitle: 'Director Clínico y Fundador',
+      jobTitle: 'Director Clínico',
       description:
         'Psicólogo clínico con doctorado de la Universidad de Chile y más de 20 años de experiencia. Consultor internacional especializado en psicoterapia basada en evidencia.',
       worksFor: { '@id': `${BASE_URL}/#clinic` },
