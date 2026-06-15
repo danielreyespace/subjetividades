@@ -34,6 +34,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'terapia-sexual',
+    title: 'Terapia sexual: medio siglo de una disciplina clínica',
+    excerpt: 'La terapia sexual suele cargar con una imagen difusa, entre el tabú y la curiosidad. Tiene, sin embargo, más de medio siglo de desarrollo científico, un cuerpo de técnicas propio y resultados bien documentados.',
+    date: '15 de junio, 2026',
+    readTime: '6 min',
+    category: 'Servicios',
+  },
+  {
     slug: 'cuando-ir-al-psicologo',
     title: '¿Cuándo ir al psicólogo? 7 señales de que necesitas apoyo profesional',
     excerpt: 'Muchas personas esperan llegar a un punto de crisis antes de buscar ayuda. Sin embargo, la terapia es más efectiva — y más rápida — cuando se empieza antes de ese punto.',
