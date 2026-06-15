@@ -57,10 +57,10 @@ export default function DanielReyes_CentroSection() {
               Un espacio pensado para tu bienestar
             </motion.h2>
             <motion.p variants={itemVariants} className="text-base text-slate-600 leading-relaxed mb-4">
-              En SUBJETIVIDADES creemos que el cuidado de la salud mental merece un entorno profesional, acogedor y basado en la mejor evidencia disponible.
+              El cuidado de la salud mental necesita un entorno profesional y reservado, y un trabajo guiado por la mejor evidencia disponible.
             </motion.p>
             <motion.p variants={itemVariants} className="text-base text-slate-600 leading-relaxed mb-4">
-              Nuestro centro nace de la convicción de que una psicoterapia efectiva requiere no solo experiencia clínica, sino también un compromiso genuino con cada persona.
+              En SUBJETIVIDADES reunimos experiencia clínica y una atención cercana a cada persona que consulta.
             </motion.p>
 
             <motion.div

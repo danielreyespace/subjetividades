@@ -54,7 +54,7 @@ export default function DanielReyes_EnfoqueSection() {
               Trabajamos con un enfoque integrativo que prioriza las intervenciones con mayor respaldo, adaptándolas a la realidad y necesidades de cada paciente.
             </motion.p>
             <motion.p variants={itemVariants} className="text-base text-slate-600 leading-relaxed mb-4">
-              Cada proceso es único, y se supervisa por todo el equipo. Con evaluación permanente y orientada a resultados.
+              Cada proceso es único y se supervisa en equipo, con evaluación permanente orientada a resultados.
             </motion.p>
 
             <motion.div variants={containerVariants} className="flex flex-col gap-4 mt-7">

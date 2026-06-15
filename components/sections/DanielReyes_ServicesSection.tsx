@@ -22,7 +22,7 @@ const services: ServiceData[] = [
   {
     icon: Users,
     title: 'Terapia de Pareja',
-    description: 'Un espacio de comunicación, observación y toma de conciencia conjunta que permite a las parejas establecer nuevas bases para una relación plena.',
+    description: 'Un proceso de comunicación, observación y toma de conciencia conjunta que permite a la pareja establecer nuevas bases para la relación.',
     topics: ['Conflictos de comunicación', 'Crisis de pareja', 'Infidelidad', 'Distancia emocional'],
     price: '$70.000 - $80.000 CLP / sesión',
   },
@@ -87,7 +87,7 @@ export default function DanielReyes_ServicesSection() {
             Atención clínica especializada
           </h2>
           <p className="text-base text-slate-500 mt-3.5 max-w-[580px] mx-auto leading-relaxed">
-            Tres áreas de especialización con un enfoque clínico riguroso y más de dos décadas de práctica profesional.
+            Tres áreas de especialización con un enfoque clínico riguroso.
           </p>
         </div>
 

@@ -138,13 +138,13 @@ export default function DanielReyes_TeamSection() {
       <div className="max-w-[1140px] mx-auto">
         <div className="text-center mb-14">
           <div className="text-[13px] font-semibold text-teal-600 tracking-widest uppercase mb-3.5">
-            Equipo Clínico
+            Equipo
           </div>
           <h2 className="text-[clamp(26px,3.5vw,38px)] font-bold text-slate-900 leading-tight tracking-tight">
-            Profesionales dedicados a tu bienestar
+            Psicólogos clínicos con experiencia y especialización
           </h2>
           <p className="text-base text-slate-500 mt-3.5 max-w-[580px] mx-auto leading-relaxed">
-            Nuestro equipo clínico combina experiencia, formación académica de excelencia y un compromiso genuino con cada paciente.
+            El equipo combina formación de excelencia, experiencia clínica y un trato dedicado con cada paciente.
           </p>
         </div>
 
