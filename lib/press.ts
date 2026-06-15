@@ -151,9 +151,9 @@ export const publications: PressItem[] = [
     date: '2022',
     title: 'Política y debates en educación sexual: Articulaciones, sujetos y objetos emergentes',
     description:
-      'Libro colectivo publicado por Ediciones Universidad Alberto Hurtado, del cual es editor junto a Pablo Astudillo y Nicola Ríos.',
-    href: 'https://ediciones.uahurtado.cl/producto/politica-y-debates-en-educacion-sexual/',
-    action: 'Ver publicación',
+      'Libro colectivo publicado por Ediciones Universidad Alberto Hurtado, del cual es editor junto a Pablo Astudillo y Nicola Ríos. Adquirido por el Estado de Chile y disponible gratuitamente en préstamo digital para todo el país.',
+    href: 'https://catalogoadquisiciondelibros.cultura.gob.cl/libro/politica-y-debates-en-educacion-sexual-articulaciones-sujetos-y-objetos-emergentes/',
+    action: 'Acceder en préstamo digital',
   },
   {
     source: 'Revista Docencia N°49',
