@@ -15,7 +15,7 @@ const services: ServiceData[] = [
   {
     icon: User,
     title: 'Terapia Individual',
-    description: 'Un espacio seguro para trabajar en lo que necesitas cambiar, con objetivos claros desde la primera sesión.',
+    description: 'Un espacio seguro para trabajar en lo que necesitas cambiar, con objetivos claros desde la primera sesión y evaluación constante del proceso.',
     topics: ['Ansiedad y estrés', 'Depresión y duelos', 'Autoestima', 'Desarrollo personal'],
     price: '$50.000 - $60.000 CLP / sesión',
   },
@@ -84,10 +84,10 @@ export default function DanielReyes_ServicesSection() {
             Servicios
           </div>
           <h2 className="text-[clamp(26px,3.5vw,38px)] font-bold text-slate-900 leading-tight tracking-tight">
-            Atención clínica especializada
+            Nuestros servicios clínicos
           </h2>
           <p className="text-base text-slate-500 mt-3.5 max-w-[580px] mx-auto leading-relaxed">
-            Tres áreas de especialización con un enfoque clínico riguroso.
+            Tres áreas de atención, con objetivos definidos desde la primera sesión.
           </p>
         </div>
 
