@@ -117,6 +117,22 @@ export const pressSections: PressSection[] = [
       },
     ],
   },
+  {
+    title: 'Política pública y participación gremial',
+    description:
+      'Liderazgo en el Colegio de Psicólogos de Chile y aportes técnicos al debate legislativo sobre derechos sexuales y reproductivos.',
+    items: [
+      {
+        source: 'Ministerio de la Mujer y la Equidad de Género',
+        date: 'Agosto 2017',
+        title: 'Aporte al Tribunal Constitucional por la Ley de Aborto en Tres Causales',
+        description:
+          'Como coordinador de la Comisión de Sexualidades y Género del Colegio de Psicólogos de Chile, presentó antecedentes ante el Tribunal Constitucional en el marco del proyecto de interrupción voluntaria del embarazo en tres causales. La Ministra Claudia Pascual agradeció formalmente este aporte mediante carta institucional.',
+        href: '/daniel-reyes/prensa/carta-ministra-claudia-pascual-2017.pdf',
+        action: 'Ver carta',
+      },
+    ],
+  },
 ];
 
 export const featuredPublication = {
