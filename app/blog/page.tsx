@@ -34,6 +34,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'reembolso-psicologo-isapre-fonasa',
+    title: 'Reembolso del psicólogo en Isapre: cómo funciona y qué dice la ley',
+    excerpt: 'Una parte del costo es recuperable mediante el reembolso del seguro de salud. Y desde la Ley 21.331 de Salud Mental, la cobertura de la psicología no puede ser menor que la de cualquier otra consulta de salud.',
+    date: '16 de junio, 2026',
+    readTime: '7 min',
+    category: 'Información práctica',
+  },
+  {
     slug: 'terapia-sexual',
     title: 'Terapia sexual: medio siglo de una disciplina clínica',
     excerpt: 'La terapia sexual suele cargar con una imagen difusa, entre el tabú y la curiosidad. Tiene, sin embargo, más de medio siglo de desarrollo científico, un cuerpo de técnicas propio y resultados bien documentados.',
