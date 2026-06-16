@@ -115,6 +115,24 @@ export const pressSections: PressSection[] = [
         href: 'https://www.camara.cl/legislacion/comisiones/citaciones_semana.aspx?prmSemana=2020-04',
         action: 'Ver citación',
       },
+      {
+        source: 'FLACSO',
+        date: '2019',
+        title: 'Conferencia "La Pedagogía de la Sexualidad"',
+        description:
+          'Conferencia dictada en la Comunidad de Prácticas en Educación Integral en Sexualidad (ESI) de FLACSO, sobre los resultados de su estudio para la UNESCO.',
+        href: 'https://www.youtube.com/watch?v=0zUqH6AYHbQ',
+        action: 'Ver conferencia',
+      },
+      {
+        source: 'FLACSO · IntercambiEIS',
+        date: 'Agosto 2019',
+        title: 'La Pedagogía de la Sexualidad: planificación e implementación didáctica en Chile',
+        description:
+          'Artículo de su autoría en el boletín IntercambiEIS de Educación Integral en Sexualidad para América Latina y el Caribe (FLACSO), con las conclusiones de su estudio publicado por la UNESCO.',
+        href: 'http://legacy.flacso.org.ar/newsletter/intercambieis/06/aportes-investigacion-pedagogia-de-la-sexualidad.html',
+        action: 'Leer artículo',
+      },
     ],
   },
   {
