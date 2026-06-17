@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Instagram } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: {
@@ -73,12 +74,21 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
               © 2026 SUBJETIVIDADES · Todos los derechos reservados.
             </div>
           </div>
-          <div className="flex gap-5">
+          <div className="flex items-center gap-5">
             <a href="/" className="text-[13px] text-slate-400 no-underline hover:text-white transition-colors">
               Volver al sitio
             </a>
             <a href="/blog" className="text-[13px] text-slate-400 no-underline hover:text-white transition-colors">
               Blog
+            </a>
+            <a
+              href="https://www.instagram.com/subjetividades.cl/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram de SUBJETIVIDADES"
+              className="text-slate-400 transition-colors hover:text-white"
+            >
+              <Instagram className="w-[18px] h-[18px]" />
             </a>
           </div>
         </div>

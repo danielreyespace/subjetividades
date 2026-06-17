@@ -1,3 +1,5 @@
+import { Instagram } from 'lucide-react';
+
 export default function DanielReyes_Footer() {
   return (
     <footer className="bg-slate-900 text-slate-400 py-12 px-6">
@@ -13,7 +15,7 @@ export default function DanielReyes_Footer() {
             Ñuñoa, Santiago de Chile | Atención online para todo Chile
           </div>
         </div>
-        <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center md:justify-end">
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 justify-center md:justify-end">
           <a href="/prensa" className="text-[13px] text-slate-400 no-underline transition-colors hover:text-white">
             Prensa
           </a>
@@ -26,8 +28,14 @@ export default function DanielReyes_Footer() {
           <a href="/blog/terapia-de-pareja-como-funciona" className="text-[13px] text-slate-400 no-underline transition-colors hover:text-white">
             Terapia de pareja
           </a>
-          <a href="#" className="text-[13px] text-slate-400 no-underline transition-colors hover:text-white">
-            Privacidad
+          <a
+            href="https://www.instagram.com/subjetividades.cl/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram de SUBJETIVIDADES"
+            className="text-slate-400 transition-colors hover:text-white"
+          >
+            <Instagram className="w-[18px] h-[18px]" />
           </a>
         </div>
       </div>
