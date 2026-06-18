@@ -9,6 +9,7 @@ interface ServiceData {
   description: string;
   topics: string[];
   price: string;
+  href?: string;
 }
 
 const services: ServiceData[] = [
@@ -24,7 +25,8 @@ const services: ServiceData[] = [
     title: 'Terapia de Pareja',
     description: 'Un proceso de comunicación, observación y toma de conciencia conjunta que permite a la pareja establecer nuevas bases para la relación.',
     topics: ['Conflictos de comunicación', 'Crisis de pareja', 'Infidelidad', 'Distancia emocional'],
-    price: '$70.000 - $80.000 CLP / sesión',
+    price: '$60.000 - $70.000 CLP / sesión',
+    href: '/terapia-de-pareja',
   },
   {
     icon: Heart,
@@ -71,6 +73,15 @@ function ServiceCard({ service }: { service: ServiceData }) {
       <div className="inline-block text-sm font-semibold text-teal-700 bg-teal-50 px-3.5 py-[7px] rounded-lg">
         {service.price}
       </div>
+      {service.href && (
+        <a
+          href={service.href}
+          className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-teal-600 no-underline transition-colors hover:text-teal-700"
+        >
+          Conocer más
+          <span aria-hidden>→</span>
+        </a>
+      )}
     </motion.div>
   );
 }
