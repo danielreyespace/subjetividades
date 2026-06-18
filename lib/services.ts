@@ -10,5 +10,7 @@ export interface ServicePage {
 }
 
 export const servicePages: ServicePage[] = [
+  { slug: 'terapia-individual', name: 'Terapia individual', lastModified: '2026-06-18' },
   { slug: 'terapia-de-pareja', name: 'Terapia de pareja', lastModified: '2026-06-18' },
+  { slug: 'terapia-sexual', name: 'Terapia sexual', lastModified: '2026-06-18' },
 ];

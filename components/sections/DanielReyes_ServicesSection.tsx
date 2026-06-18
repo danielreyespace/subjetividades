@@ -19,6 +19,7 @@ const services: ServiceData[] = [
     description: 'Un espacio seguro para trabajar en lo que necesitas cambiar, con objetivos claros desde la primera sesión y evaluación constante del proceso.',
     topics: ['Ansiedad y estrés', 'Depresión y duelos', 'Autoestima', 'Desarrollo personal'],
     price: '$50.000 - $60.000 CLP / sesión',
+    href: '/terapia-individual',
   },
   {
     icon: Users,
@@ -34,6 +35,7 @@ const services: ServiceData[] = [
     description: 'Un área que afecta a muchas personas, pero que tiene soluciones concretas y basadas en evidencia. Atención profesional y sin prejuicios.',
     topics: ['Disfunciones sexuales', 'Deseo e intimidad', 'Identidad sexual', 'Salud sexual integral'],
     price: '$50.000 - $60.000 CLP / sesión',
+    href: '/terapia-sexual',
   },
 ];
 
