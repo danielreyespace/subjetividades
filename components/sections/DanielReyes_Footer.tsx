@@ -12,7 +12,7 @@ export default function DanielReyes_Footer() {
             Psicología Clínica
           </div>
           <div className="text-[13px] text-slate-400 mt-1">
-            Ñuñoa, Santiago de Chile | Atención online para todo Chile
+            Alonso de Ercilla 2959, Ñuñoa, Región Metropolitana, Chile · Atención online para todo Chile
           </div>
         </div>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 justify-center md:justify-end">

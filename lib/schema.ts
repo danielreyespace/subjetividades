@@ -10,7 +10,6 @@ export interface LocalBusinessSchema {
   name: string;
   description: string;
   url: string;
-  telephone?: string;
   email?: string;
   address: {
     streetAddress?: string;
@@ -52,7 +51,6 @@ export function generateLocalBusinessJsonLd(
     },
   };
 
-  if (business.telephone) schema.telephone = business.telephone;
   if (business.email) schema.email = business.email;
   if (business.image) schema.image = business.image;
   if (business.priceRange) schema.priceRange = business.priceRange;

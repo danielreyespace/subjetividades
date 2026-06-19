@@ -56,7 +56,7 @@ const schemaData = {
   jobTitle: 'Director Clínico',
   worksFor: {
     '@type': 'MedicalBusiness',
-    name: 'SUBJETIVIDADES Centro de Psicología Clínica',
+    name: 'Subjetividades · Psicología Clínica',
     url: BASE_URL,
   },
   alumniOf: {

@@ -79,16 +79,19 @@ const schemaData = {
     {
       '@type': ['MedicalBusiness', 'LocalBusiness'],
       '@id': `${BASE_URL}/#clinic`,
-      name: 'SUBJETIVIDADES — Centro de Psicología Clínica',
+      name: 'Subjetividades · Psicología Clínica',
       description:
         'Centro de psicología clínica en Ñuñoa, Santiago. Psicoterapia individual, de pareja y sexual con enfoque basado en evidencia. Más de 20 años de experiencia.',
       url: BASE_URL,
-      telephone: '+56937389719',
+      sameAs: [
+        'https://www.instagram.com/subjetividades.cl/',
+        'https://maps.google.com/?cid=12037037789320556678',
+      ],
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Alonso de Ercilla 2959',
         addressLocality: 'Ñuñoa',
-        addressRegion: 'Santiago',
+        addressRegion: 'Región Metropolitana',
         addressCountry: 'CL',
       },
       geo: {
@@ -123,7 +126,7 @@ const schemaData = {
         '@type': 'AdministrativeArea',
         name: 'Santiago, Chile',
       },
-      hasMap: 'https://maps.google.com/?q=Alonso+de+Ercilla+2959+Ñuñoa+Santiago+Chile',
+      hasMap: 'https://maps.google.com/?cid=12037037789320556678',
     },
     {
       '@type': 'Physician',

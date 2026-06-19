@@ -68,7 +68,7 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
               Psicología Clínica
             </div>
             <div className="text-[13px] text-slate-400 mt-1">
-              Ñuñoa, Santiago de Chile · Atención online para todo Chile
+              Alonso de Ercilla 2959, Ñuñoa, Región Metropolitana, Chile · Atención online para todo Chile
             </div>
             <div className="text-[12px] text-slate-500 mt-2">
               © 2026 SUBJETIVIDADES · Todos los derechos reservados.
