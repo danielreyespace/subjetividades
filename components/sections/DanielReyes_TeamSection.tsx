@@ -17,7 +17,7 @@ const team: TeamMember[] = [
   {
     name: 'Daniel Reyes Pace',
     role: 'Director Clínico',
-    photo: '/daniel-reyes/photos/team-daniel-reyes.jpg',
+    photo: '/daniel-reyes/photos/team-daniel-reyes.webp',
     specialties: ['Terapeuta para adultos', 'Terapia de pareja', 'Sexualidad y deseo'],
     bio: 'Psicólogo y Doctor en Psicología de la Universidad de Chile, con más de 20 años de experiencia como terapeuta, docente universitario y consultor internacional.',
     calendarUrl:
@@ -26,7 +26,7 @@ const team: TeamMember[] = [
   {
     name: 'Fernando Bravo Matheu',
     role: 'Psicólogo Clínico',
-    photo: '/daniel-reyes/photos/team-fernando-bravo.jpg',
+    photo: '/daniel-reyes/photos/team-fernando-bravo.webp',
     specialties: ['Adolescentes y adultos', 'Vínculos y emociones', 'Terapia de pareja'],
     bio: 'Psicólogo clínico de la Universidad Diego Portales, con formación en clínica psicoanalítica de Winnicott. Con experiencia en la atención de adolescentes, adultos y parejas, en contextos comunitarios y en centros de salud mental.',
     calendarUrl:
@@ -35,7 +35,7 @@ const team: TeamMember[] = [
   {
     name: 'Allison Rowe Carrasco',
     role: 'Psicóloga Clínica',
-    photo: '/daniel-reyes/photos/team-allison-rowe.jpg',
+    photo: '/daniel-reyes/photos/team-allison-rowe.webp',
     specialties: ['Adultos y adolescentes', 'Terapia de pareja', 'Enfoque sistémico'],
     bio: 'Psicóloga de la Universidad de Chile, con diplomado en Terapia Sistémica y Familiar. Trabaja con población adulta y adolescente. Posee formación y experiencia en atención clínica, tanto en modalidad individual como en terapia de parejas.',
     calendarUrl:
