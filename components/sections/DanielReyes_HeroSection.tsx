@@ -10,7 +10,7 @@ export default function DanielReyes_HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/daniel-reyes/photos/waiting-room.png"
+          src="/daniel-reyes/photos/waiting-room.webp"
           alt="Sala de espera del centro de psicología clínica"
           fill
           className="object-cover"
