@@ -25,6 +25,14 @@ export const pressSections: PressSection[] = [
       'Publicaciones en medios de referencia nacional sobre políticas de educación sexual, salud pública y derechos de los estudiantes.',
     items: [
       {
+        source: 'El Mercurio de Valparaíso',
+        title: 'Educación sexual y el rol del Estado',
+        description:
+          'Carta al director escrita junto a la entonces diputada Camila Rojas Valderrama, sobre el debate de la educación sexual en Chile y la tensión entre las atribuciones del Estado y de la familia.',
+        href: '/daniel-reyes/prensa/carta-el-mercurio-educacion-sexual.webp',
+        action: 'Ver carta',
+      },
+      {
         source: 'El Mostrador',
         date: 'Septiembre 2018',
         title: 'Cinco razones para no reactivar la estrategia de los 7 programas de educación sexual',
