@@ -20,8 +20,7 @@ const team: TeamMember[] = [
     photo: '/daniel-reyes/photos/team-daniel-reyes.webp',
     specialties: ['Terapeuta para adultos', 'Terapia de pareja', 'Sexualidad y deseo'],
     bio: 'Psicólogo y Doctor en Psicología de la Universidad de Chile, con más de 20 años de experiencia como terapeuta, docente universitario y consultor internacional.',
-    calendarUrl:
-      'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2v0skIM06AfjXvgc6XLIl2dwRRR-ZM5Kza7z_6-0ojv1tRu7cfYG_U80NXtj54fOwxKGmxc5GB?gv=true',
+    calendarUrl: 'https://www.fidelidapp.cl/agendas/6a3c1f36400042462f435276',
   },
   {
     name: 'Fernando Bravo Matheu',
@@ -29,8 +28,7 @@ const team: TeamMember[] = [
     photo: '/daniel-reyes/photos/team-fernando-bravo.webp',
     specialties: ['Adolescentes y adultos', 'Vínculos y emociones', 'Terapia de pareja'],
     bio: 'Psicólogo clínico de la Universidad Diego Portales, con formación en clínica psicoanalítica de Winnicott. Con experiencia en la atención de adolescentes, adultos y parejas, en contextos comunitarios y en centros de salud mental.',
-    calendarUrl:
-      'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3qj1T7bbIEsun5MXkJ00SCkoilXMR8OFSfNMyYxmLZGE-NXz076BawJz_4EAcfa2-gUKCIScop?gv=true',
+    calendarUrl: 'https://www.fidelidapp.cl/agendas/6a3c1f36400042462f435276',
   },
   {
     name: 'Allison Rowe Carrasco',
@@ -38,8 +36,7 @@ const team: TeamMember[] = [
     photo: '/daniel-reyes/photos/team-allison-rowe.webp',
     specialties: ['Adultos y adolescentes', 'Terapia de pareja', 'Enfoque sistémico'],
     bio: 'Psicóloga de la Universidad de Chile, con diplomado en Terapia Sistémica y Familiar. Trabaja con población adulta y adolescente. Posee formación y experiencia en atención clínica, tanto en modalidad individual como en terapia de parejas.',
-    calendarUrl:
-      'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cKfTR9fotDssOfS-8i_9P3JLkY4X5aVw_SWASs7HlWu90kcpx_R8liDq8rXmZM5UqF7J53k9B?gv=true',
+    calendarUrl: 'https://www.fidelidapp.cl/agendas/6a3c1f36400042462f435276',
   },
 ];
 
