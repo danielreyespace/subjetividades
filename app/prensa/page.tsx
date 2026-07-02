@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import SchedulingLink from '@/components/SchedulingLink';
 import { ArrowRight, Play } from 'lucide-react';
 import {
   featuredPublication,
@@ -91,12 +92,12 @@ function PageNav() {
           <a className="hidden text-sm font-medium text-slate-500 no-underline hover:text-slate-900 transition-colors sm:inline" href="/blog">
             Blog
           </a>
-          <a
+          <SchedulingLink
             className="text-sm font-semibold text-white bg-teal-600 px-4 py-2 rounded-lg no-underline hover:bg-teal-700 transition-colors"
-            href="/#contacto"
+            location="prensa_nav"
           >
             Agendar consulta
-          </a>
+          </SchedulingLink>
         </div>
       </div>
     </nav>

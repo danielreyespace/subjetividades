@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { CalendarDays, GraduationCap, Heart, Users, Brain } from 'lucide-react';
+import { GraduationCap, Heart, Users, Brain } from 'lucide-react';
 
 interface TeamMember {
   name: string;
@@ -10,7 +10,6 @@ interface TeamMember {
   photo: string | null;
   specialties: string[];
   bio: string;
-  calendarUrl: string;
 }
 
 const team: TeamMember[] = [
@@ -20,7 +19,6 @@ const team: TeamMember[] = [
     photo: '/daniel-reyes/photos/team-daniel-reyes.webp',
     specialties: ['Terapeuta para adultos', 'Terapia de pareja', 'Sexualidad y deseo'],
     bio: 'Psicólogo y Doctor en Psicología de la Universidad de Chile, con más de 20 años de experiencia como terapeuta, docente universitario y consultor internacional.',
-    calendarUrl: 'https://www.fidelidapp.cl/agendas/6a3c1f36400042462f435276',
   },
   {
     name: 'Fernando Bravo Matheu',
@@ -28,7 +26,6 @@ const team: TeamMember[] = [
     photo: '/daniel-reyes/photos/team-fernando-bravo.webp',
     specialties: ['Adolescentes y adultos', 'Vínculos y emociones', 'Terapia de pareja'],
     bio: 'Psicólogo clínico de la Universidad Diego Portales, con formación en clínica psicoanalítica de Winnicott. Con experiencia en la atención de adolescentes, adultos y parejas, en contextos comunitarios y en centros de salud mental.',
-    calendarUrl: 'https://www.fidelidapp.cl/agendas/6a3c1f36400042462f435276',
   },
   {
     name: 'Allison Rowe Carrasco',
@@ -36,7 +33,6 @@ const team: TeamMember[] = [
     photo: '/daniel-reyes/photos/team-allison-rowe.webp',
     specialties: ['Adultos y adolescentes', 'Terapia de pareja', 'Enfoque sistémico'],
     bio: 'Psicóloga de la Universidad de Chile, con diplomado en Terapia Sistémica y Familiar. Trabaja con población adulta y adolescente. Posee formación y experiencia en atención clínica, tanto en modalidad individual como en terapia de parejas.',
-    calendarUrl: 'https://www.fidelidapp.cl/agendas/6a3c1f36400042462f435276',
   },
 ];
 
@@ -53,7 +49,6 @@ const cardVariants = {
 };
 
 function TeamCard({ member }: { member: TeamMember }) {
-  const firstName = member.name.split(' ')[0];
   const iconMap: Record<string, typeof Heart> = {
     'Terapeuta para adultos': Brain,
     'Terapia de pareja': Heart,
@@ -102,18 +97,6 @@ function TeamCard({ member }: { member: TeamMember }) {
             );
           })}
         </div>
-
-        {/* Booking CTA */}
-        <a
-          href={member.calendarUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-5 w-full inline-flex items-center justify-center gap-2 bg-teal-600 text-white text-sm font-semibold px-5 py-2.5 rounded-[9px] hover:bg-teal-700 transition-colors"
-        >
-          <CalendarDays className="w-4 h-4" />
-          Agendar con {firstName}
-        </a>
-        <p className="mt-2 text-center text-xs text-slate-400">Confirmación inmediata por correo</p>
       </div>
     </motion.div>
   );

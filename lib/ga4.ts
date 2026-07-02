@@ -87,3 +87,14 @@ export function trackLeadGeneration(source: string, serviceType?: string) {
     service_type: serviceType,
   });
 }
+
+/**
+ * Track a click on any "Agendar" CTA that opens the Fidelidapp scheduling
+ * page. Configure this event as the Google Ads conversion trigger in GTM.
+ */
+export function trackSchedulingClick(location: string) {
+  pushEvent('schedule_click', {
+    event_category: 'conversion',
+    click_location: location,
+  });
+}

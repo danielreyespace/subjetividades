@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Calendar } from 'lucide-react';
 import Image from 'next/image';
+import SchedulingLink from '@/components/SchedulingLink';
 
 export default function DanielReyes_HeroSection() {
   return (
@@ -55,13 +56,13 @@ export default function DanielReyes_HeroSection() {
           transition={{ duration: 0.6, delay: 0.45, ease: 'easeOut' }}
           className="flex gap-3.5 justify-center flex-wrap"
         >
-          <a
-            href="#equipo"
+          <SchedulingLink
+            location="home_hero"
             className="inline-flex items-center gap-2 px-7 py-3.5 bg-teal-600 text-white rounded-[9px] text-[15px] font-semibold transition-all hover:bg-teal-700 hover:-translate-y-px hover:shadow-[0_4px_14px_rgba(13,148,136,0.3)]"
           >
             <Calendar className="w-[18px] h-[18px]" />
             Agendar primera consulta
-          </a>
+          </SchedulingLink>
         </motion.div>
       </div>
     </section>

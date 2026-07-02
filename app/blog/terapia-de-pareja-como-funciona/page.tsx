@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import SchedulingLink from '@/components/SchedulingLink';
 
 export const metadata: Metadata = {
   title: 'Terapia de pareja en Santiago: cómo funciona y qué esperar',
@@ -255,12 +256,9 @@ export default function TerapiaDeParejaPage() {
           <p className="text-slate-400 text-sm mb-5">
             Primera consulta presencial en Ñuñoa, Santiago u online para todo Chile. Sin compromiso.
           </p>
-          <a
-            href="/#contacto"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold text-sm no-underline hover:bg-teal-700 transition-colors"
-          >
+          <SchedulingLink location="blog_terapia_de_pareja_como_funciona_cta" className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold text-sm no-underline hover:bg-teal-700 transition-colors">
             Agendar consulta de pareja
-          </a>
+          </SchedulingLink>
         </div>
       </main>
     </>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import SchedulingLink from '@/components/SchedulingLink';
 
 export const metadata: Metadata = {
   title: 'Terapia sexual: qué es, su origen y cómo se trabaja hoy',
@@ -248,12 +249,9 @@ export default function TerapiaSexualPage() {
           <p className="text-slate-400 text-sm mb-5">
             Primera consulta presencial en Ñuñoa, Santiago u online para todo Chile.
           </p>
-          <a
-            href="/#contacto"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold text-sm no-underline hover:bg-teal-700 transition-colors"
-          >
+          <SchedulingLink location="blog_terapia_sexual_cta" className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold text-sm no-underline hover:bg-teal-700 transition-colors">
             Agendar primera consulta
-          </a>
+          </SchedulingLink>
         </div>
       </main>
     </>

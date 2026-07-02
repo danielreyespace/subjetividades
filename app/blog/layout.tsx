@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import SchedulingLink from '@/components/SchedulingLink';
 import { Instagram } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -40,12 +41,12 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
             >
               Blog
             </a>
-            <a
-              href="/#contacto"
+            <SchedulingLink
+              location="blog_nav"
               className="text-sm font-semibold text-white bg-teal-600 px-4 py-2 rounded-lg no-underline hover:bg-teal-700 transition-colors"
             >
               Agendar consulta
-            </a>
+            </SchedulingLink>
           </div>
         </div>
       </nav>

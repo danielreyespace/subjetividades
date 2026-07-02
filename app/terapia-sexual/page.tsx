@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { ArrowRight, Calendar, MapPin, Monitor } from 'lucide-react';
 import { DanielReyes_Footer, DanielReyes_WhatsAppFloat } from '@/components/sections';
+import SchedulingLink from '@/components/SchedulingLink';
 
 const BASE_URL = 'https://subjetividades.cl';
 
@@ -110,9 +111,9 @@ function PageNav() {
           <a className="hidden text-sm font-medium text-slate-500 no-underline hover:text-slate-900 transition-colors sm:inline" href="/blog">
             Blog
           </a>
-          <a className="text-sm font-semibold text-white bg-teal-600 px-4 py-2 rounded-lg no-underline hover:bg-teal-700 transition-colors" href="/#equipo">
+          <SchedulingLink className="text-sm font-semibold text-white bg-teal-600 px-4 py-2 rounded-lg no-underline hover:bg-teal-700 transition-colors" location="terapia_sexual_nav">
             Agendar
-          </a>
+          </SchedulingLink>
         </div>
       </div>
     </nav>
@@ -150,10 +151,10 @@ export default function TerapiaSexualPage() {
                 Psicoterapia especializada en las dificultades sexuales y consejería sexual, con atención profesional, confidencial y sin prejuicios. Presencial en Ñuñoa y por videollamada en todo Chile.
               </p>
               <div className="mt-7 flex flex-wrap items-center gap-4">
-                <a href="/#equipo" className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
+                <SchedulingLink location="terapia_sexual_hero" className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
                   <Calendar className="h-[18px] w-[18px]" />
                   Agendar primera consulta
-                </a>
+                </SchedulingLink>
                 <div className="flex items-center gap-4 text-[13px] text-slate-400">
                   <span className="inline-flex items-center gap-1.5"><MapPin className="h-4 w-4 text-teal-400" /> Presencial en Ñuñoa</span>
                   <span className="inline-flex items-center gap-1.5"><Monitor className="h-4 w-4 text-teal-400" /> Online en todo Chile</span>
@@ -215,10 +216,10 @@ export default function TerapiaSexualPage() {
               <p className="text-[16px] leading-relaxed text-slate-600 mb-6">
                 La terapia sexual en SUBJETIVIDADES la atiende Daniel Reyes Pace, psicólogo clínico especialista en terapia de pareja y sexual.
               </p>
-              <a href="/#equipo" className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
+              <SchedulingLink location="terapia_sexual_quien_atiende" className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
                 Agendar primera consulta
                 <ArrowRight className="h-4 w-4" />
-              </a>
+              </SchedulingLink>
             </div>
           </section>
 
@@ -241,10 +242,10 @@ export default function TerapiaSexualPage() {
               <div className="rounded-[14px] bg-slate-900 p-8 text-center">
                 <h2 className="text-xl font-bold text-white mb-2">Atención profesional, confidencial y sin prejuicios</h2>
                 <p className="text-slate-400 text-sm mb-5">Primera consulta presencial en Ñuñoa, Santiago, u online para todo Chile.</p>
-                <a href="/#equipo" className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
+                <SchedulingLink location="terapia_sexual_cta_final" className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
                   <Calendar className="h-[18px] w-[18px]" />
                   Agendar primera consulta
-                </a>
+                </SchedulingLink>
               </div>
             </div>
           </section>

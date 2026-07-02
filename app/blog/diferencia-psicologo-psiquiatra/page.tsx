@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import SchedulingLink from '@/components/SchedulingLink';
 
 export const metadata: Metadata = {
   title: '¿Psicólogo o psiquiatra? Guía para saber cuál necesitas',
@@ -259,9 +260,9 @@ export default function DiferenciaPsicologoPsiquiatraPage() {
         <div className="mt-12 bg-slate-900 rounded-[14px] p-8 text-center">
           <h2 className="text-xl font-bold text-white mb-2">¿Listo para comenzar?</h2>
           <p className="text-slate-400 text-sm mb-5">En SUBJETIVIDADES puedes agendar una primera consulta presencial en Ñuñoa o en modalidad online para todo Chile.</p>
-          <a href="/#contacto" className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold text-sm no-underline hover:bg-teal-700 transition-colors">
+          <SchedulingLink location="blog_diferencia_psicologo_psiquiatra_cta" className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold text-sm no-underline hover:bg-teal-700 transition-colors">
             Agendar primera consulta
-          </a>
+          </SchedulingLink>
         </div>
       </main>
     </>
