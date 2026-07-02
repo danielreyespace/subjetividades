@@ -94,7 +94,7 @@ function PageNav() {
           </a>
           <SchedulingLink
             className="text-sm font-semibold text-white bg-teal-600 px-4 py-2 rounded-lg no-underline hover:bg-teal-700 transition-colors"
-            location="prensa_nav"
+           
           >
             Agendar consulta
           </SchedulingLink>

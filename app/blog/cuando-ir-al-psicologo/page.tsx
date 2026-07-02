@@ -278,7 +278,7 @@ export default function CuandoIrAlPsicologoPage() {
           <p className="text-slate-400 text-sm mb-5">
             El primer paso es el más difícil. Agenda una primera consulta — sin compromiso, presencial en Ñuñoa u online.
           </p>
-          <SchedulingLink location="blog_cuando_ir_al_psicologo_cta" className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold text-sm no-underline hover:bg-teal-700 transition-colors">
+          <SchedulingLink className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold text-sm no-underline hover:bg-teal-700 transition-colors">
             Agendar primera consulta
           </SchedulingLink>
         </div>

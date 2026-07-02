@@ -111,7 +111,7 @@ function PageNav() {
           <a className="hidden text-sm font-medium text-slate-500 no-underline hover:text-slate-900 transition-colors sm:inline" href="/blog">
             Blog
           </a>
-          <SchedulingLink className="text-sm font-semibold text-white bg-teal-600 px-4 py-2 rounded-lg no-underline hover:bg-teal-700 transition-colors" location="terapia_individual_nav">
+          <SchedulingLink className="text-sm font-semibold text-white bg-teal-600 px-4 py-2 rounded-lg no-underline hover:bg-teal-700 transition-colors">
             Agendar
           </SchedulingLink>
         </div>
@@ -151,7 +151,7 @@ export default function TerapiaIndividualPage() {
                 Psicoterapia para adultos orientada a comprender y abordar el malestar, desarrollar herramientas y proyectar la vida con mayor bienestar. Presencial en Ñuñoa y por videollamada en todo Chile.
               </p>
               <div className="mt-7 flex flex-wrap items-center gap-4">
-                <SchedulingLink location="terapia_individual_hero" className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
+                <SchedulingLink className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
                   <Calendar className="h-[18px] w-[18px]" />
                   Agendar primera consulta
                 </SchedulingLink>
@@ -216,7 +216,7 @@ export default function TerapiaIndividualPage() {
               <p className="text-[16px] leading-relaxed text-slate-600 mb-6">
                 El equipo clínico de SUBJETIVIDADES atiende terapia individual de adultos: Daniel Reyes Pace, Fernando Bravo Matheu y Allison Rowe Carrasco.
               </p>
-              <SchedulingLink location="terapia_individual_quien_atiende" className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
+              <SchedulingLink className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
                 Agendar con un profesional
                 <ArrowRight className="h-4 w-4" />
               </SchedulingLink>
@@ -242,7 +242,7 @@ export default function TerapiaIndividualPage() {
               <div className="rounded-[14px] bg-slate-900 p-8 text-center">
                 <h2 className="text-xl font-bold text-white mb-2">Da el primer paso</h2>
                 <p className="text-slate-400 text-sm mb-5">Primera consulta presencial en Ñuñoa, Santiago, u online para todo Chile.</p>
-                <SchedulingLink location="terapia_individual_cta_final" className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
+                <SchedulingLink className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
                   <Calendar className="h-[18px] w-[18px]" />
                   Agendar primera consulta
                 </SchedulingLink>
