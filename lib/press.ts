@@ -22,8 +22,17 @@ export const pressSections: PressSection[] = [
   {
     title: 'Columnas de opinión',
     description:
-      'Publicaciones en medios de referencia nacional sobre políticas de educación sexual, salud pública y derechos de los estudiantes.',
+      'Publicaciones en medios de referencia nacional sobre salud mental, sexualidad, educación sexual y políticas públicas.',
     items: [
+      {
+        source: 'El Mostrador',
+        date: 'Julio 2026',
+        title: 'Envejecer sin sindicato, sin partido y sin parroquia',
+        description:
+          'La soledad de los hombres adultos en Chile: el desmantelamiento de las instituciones que organizaban el encuentro —sindicato, partido, parroquia— y el desafío que eso plantea a la psicoterapia y a las políticas públicas.',
+        href: 'https://www.elmostrador.cl/noticias/opinion/columnas/2026/07/04/envejecer-sin-sindicato-sin-partido-y-sin-parroquia/',
+        action: 'Leer columna',
+      },
       {
         source: 'El Mercurio de Valparaíso',
         title: 'Educación sexual y el rol del Estado',
