@@ -15,6 +15,16 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'soledad-masculina-adulta',
+    title: 'Hombres sin amigos: la soledad masculina en la adultez',
+    excerpt:
+      'Muchos hombres llegan a los cuarenta, cincuenta o sesenta años sin amigos y con el trabajo como único contacto social. No es una falla personal: las instituciones que organizaban el encuentro adulto se desmantelaron sin reemplazo.',
+    date: '4 de julio, 2026',
+    readTime: '6 min',
+    category: 'Salud mental',
+    lastModified: '2026-07-04',
+  },
+  {
     slug: 'reembolso-psicologo-isapre-fonasa',
     title: 'Reembolso del psicólogo en Isapre: cómo funciona y qué dice la ley',
     excerpt:
