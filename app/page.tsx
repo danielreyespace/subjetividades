@@ -136,6 +136,11 @@ const schemaData = {
       description:
         'Psicólogo clínico con doctorado de la Universidad de Chile y más de 20 años de experiencia. Consultor internacional especializado en psicoterapia basada en evidencia.',
       worksFor: { '@id': `${BASE_URL}/#clinic` },
+      sameAs: [
+        'https://www.elmostrador.cl/autor/danielreyes/',
+        'https://www.instagram.com/subjetividades.cl/',
+        'https://psicologiaclinicachile.cl/',
+      ],
       hasCredential: {
         '@type': 'EducationalOccupationalCredential',
         credentialCategory: 'Doctorado en Psicología',
