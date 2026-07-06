@@ -34,6 +34,14 @@ export const pressSections: PressSection[] = [
         action: 'Leer columna',
       },
       {
+        source: 'La Tercera',
+        title: 'Aumento del VIH en jóvenes',
+        description:
+          'Carta al director sobre el aumento de casos de VIH en población joven en Chile y sus implicancias para la salud pública.',
+        href: 'https://www.latercera.com/diario-impreso/aumento-vih-en-jovenes/',
+        action: 'Leer carta',
+      },
+      {
         source: 'El Mercurio de Valparaíso',
         title: 'Educación sexual y el rol del Estado',
         description:
@@ -88,14 +96,6 @@ export const pressSections: PressSection[] = [
         description:
           'Entrevistado como psicólogo experto en educación sexual en el debate nacional sobre el acceso de los jóvenes a información de calidad sobre sexualidad.',
         href: 'https://www.cnnchile.com/pais/falta-educacion-sexual-en-chile/',
-        action: 'Ver cobertura',
-      },
-      {
-        source: 'La Tercera',
-        title: 'Aumento de VIH en jóvenes',
-        description:
-          'Citado como experto en el análisis del aumento de casos de VIH en población joven en Chile y sus implicancias para la salud pública.',
-        href: 'https://www.latercera.com/diario-impreso/aumento-vih-en-jovenes/',
         action: 'Ver cobertura',
       },
     ],
