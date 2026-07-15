@@ -15,6 +15,16 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'tratamiento-eyaculacion-precoz',
+    title: 'Tratamiento de la eyaculación precoz: qué funciona según la evidencia',
+    excerpt:
+      'La eyaculación precoz es la dificultad sexual masculina más frecuente y, al mismo tiempo, una de las que menos se consulta. Hoy existen tratamientos con respaldo científico —psicológicos, sexológicos y médicos— que funcionan, sobre todo cuando se combinan.',
+    date: '15 de julio, 2026',
+    readTime: '8 min',
+    category: 'Terapia sexual',
+    lastModified: '2026-07-15',
+  },
+  {
     slug: 'soledad-masculina-adulta',
     title: 'Hombres sin amigos: la soledad masculina en la adultez',
     excerpt:
