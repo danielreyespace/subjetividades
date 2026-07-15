@@ -148,7 +148,7 @@ export default function TratamientoEyaculacionPrecozPage() {
             Se habla de eyaculación precoz cuando la eyaculación ocurre antes de lo que la persona desea, de manera recurrente, con poca sensación de control sobre el momento, y esto genera malestar personal o dificultades en la relación de pareja.
           </p>
           <p className="text-[16px] text-slate-600 leading-relaxed mb-4">
-            Conviene subrayar dos cosas. La primera es que el criterio central no es un cronómetro, sino la falta de control y el malestar asociado. Muchos hombres se comparan con estándares poco realistas —a menudo tomados de la pornografía— y consultan por un funcionamiento que en realidad está dentro de lo esperable. La segunda es que en sexología distinguimos dos formas, porque orientan tratamientos distintos:
+            Conviene subrayar dos cosas. La primera es que el criterio central no es un cronómetro, sino la falta de control y el malestar asociado. Muchos hombres se comparan con estándares poco realistas y consultan por un funcionamiento que en realidad está dentro de lo esperable. La segunda es que en sexología distinguimos dos formas, porque orientan tratamientos distintos:
           </p>
           <ul className="list-disc pl-6 space-y-2 text-[16px] text-slate-600 mb-6">
             <li>
