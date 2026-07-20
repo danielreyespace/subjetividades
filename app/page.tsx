@@ -19,7 +19,7 @@ import {
 const BASE_URL = 'https://subjetividades.cl';
 
 export const metadata: Metadata = {
-  title: 'Psicólogo clínico en Ñuñoa, Santiago | SUBJETIVIDADES',
+  title: 'Psicólogo clínico en Ñuñoa, Santiago | Subjetividades. Psicología Clínica',
   description:
     'Centro de psicología clínica en Ñuñoa, Santiago. Terapia individual, de pareja y sexual con más de 20 años de experiencia. Atención presencial y online en todo Chile.',
   keywords: [
@@ -31,14 +31,14 @@ export const metadata: Metadata = {
     'psicoterapia online Chile',
     'psicólogo clínico',
     'salud mental Santiago',
-    'SUBJETIVIDADES',
+    'Subjetividades. Psicología Clínica',
   ],
   openGraph: {
-    title: 'Psicólogo clínico en Ñuñoa, Santiago | SUBJETIVIDADES',
+    title: 'Psicólogo clínico en Ñuñoa, Santiago | Subjetividades. Psicología Clínica',
     description:
       'Terapia individual, de pareja y sexual con más de 20 años de experiencia. Atención presencial y online en todo Chile.',
     url: BASE_URL,
-    siteName: 'SUBJETIVIDADES',
+    siteName: 'Subjetividades. Psicología Clínica',
     locale: 'es_CL',
     type: 'website',
     images: [
@@ -46,13 +46,13 @@ export const metadata: Metadata = {
         url: `${BASE_URL}/daniel-reyes/photos/waiting-room.png`,
         width: 1200,
         height: 630,
-        alt: 'Sala de espera SUBJETIVIDADES — Centro de Psicología Clínica en Ñuñoa, Santiago',
+        alt: 'Sala de espera de Subjetividades. Psicología Clínica en Ñuñoa, Santiago',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Psicólogo clínico en Ñuñoa, Santiago | SUBJETIVIDADES',
+    title: 'Psicólogo clínico en Ñuñoa, Santiago | Subjetividades. Psicología Clínica',
     description:
       'Terapia individual, de pareja y sexual. Atención presencial en Ñuñoa y online en todo Chile.',
     images: [`${BASE_URL}/daniel-reyes/photos/waiting-room.png`],
@@ -79,7 +79,8 @@ const schemaData = {
     {
       '@type': ['MedicalBusiness', 'LocalBusiness'],
       '@id': `${BASE_URL}/#clinic`,
-      name: 'Subjetividades · Psicología Clínica',
+      name: 'Subjetividades. Psicología Clínica',
+      alternateName: ['Subjetividades', 'Centro Subjetividades', 'Subjetividades Ñuñoa'],
       description:
         'Centro de psicología clínica en Ñuñoa, Santiago. Psicoterapia individual, de pareja y sexual con enfoque basado en evidencia. Más de 20 años de experiencia.',
       url: BASE_URL,
@@ -234,7 +235,8 @@ const schemaData = {
       '@type': 'WebSite',
       '@id': `${BASE_URL}/#website`,
       url: BASE_URL,
-      name: 'SUBJETIVIDADES',
+      name: 'Subjetividades. Psicología Clínica',
+      alternateName: 'Subjetividades',
       inLanguage: 'es-CL',
       publisher: { '@id': `${BASE_URL}/#clinic` },
     },

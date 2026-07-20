@@ -53,7 +53,7 @@ const schemaData = {
       },
       publisher: {
         '@type': 'MedicalBusiness',
-        name: 'Subjetividades · Psicología Clínica',
+        name: 'Subjetividades. Psicología Clínica',
         url: 'https://subjetividades.cl',
       },
     },

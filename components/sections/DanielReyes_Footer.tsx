@@ -32,7 +32,7 @@ export default function DanielReyes_Footer() {
             href="https://www.instagram.com/subjetividades.cl/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Instagram de SUBJETIVIDADES"
+            aria-label="Instagram de Subjetividades. Psicología Clínica"
             className="text-slate-400 transition-colors hover:text-white"
           >
             <Instagram className="w-[18px] h-[18px]" />

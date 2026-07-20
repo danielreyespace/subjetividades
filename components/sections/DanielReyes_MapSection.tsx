@@ -42,7 +42,7 @@ export default function DanielReyes_MapSection() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Subjetividades · Psicología Clínica — Alonso de Ercilla 2959, Ñuñoa"
+            title="Subjetividades. Psicología Clínica — Alonso de Ercilla 2959, Ñuñoa"
           />
         </motion.div>
       </div>

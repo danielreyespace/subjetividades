@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     description:
       'Columnas de opinión, apariciones en prensa, participación institucional y publicaciones académicas sobre psicología, sexualidad y salud mental.',
     url: `${BASE_URL}/prensa`,
-    siteName: 'SUBJETIVIDADES',
+    siteName: 'Subjetividades. PsicologÃ­a ClÃ­nica',
     locale: 'es_CL',
     type: 'profile',
     images: [
@@ -57,7 +57,7 @@ const schemaData = {
   jobTitle: 'Director Clínico',
   worksFor: {
     '@type': 'MedicalBusiness',
-    name: 'Subjetividades · Psicología Clínica',
+    name: 'Subjetividades. Psicología Clínica',
     url: BASE_URL,
   },
   alumniOf: {

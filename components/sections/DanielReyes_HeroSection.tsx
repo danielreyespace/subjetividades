@@ -36,9 +36,14 @@ export default function DanielReyes_HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15, ease: 'easeOut' }}
-          className="text-[clamp(34px,5.5vw,54px)] font-bold text-white leading-[1.15] mb-5 tracking-tight"
+          className="mb-5"
         >
-          SUBJETIVIDADES
+          <span className="block text-[clamp(34px,5.5vw,54px)] font-bold text-white leading-[1.15] tracking-tight">
+            SUBJETIVIDADES
+          </span>
+          <span className="block mt-2.5 text-[clamp(12px,1.5vw,15px)] font-semibold uppercase tracking-[0.18em] text-teal-300/90">
+            Psicología clínica · Ñuñoa, Santiago
+          </span>
         </motion.h1>
 
         <motion.h2
@@ -47,7 +52,7 @@ export default function DanielReyes_HeroSection() {
           transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
           className="text-[clamp(16px,2vw,19px)] text-white/75 max-w-[600px] mx-auto mb-9 leading-relaxed font-normal"
         >
-          Centro de psicología clínica en Ñuñoa. Terapia individual, de pareja y sexual con enfoque basado en la evidencia. Más de 20 años de experiencia en salud mental.
+          Terapia individual, de pareja y sexual con enfoque basado en la evidencia. Más de 20 años de experiencia en salud mental.
         </motion.h2>
 
         <motion.div

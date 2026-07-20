@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description:
       'Terapia psicológica individual para adultos en Ñuñoa, Santiago, y online para todo Chile.',
     url: `${BASE_URL}/terapia-individual`,
-    siteName: 'SUBJETIVIDADES',
+    siteName: 'Subjetividades. PsicologÃ­a ClÃ­nica',
     locale: 'es_CL',
     type: 'website',
     images: [
@@ -75,7 +75,7 @@ const schemaData = {
       ],
       provider: {
         '@type': 'MedicalBusiness',
-        name: 'Subjetividades · Psicología Clínica',
+        name: 'Subjetividades. Psicología Clínica',
         url: BASE_URL,
         address: {
           '@type': 'PostalAddress',
