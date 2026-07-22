@@ -1,7 +1,14 @@
 import type { Metadata } from 'next';
-import { ArrowRight, Calendar, MapPin, Monitor } from 'lucide-react';
-import { DanielReyes_Footer, DanielReyes_WhatsAppFloat } from '@/components/sections';
+import Image from 'next/image';
+import { ArrowRight, Calendar, MapPin, Monitor, Award, ShieldCheck, HeartHandshake } from 'lucide-react';
+import {
+  DanielReyes_Footer,
+  DanielReyes_WhatsAppFloat,
+  DanielReyes_SubpageNav,
+  DanielReyes_ServiceTeam,
+} from '@/components/sections';
 import SchedulingLink from '@/components/SchedulingLink';
+import { teamByIds } from '@/lib/team';
 
 const BASE_URL = 'https://subjetividades.cl';
 
@@ -97,29 +104,6 @@ const schemaData = {
   ],
 };
 
-function PageNav() {
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-[100] bg-white/95 backdrop-blur-2xl border-b border-slate-100 shadow-sm">
-      <div className="max-w-[1140px] mx-auto flex items-center justify-between h-[72px] px-6">
-        <a href="/" className="flex flex-col leading-tight no-underline">
-          <span className="text-[15px] font-bold text-slate-900 tracking-tight" style={{ fontFamily: "'Courier Prime', Courier, monospace" }}>
-            SUBJETIVIDADES
-          </span>
-          <span className="text-[10px] font-medium text-teal-600 tracking-wider uppercase">Psicología Clínica</span>
-        </a>
-        <div className="flex items-center gap-5">
-          <a className="hidden text-sm font-medium text-slate-500 no-underline hover:text-slate-900 transition-colors sm:inline" href="/blog">
-            Blog
-          </a>
-          <SchedulingLink className="text-sm font-semibold text-white bg-teal-600 px-4 py-2 rounded-lg no-underline hover:bg-teal-700 transition-colors">
-            Agendar
-          </SchedulingLink>
-        </div>
-      </div>
-    </nav>
-  );
-}
-
 const motivos = [
   'Conflictos de comunicación que se repiten sin encontrar resolución.',
   'Crisis, distanciamiento afectivo o pérdida de intimidad.',
@@ -128,40 +112,78 @@ const motivos = [
   'La decisión, consciente y respetuosa, de continuar o no en la relación.',
 ];
 
+const trustItems = [
+  { icon: Award, title: '+20 años', text: 'de experiencia clínica' },
+  { icon: ShieldCheck, title: 'Psicólogos colegiados', text: 'con especialización' },
+  { icon: HeartHandshake, title: 'Reembolso Isapre', text: 'boleta de honorarios' },
+  { icon: Monitor, title: 'Presencial y online', text: 'Ñuñoa y todo Chile' },
+];
+
+const equipo = teamByIds(['daniel-reyes', 'fernando-bravo', 'allison-rowe']);
+
 export default function TerapiaDeParejaPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       <div className="min-h-screen bg-white text-slate-700" style={{ fontFamily: "'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}>
-        <PageNav />
+        <DanielReyes_SubpageNav />
         <main className="pt-[72px]">
           {/* Hero */}
-          <header className="bg-slate-900 px-6 py-20 text-white">
-            <div className="mx-auto max-w-[820px]">
-              <nav className="mb-5 text-[13px] text-slate-400">
-                <a href="/" className="no-underline text-slate-400 hover:text-teal-400 transition-colors">Inicio</a>
-                {' / '}
-                <span className="text-slate-300">Terapia de pareja</span>
-              </nav>
-              <div className="mb-4 text-[13px] font-semibold uppercase tracking-widest text-teal-400">Servicio</div>
-              <h1 className="text-[clamp(30px,5vw,48px)] font-bold leading-tight tracking-tight">
-                Terapia de pareja en Santiago
-              </h1>
-              <p className="mt-5 max-w-[620px] text-base leading-relaxed text-slate-300">
-                Un proceso clínico orientado a comprender y modificar los patrones de interacción que sostienen el malestar en la relación. Presencial en Ñuñoa y por videollamada en todo Chile.
-              </p>
-              <div className="mt-7 flex flex-wrap items-center gap-4">
-                <SchedulingLink className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
-                  <Calendar className="h-[18px] w-[18px]" />
-                  Agendar primera consulta
-                </SchedulingLink>
-                <div className="flex items-center gap-4 text-[13px] text-slate-400">
-                  <span className="inline-flex items-center gap-1.5"><MapPin className="h-4 w-4 text-teal-400" /> Presencial en Ñuñoa</span>
-                  <span className="inline-flex items-center gap-1.5"><Monitor className="h-4 w-4 text-teal-400" /> Online en todo Chile</span>
+          <header className="bg-slate-900 px-6 py-16 text-white md:py-20">
+            <div className="mx-auto grid max-w-[1140px] items-center gap-10 md:grid-cols-[1fr_minmax(0,440px)] lg:gap-16">
+              <div>
+                <nav className="mb-5 text-[13px] text-slate-400">
+                  <a href="/" className="no-underline text-slate-400 hover:text-teal-400 transition-colors">Inicio</a>
+                  {' / '}
+                  <span className="text-slate-300">Terapia de pareja</span>
+                </nav>
+                <div className="mb-4 text-[13px] font-semibold uppercase tracking-widest text-teal-400">Servicio</div>
+                <h1 className="text-[clamp(30px,5vw,48px)] font-bold leading-tight tracking-tight">
+                  Terapia de pareja en Santiago
+                </h1>
+                <p className="mt-5 max-w-[560px] text-base leading-relaxed text-slate-300">
+                  Un proceso clínico orientado a comprender y modificar los patrones de interacción que sostienen el malestar en la relación. Presencial en Ñuñoa y por videollamada en todo Chile.
+                </p>
+                <div className="mt-7 flex flex-wrap items-center gap-4">
+                  <SchedulingLink className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
+                    <Calendar className="h-[18px] w-[18px]" />
+                    Agendar primera consulta
+                  </SchedulingLink>
+                  <div className="flex items-center gap-4 text-[13px] text-slate-400">
+                    <span className="inline-flex items-center gap-1.5"><MapPin className="h-4 w-4 text-teal-400" /> Presencial en Ñuñoa</span>
+                    <span className="inline-flex items-center gap-1.5"><Monitor className="h-4 w-4 text-teal-400" /> Online en todo Chile</span>
+                  </div>
                 </div>
+              </div>
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl ring-1 ring-white/10">
+                <Image
+                  src="/daniel-reyes/photos/daniel-reyes-consulta.jpg"
+                  alt="Sesión de terapia en SUBJETIVIDADES, Ñuñoa, Santiago"
+                  fill
+                  priority
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 440px"
+                />
               </div>
             </div>
           </header>
+
+          {/* Barra de confianza */}
+          <section className="border-b border-slate-100 bg-white px-6 py-6">
+            <div className="mx-auto grid max-w-[1140px] grid-cols-2 gap-x-6 gap-y-5 md:grid-cols-4">
+              {trustItems.map(({ icon: Icon, title, text }) => (
+                <div key={title} className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal-50 text-teal-600">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <div className="leading-tight">
+                    <div className="text-sm font-bold text-slate-900">{title}</div>
+                    <div className="text-[12px] text-slate-500">{text}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
 
           {/* Cuándo consultar */}
           <section className="px-6 py-16">
@@ -212,11 +234,11 @@ export default function TerapiaDeParejaPage() {
 
           {/* Quién atiende */}
           <section className="bg-[#f7f8fa] px-6 py-16">
-            <div className="mx-auto max-w-[820px]">
-              <h2 className="text-[clamp(24px,3vw,32px)] font-bold leading-tight text-slate-900 mb-4">Quién atiende</h2>
-              <p className="text-[16px] leading-relaxed text-slate-600 mb-6">
-                El equipo clínico de SUBJETIVIDADES atiende terapia de pareja: Daniel Reyes Pace, Fernando Bravo Matheu y Allison Rowe Carrasco.
-              </p>
+            <DanielReyes_ServiceTeam
+              members={equipo}
+              intro="El equipo clínico de SUBJETIVIDADES atiende terapia de pareja. Todos son psicólogos clínicos con formación de excelencia y experiencia."
+            />
+            <div className="mx-auto mt-8 max-w-[820px]">
               <SchedulingLink className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
                 Agendar con un profesional
                 <ArrowRight className="h-4 w-4" />
