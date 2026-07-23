@@ -1,6 +1,7 @@
 export { default as DanielReyes_Navigation } from './DanielReyes_Navigation';
 export { default as DanielReyes_SubpageNav } from './DanielReyes_SubpageNav';
 export { default as DanielReyes_ServiceTeam } from './DanielReyes_ServiceTeam';
+export { default as DanielReyes_GoogleReviews, GoogleRatingBadge, googleReviewSets } from './DanielReyes_GoogleReviews';
 export { default as DanielReyes_HeroSection } from './DanielReyes_HeroSection';
 export { default as DanielReyes_CentroSection } from './DanielReyes_CentroSection';
 export { default as DanielReyes_ServicesSection } from './DanielReyes_ServicesSection';

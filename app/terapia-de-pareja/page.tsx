@@ -7,6 +7,10 @@ import {
   DanielReyes_SubpageNav,
   DanielReyes_ServiceTeam,
 } from '@/components/sections';
+import DanielReyes_GoogleReviews, {
+  GoogleRatingBadge,
+  googleReviewSets,
+} from '@/components/sections/DanielReyes_GoogleReviews';
 import SchedulingLink from '@/components/SchedulingLink';
 import { teamByIds } from '@/lib/team';
 
@@ -154,6 +158,9 @@ export default function TerapiaDeParejaPage() {
                     <span className="inline-flex items-center gap-1.5"><Monitor className="h-4 w-4 text-teal-400" /> Online en todo Chile</span>
                   </div>
                 </div>
+                <div className="mt-5">
+                  <GoogleRatingBadge variant="dark" />
+                </div>
               </div>
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl ring-1 ring-white/10">
                 <Image
@@ -245,6 +252,8 @@ export default function TerapiaDeParejaPage() {
               </SchedulingLink>
             </div>
           </section>
+
+          <DanielReyes_GoogleReviews reviews={googleReviewSets.pareja} />
 
           {/* FAQ */}
           <section className="px-6 py-16">
