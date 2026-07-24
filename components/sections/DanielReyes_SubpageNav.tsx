@@ -9,7 +9,7 @@ const navLinks = [
   { href: '/#centro', label: 'El Centro' },
   { href: '/#servicios', label: 'Servicios' },
   { href: '/#equipo', label: 'Equipo' },
-  { href: '/#testimonios', label: 'Testimonios' },
+  { href: '/#resenas', label: 'Reseñas' },
   { href: '/prensa', label: 'Prensa' },
   { href: '/blog', label: 'Blog' },
 ];
