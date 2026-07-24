@@ -3,7 +3,7 @@ import { Star, ArrowUpRight } from 'lucide-react';
 // Ficha de Google Business (Google Maps) de SUBJETIVIDADES.
 export const GOOGLE_PROFILE_URL = 'https://maps.google.com/?cid=12037037789320556678';
 export const GOOGLE_RATING = '5,0';
-export const GOOGLE_REVIEW_COUNT = 27;
+export const GOOGLE_REVIEW_COUNT = 31;
 
 // Reseñas reales seleccionadas desde la ficha de Google (nombre abreviado por
 // discreción). Se curan por servicio para no repetir personas entre páginas ni
@@ -35,10 +35,14 @@ const R = {
     name: 'Thiare B.',
     text: 'Daniel nos ayudó muchísimo junto a mi pareja para resolver conflictos y situaciones que necesitaban ser escuchadas y comprendidas desde otra perspectiva. Aprendimos mucho de las comunicaciones efectivas y de que cada uno tiene una forma diferente de ver y sentir las cosas. Dejo 5 estrellitas porque estoy contenta con el resultado.',
   },
+  natalia: {
+    name: 'Natalia G.',
+    text: 'Iniciar terapia en este centro ha sido una de las mejores decisiones que he tomado. Durante todo el proceso he encontrado un espacio seguro, de confianza y libre de juicios, donde he podido conocerme mejor y comprender aspectos de mí que antes no lograba identificar. Lo recomiendo completamente a cualquier persona que busque un psicólogo comprometido, empático y con una mirada profundamente humana.',
+  },
 } satisfies Record<string, Review>;
 
 export const googleReviewSets = {
-  individual: [R.camila, R.romina, R.alvaro],
+  individual: [R.natalia, R.camila, R.romina],
   pareja: [R.thiare, R.camila, R.sebastian],
   sexual: [R.sebastian, R.yanet, R.alvaro],
 } satisfies Record<string, Review[]>;
