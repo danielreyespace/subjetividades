@@ -7,6 +7,8 @@ import {
   DanielReyes_TeamSection,
   DanielReyes_EnfoqueSection,
   DanielReyes_TestimonialsSection,
+  DanielReyes_GoogleReviews,
+  googleReviewSets,
   DanielReyes_IsapreGallery,
   DanielReyes_FAQSection,
   DanielReyes_ContactSection,
@@ -267,6 +269,11 @@ export default function HomePage() {
           <DanielReyes_EnfoqueSection />
           <DanielReyes_PressSection />
           <DanielReyes_TestimonialsSection />
+          <DanielReyes_GoogleReviews
+            reviews={googleReviewSets.centro}
+            label="En Google"
+            heading="Reseñas verificadas en Google"
+          />
           <DanielReyes_FAQSection />
           <DanielReyes_ContactSection />
           <DanielReyes_MapSection />

@@ -45,6 +45,9 @@ export const googleReviewSets = {
   individual: [R.natalia, R.camila, R.romina],
   pareja: [R.thiare, R.camila, R.sebastian],
   sexual: [R.sebastian, R.yanet, R.alvaro],
+  // Para la home: reseñas que hablan del centro/los profesionales (sin nombrar
+  // a Daniel) y que no se repiten con los testimonios escritos.
+  centro: [R.natalia, R.alvaro, R.sebastian],
 } satisfies Record<string, Review[]>;
 
 const defaultReviews = googleReviewSets.individual;
@@ -83,17 +86,21 @@ export function GoogleRatingBadge({ variant = 'light' }: { variant?: 'dark' | 'l
 // Bloque completo de reseñas para las páginas de servicio.
 export default function DanielReyes_GoogleReviews({
   reviews = defaultReviews,
+  label = 'Reseñas',
+  heading = 'Lo que dicen los pacientes',
 }: {
   reviews?: Review[];
+  label?: string;
+  heading?: string;
 }) {
   return (
     <section id="resenas" className="scroll-mt-[72px] bg-white px-6 py-16">
       <div className="mx-auto max-w-[1140px]">
         <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
           <div>
-            <div className="mb-3 text-[13px] font-semibold uppercase tracking-widest text-teal-600">Reseñas</div>
+            <div className="mb-3 text-[13px] font-semibold uppercase tracking-widest text-teal-600">{label}</div>
             <h2 className="text-[clamp(24px,3vw,32px)] font-bold leading-tight text-slate-900">
-              Lo que dicen los pacientes
+              {heading}
             </h2>
           </div>
           <a

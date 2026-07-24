@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
-import { GoogleRatingBadge } from './DanielReyes_GoogleReviews';
 
 interface Testimonial {
   text: string;
@@ -187,9 +186,6 @@ export default function DanielReyes_TestimonialsSection() {
           <h2 className="text-[clamp(26px,3.5vw,38px)] font-bold text-slate-900 leading-tight tracking-tight">
             Lo que dicen quienes han pasado por nuestro centro
           </h2>
-          <div className="mt-5 flex justify-center">
-            <GoogleRatingBadge />
-          </div>
         </div>
 
         <motion.div
