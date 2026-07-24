@@ -8,7 +8,7 @@ const icons = [Award, Newspaper, University];
 
 export default function DanielReyes_PressSection() {
   return (
-    <section id="prensa" className="py-24 px-6 bg-white">
+    <section id="prensa" className="py-24 px-6 bg-[#f7f8fa]">
       <div className="max-w-[1140px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.3fr] gap-10 lg:gap-14 items-start">
           <motion.div

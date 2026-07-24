@@ -13,7 +13,7 @@ const isapres = [
 
 export default function DanielReyes_IsapreGallery() {
   return (
-    <section id="isapres" className="py-14 px-6 border-t border-b border-slate-100">
+    <section id="isapres" className="py-14 px-6 bg-[#f7f8fa] border-t border-b border-slate-100">
       <div className="max-w-[1140px] mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 12 }}

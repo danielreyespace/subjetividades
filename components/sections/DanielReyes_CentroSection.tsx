@@ -25,7 +25,7 @@ const itemVariants = {
 
 export default function DanielReyes_CentroSection() {
   return (
-    <section id="centro" className="py-24 px-6 bg-[#f7f8fa]">
+    <section id="centro" className="py-24 px-6 bg-white">
       <div className="max-w-[1140px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-9 md:gap-16 items-center">
           <motion.div

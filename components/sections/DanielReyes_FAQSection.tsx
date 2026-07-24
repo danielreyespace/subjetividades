@@ -70,7 +70,7 @@ export default function DanielReyes_FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-24 px-6">
+    <section id="faq" className="py-24 px-6 bg-[#f7f8fa]">
       <div className="max-w-[1140px] mx-auto">
         <div className="text-center mb-14">
           <div className="text-[13px] font-semibold text-teal-600 tracking-widest uppercase mb-3.5">
