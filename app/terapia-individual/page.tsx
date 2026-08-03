@@ -10,9 +10,22 @@ import {
   GoogleRatingBadge,
 } from '@/components/sections';
 import SchedulingLink from '@/components/SchedulingLink';
+import WhatsAppLink from '@/components/WhatsAppLink';
 import { teamByIds } from '@/lib/team';
 
 const BASE_URL = 'https://subjetividades.cl';
+
+// URL de WhatsApp con mensaje pre-escrito propio de este servicio.
+const WHATSAPP_URL =
+  'https://wa.me/56937389719?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20consulta%20de%20terapia%20individual.';
+
+// Botón primario (Agendar) y secundario (WhatsApp) para el par de CTA de hero y
+// cierre. Misma altura y ancho: primario relleno, secundario contorno. El
+// borde transparente del primario iguala la altura del contorno del secundario.
+const ctaPrimaryClass =
+  'inline-flex w-full items-center justify-center gap-2 rounded-lg border border-transparent bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700 sm:w-auto';
+const ctaWhatsAppClass =
+  'inline-flex w-full items-center justify-center gap-2 rounded-lg border border-teal-400 bg-transparent px-6 py-3 text-sm font-semibold text-teal-300 no-underline transition-colors hover:bg-teal-400/10 sm:w-auto';
 
 export const metadata: Metadata = {
   title: 'Terapia Individual en Santiago y online | SUBJETIVIDADES',
@@ -146,12 +159,17 @@ export default function TerapiaIndividualPage() {
                 <p className="mt-5 max-w-[560px] text-base leading-relaxed text-slate-300">
                   Psicoterapia para adultos orientada a comprender y abordar el malestar, desarrollar herramientas y proyectar la vida con mayor bienestar. Presencial en Ñuñoa y por videollamada en todo Chile.
                 </p>
-                <div className="mt-7 flex flex-wrap items-center gap-4">
-                  <SchedulingLink className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
-                    <Calendar className="h-[18px] w-[18px]" />
-                    Agendar primera consulta
-                  </SchedulingLink>
-                  <div className="flex items-center gap-4 text-[13px] text-slate-400">
+                <div className="mt-7">
+                  <div className="flex flex-col gap-3 sm:flex-row">
+                    <SchedulingLink className={ctaPrimaryClass}>
+                      <Calendar className="h-[18px] w-[18px]" />
+                      Agendar primera consulta
+                    </SchedulingLink>
+                    <WhatsAppLink href={WHATSAPP_URL} className={ctaWhatsAppClass}>
+                      Escríbenos por WhatsApp
+                    </WhatsAppLink>
+                  </div>
+                  <div className="mt-5 flex flex-wrap items-center gap-4 text-[13px] text-slate-400">
                     <span className="inline-flex items-center gap-1.5"><MapPin className="h-4 w-4 text-teal-400" /> Presencial en Ñuñoa</span>
                     <span className="inline-flex items-center gap-1.5"><Monitor className="h-4 w-4 text-teal-400" /> Online en todo Chile</span>
                   </div>
@@ -271,10 +289,15 @@ export default function TerapiaIndividualPage() {
               <div className="rounded-[14px] bg-slate-900 p-8 text-center">
                 <h2 className="text-xl font-bold text-white mb-2">Da el primer paso</h2>
                 <p className="text-slate-400 text-sm mb-5">Primera consulta presencial en Ñuñoa, Santiago, u online para todo Chile.</p>
-                <SchedulingLink className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
-                  <Calendar className="h-[18px] w-[18px]" />
-                  Agendar primera consulta
-                </SchedulingLink>
+                <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
+                  <SchedulingLink className={ctaPrimaryClass}>
+                    <Calendar className="h-[18px] w-[18px]" />
+                    Agendar primera consulta
+                  </SchedulingLink>
+                  <WhatsAppLink href={WHATSAPP_URL} className={ctaWhatsAppClass}>
+                    Escríbenos por WhatsApp
+                  </WhatsAppLink>
+                </div>
               </div>
             </div>
           </section>
