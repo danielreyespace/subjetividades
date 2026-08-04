@@ -31,12 +31,12 @@ const ctaWhatsAppClass =
 export const metadata: Metadata = {
   title: 'Terapia para Adolescentes en Santiago y online | SUBJETIVIDADES',
   description:
-    'Psicoterapia para adolescentes en Ñuñoa, Santiago, y por videollamada en todo Chile. Ansiedad, ánimo, autoestima, identidad y vínculos familiares, con enfoque sistémico.',
+    'Psicoterapia para adolescentes en Ñuñoa, Santiago, y por videollamada en todo Chile. Ansiedad, ánimo, autoestima, identidad y vínculos familiares, con psicólogos clínicos con experiencia en adolescentes.',
   alternates: { canonical: `${BASE_URL}/terapia-adolescentes` },
   openGraph: {
     title: 'Terapia para Adolescentes en Santiago y online | SUBJETIVIDADES',
     description:
-      'Psicoterapia para adolescentes en Ñuñoa, Santiago, y online para todo Chile, con enfoque sistémico.',
+      'Psicoterapia para adolescentes en Ñuñoa, Santiago, y online para todo Chile, con psicólogos clínicos con experiencia en adolescentes.',
     url: `${BASE_URL}/terapia-adolescentes`,
     siteName: 'Subjetividades. PsicologÃ­a ClÃ­nica',
     locale: 'es_CL',
@@ -130,13 +130,13 @@ const motivos = [
 ];
 
 const trustItems = [
-  { icon: Award, title: 'Enfoque sistémico', text: 'y familiar' },
-  { icon: ShieldCheck, title: 'Psicóloga colegiada', text: 'U. de Chile' },
+  { icon: Award, title: 'Experiencia clínica', text: 'con adolescentes' },
+  { icon: ShieldCheck, title: 'Psicólogos colegiados', text: 'con especialización' },
   { icon: HeartHandshake, title: 'Reembolso Isapre', text: 'boleta de honorarios' },
   { icon: Monitor, title: 'Presencial y online', text: 'Ñuñoa y todo Chile' },
 ];
 
-const equipo = teamByIds(['allison-rowe']);
+const equipo = teamByIds(['allison-rowe', 'fernando-bravo']);
 
 export default function TerapiaAdolescentesPage() {
   return (
@@ -233,10 +233,10 @@ export default function TerapiaAdolescentesPage() {
                 La terapia para adolescentes es un espacio propio, confidencial y de confianza, donde cada joven puede expresar lo que le ocurre a su ritmo. El trabajo respeta su autonomía y, al mismo tiempo, considera el contexto familiar y escolar en el que vive.
               </p>
               <p className="text-[16px] leading-relaxed text-slate-600 mb-5">
-                Desde un enfoque sistémico, la psicoterapia ayuda a comprender el malestar en relación con los vínculos importantes —familia, amistades, colegio— y a desarrollar recursos emocionales para enfrentar los desafíos propios de esta etapa.
+                La psicoterapia considera al adolescente en relación con sus vínculos importantes —familia, amistades, colegio— y ayuda a comprender el malestar y a desarrollar recursos emocionales para enfrentar los desafíos propios de esta etapa.
               </p>
               <p className="text-[16px] leading-relaxed text-slate-600 mb-5">
-                Es psicoterapia conducida por una psicóloga clínica. Comienza con una evaluación del motivo de consulta, define objetivos junto al adolescente y su familia cuando corresponde, y revisa periódicamente el avance.
+                Es psicoterapia conducida por un psicólogo o psicóloga clínica. Comienza con una evaluación del motivo de consulta, define objetivos junto al adolescente y su familia cuando corresponde, y revisa periódicamente el avance.
               </p>
               <a href="/blog/cuando-ir-al-psicologo" className="inline-flex items-center gap-2 text-sm font-semibold text-teal-700 no-underline hover:text-teal-800">
                 ¿Cuándo conviene consultar? 7 señales
@@ -259,11 +259,11 @@ export default function TerapiaAdolescentesPage() {
           <section className="bg-[#f7f8fa] px-6 py-16">
             <DanielReyes_ServiceTeam
               members={equipo}
-              intro="La terapia para adolescentes en SUBJETIVIDADES la atiende Allison Rowe Carrasco, psicóloga clínica con formación en terapia sistémica y familiar y experiencia en la atención de adolescentes."
+              intro="La terapia para adolescentes en SUBJETIVIDADES la atienden Allison Rowe Carrasco y Fernando Bravo Matheu, psicólogos clínicos con experiencia en la atención de adolescentes."
             />
             <div className="mx-auto mt-8 max-w-[820px]">
               <SchedulingLink className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
-                Agendar primera consulta
+                Agendar con un profesional
                 <ArrowRight className="h-4 w-4" />
               </SchedulingLink>
             </div>
