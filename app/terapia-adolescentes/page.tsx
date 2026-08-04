@@ -43,9 +43,9 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: `${BASE_URL}/daniel-reyes/photos/couples-therapy-room.png`,
-        width: 1200,
-        height: 630,
+        url: `${BASE_URL}/daniel-reyes/photos/adolescente-consulta.jpg`,
+        width: 1600,
+        height: 900,
         alt: 'Terapia para adolescentes en SUBJETIVIDADES, Ñuñoa, Santiago',
       },
     ],
@@ -181,8 +181,8 @@ export default function TerapiaAdolescentesPage() {
               </div>
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl ring-1 ring-white/10">
                 <Image
-                  src="/daniel-reyes/photos/couples-therapy-room.png"
-                  alt="Sala de consulta para terapia de adolescentes en SUBJETIVIDADES, Ñuñoa"
+                  src="/daniel-reyes/photos/adolescente-consulta.jpg"
+                  alt="Adolescente en sesión de psicoterapia en SUBJETIVIDADES, Ñuñoa, Santiago"
                   fill
                   priority
                   className="object-cover object-center"
