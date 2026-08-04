@@ -111,13 +111,6 @@ const schemaData = {
       ],
       priceRange: '$$',
       currenciesAccepted: 'CLP',
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '17',
-        bestRating: '5',
-        worstRating: '1',
-      },
       openingHoursSpecification: [
         {
           '@type': 'OpeningHoursSpecification',
