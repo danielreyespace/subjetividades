@@ -1,9 +1,16 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Calendar } from 'lucide-react';
+import { Calendar, MapPin, Monitor } from 'lucide-react';
 import Image from 'next/image';
 import SchedulingLink from '@/components/SchedulingLink';
+import WhatsAppLink from '@/components/WhatsAppLink';
+import { GoogleRatingBadge } from './DanielReyes_GoogleReviews';
+
+// URL de WhatsApp con mensaje pre-escrito para el hero del home (distinto del
+// botón flotante para poder diferenciarlos en la medición).
+const WHATSAPP_URL =
+  'https://wa.me/56937389719?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20primera%20consulta.';
 
 export default function DanielReyes_HeroSection() {
   return (
@@ -22,16 +29,6 @@ export default function DanielReyes_HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 max-w-[780px] text-center px-6 pt-[120px] pb-20 md:pt-[120px] md:pb-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="inline-flex items-center gap-2 bg-white/[0.12] backdrop-blur-lg border border-white/[0.15] text-white/90 px-[18px] py-2 rounded-full text-[13px] font-medium tracking-wide mb-7"
-        >
-          <span className="w-[7px] h-[7px] bg-teal-500 rounded-full animate-pulse" />
-          Atendiendo presencial y online
-        </motion.div>
-
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -52,22 +49,40 @@ export default function DanielReyes_HeroSection() {
           transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
           className="text-[clamp(16px,2vw,19px)] text-white/75 max-w-[600px] mx-auto mb-9 leading-relaxed font-normal"
         >
-          Terapia individual, de pareja, sexual y para adolescentes con enfoque basado en la evidencia. Más de 20 años de experiencia en salud mental.
+          Terapia individual, de pareja, sexual y para adolescentes. Más de 20 años de experiencia en salud mental.
         </motion.h2>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.45, ease: 'easeOut' }}
-          className="flex gap-3.5 justify-center flex-wrap"
+          className="flex flex-col sm:flex-row gap-3.5 justify-center"
         >
           <SchedulingLink
-           
-            className="inline-flex items-center gap-2 px-7 py-3.5 bg-teal-600 text-white rounded-[9px] text-[15px] font-semibold transition-all hover:bg-teal-700 hover:-translate-y-px hover:shadow-[0_4px_14px_rgba(13,148,136,0.3)]"
+            className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-7 py-3.5 border border-transparent bg-teal-600 text-white rounded-[9px] text-[15px] font-semibold transition-all hover:bg-teal-700 hover:-translate-y-px hover:shadow-[0_4px_14px_rgba(13,148,136,0.3)]"
           >
             <Calendar className="w-[18px] h-[18px]" />
             Agendar primera consulta
           </SchedulingLink>
+          <WhatsAppLink
+            href={WHATSAPP_URL}
+            className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-7 py-3.5 rounded-[9px] text-[15px] font-semibold border border-teal-400 text-teal-200 bg-transparent transition-all hover:bg-teal-400/10 hover:-translate-y-px"
+          >
+            Escríbenos por WhatsApp
+          </WhatsAppLink>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6, ease: 'easeOut' }}
+          className="mt-8 flex flex-col items-center gap-4"
+        >
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[13px] text-white/70">
+            <span className="inline-flex items-center gap-1.5"><MapPin className="h-4 w-4 text-teal-400" /> Presencial en Ñuñoa</span>
+            <span className="inline-flex items-center gap-1.5"><Monitor className="h-4 w-4 text-teal-400" /> Online en todo Chile</span>
+          </div>
+          <GoogleRatingBadge variant="dark" />
         </motion.div>
       </div>
     </section>
