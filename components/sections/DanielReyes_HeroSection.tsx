@@ -52,7 +52,7 @@ export default function DanielReyes_HeroSection() {
           transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
           className="text-[clamp(16px,2vw,19px)] text-white/75 max-w-[600px] mx-auto mb-9 leading-relaxed font-normal"
         >
-          Terapia individual, de pareja y sexual con enfoque basado en la evidencia. Más de 20 años de experiencia en salud mental.
+          Terapia individual, de pareja, sexual y para adolescentes con enfoque basado en la evidencia. Más de 20 años de experiencia en salud mental.
         </motion.h2>
 
         <motion.div

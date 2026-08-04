@@ -22,13 +22,14 @@ const BASE_URL = 'https://subjetividades.cl';
 export const metadata: Metadata = {
   title: 'Psicólogo clínico en Ñuñoa, Santiago | Subjetividades. Psicología Clínica',
   description:
-    'Centro de psicología clínica en Ñuñoa, Santiago. Terapia individual, de pareja y sexual con más de 20 años de experiencia. Atención presencial y online en todo Chile.',
+    'Centro de psicología clínica en Ñuñoa, Santiago. Terapia individual, de pareja, sexual y para adolescentes con más de 20 años de experiencia. Atención presencial y online en todo Chile.',
   keywords: [
     'psicólogo Ñuñoa',
     'psicólogo Santiago',
     'terapia de pareja Santiago',
     'psicología clínica Santiago',
     'terapia sexual Santiago',
+    'terapia adolescentes Santiago',
     'psicoterapia online Chile',
     'psicólogo clínico',
     'salud mental Santiago',
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Psicólogo clínico en Ñuñoa, Santiago | Subjetividades. Psicología Clínica',
     description:
-      'Terapia individual, de pareja y sexual con más de 20 años de experiencia. Atención presencial y online en todo Chile.',
+      'Terapia individual, de pareja, sexual y para adolescentes con más de 20 años de experiencia. Atención presencial y online en todo Chile.',
     url: BASE_URL,
     siteName: 'Subjetividades. Psicología Clínica',
     locale: 'es_CL',
@@ -55,7 +56,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Psicólogo clínico en Ñuñoa, Santiago | Subjetividades. Psicología Clínica',
     description:
-      'Terapia individual, de pareja y sexual. Atención presencial en Ñuñoa y online en todo Chile.',
+      'Terapia individual, de pareja, sexual y para adolescentes. Atención presencial en Ñuñoa y online en todo Chile.',
     images: [`${BASE_URL}/daniel-reyes/photos/waiting-room.png`],
   },
   alternates: {
@@ -106,6 +107,7 @@ const schemaData = {
         { '@type': 'MedicalTherapy', name: 'Terapia Individual' },
         { '@type': 'MedicalTherapy', name: 'Terapia de Pareja' },
         { '@type': 'MedicalTherapy', name: 'Terapia Sexual' },
+        { '@type': 'MedicalTherapy', name: 'Terapia para Adolescentes' },
       ],
       priceRange: '$$',
       currenciesAccepted: 'CLP',
@@ -176,7 +178,7 @@ const schemaData = {
       description:
         'Psicóloga de la Universidad de Chile, diplomada en Terapia Sistémica y Familiar. 8 años de experiencia en atención individual y de parejas.',
       worksFor: { '@id': `${BASE_URL}/#clinic` },
-      knowsAbout: ['Terapia individual', 'Terapia sistémica', 'Terapia de pareja'],
+      knowsAbout: ['Terapia individual', 'Terapia sistémica', 'Terapia de pareja', 'Terapia para adolescentes'],
     },
     {
       '@type': 'FAQPage',

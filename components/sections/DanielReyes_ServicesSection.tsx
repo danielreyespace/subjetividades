@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { User, Users, Heart } from 'lucide-react';
+import { User, Users, Heart, Sprout } from 'lucide-react';
 
 interface ServiceData {
   icon: typeof User;
@@ -18,7 +18,7 @@ const services: ServiceData[] = [
     title: 'Terapia Individual',
     description: 'Un espacio seguro para trabajar en lo que necesitas cambiar, con objetivos claros desde la primera sesión y evaluación constante del proceso.',
     topics: ['Ansiedad y estrés', 'Depresión y duelos', 'Autoestima', 'Desarrollo personal'],
-    price: '$50.000 - $60.000 CLP / sesión',
+    price: 'desde $50.000 CLP / sesión',
     href: '/terapia-individual',
   },
   {
@@ -26,7 +26,7 @@ const services: ServiceData[] = [
     title: 'Terapia de Pareja',
     description: 'Un proceso de comunicación, observación y toma de conciencia conjunta que permite a la pareja establecer nuevas bases para la relación.',
     topics: ['Conflictos de comunicación', 'Crisis de pareja', 'Infidelidad', 'Distancia emocional'],
-    price: '$60.000 - $70.000 CLP / sesión',
+    price: 'desde $60.000 CLP / sesión',
     href: '/terapia-de-pareja',
   },
   {
@@ -34,8 +34,16 @@ const services: ServiceData[] = [
     title: 'Terapia Sexual',
     description: 'Un área que afecta a muchas personas, pero que tiene soluciones concretas y basadas en evidencia. Atención profesional y sin prejuicios.',
     topics: ['Disfunciones sexuales', 'Deseo e intimidad', 'Identidad sexual', 'Salud sexual integral'],
-    price: '$50.000 - $60.000 CLP / sesión',
+    price: 'desde $50.000 CLP / sesión',
     href: '/terapia-sexual',
+  },
+  {
+    icon: Sprout,
+    title: 'Terapia para Adolescentes',
+    description: 'Un espacio de confianza para que las y los adolescentes trabajen lo que les preocupa, con acompañamiento cercano y respeto por sus tiempos.',
+    topics: ['Ansiedad y ánimo', 'Autoestima e identidad', 'Vínculos y familia', 'Etapa escolar'],
+    price: 'desde $50.000 CLP / sesión',
+    href: '/terapia-adolescentes',
   },
 ];
 
@@ -100,7 +108,7 @@ export default function DanielReyes_ServicesSection() {
             Nuestros servicios clínicos
           </h2>
           <p className="text-base text-slate-500 mt-3.5 max-w-[580px] mx-auto leading-relaxed">
-            Tres áreas de atención, con objetivos definidos desde la primera sesión.
+            Cuatro áreas de atención, con objetivos definidos desde la primera sesión.
           </p>
         </div>
 
@@ -109,7 +117,7 @@ export default function DanielReyes_ServicesSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6"
         >
           {services.map((service) => (
             <ServiceCard key={service.title} service={service} />

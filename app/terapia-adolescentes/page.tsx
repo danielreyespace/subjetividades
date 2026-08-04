@@ -8,6 +8,7 @@ import {
   DanielReyes_ServiceTeam,
   DanielReyes_GoogleReviews,
   GoogleRatingBadge,
+  googleReviewSets,
 } from '@/components/sections';
 import SchedulingLink from '@/components/SchedulingLink';
 import WhatsAppLink from '@/components/WhatsAppLink';
@@ -17,7 +18,7 @@ const BASE_URL = 'https://subjetividades.cl';
 
 // URL de WhatsApp con mensaje pre-escrito propio de este servicio.
 const WHATSAPP_URL =
-  'https://wa.me/56937389719?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20consulta%20de%20terapia%20individual.';
+  'https://wa.me/56937389719?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20consulta%20de%20terapia%20para%20adolescentes.';
 
 // Botón primario (Agendar) y secundario (WhatsApp) para el par de CTA de hero y
 // cierre. Misma altura y ancho: primario relleno, secundario contorno. El
@@ -28,24 +29,24 @@ const ctaWhatsAppClass =
   'inline-flex w-full items-center justify-center gap-2 rounded-lg border border-teal-400 bg-transparent px-6 py-3 text-sm font-semibold text-teal-300 no-underline transition-colors hover:bg-teal-400/10 sm:w-auto';
 
 export const metadata: Metadata = {
-  title: 'Terapia Individual en Santiago y online | SUBJETIVIDADES',
+  title: 'Terapia para Adolescentes en Santiago y online | SUBJETIVIDADES',
   description:
-    'Terapia psicológica individual para adultos en Ñuñoa, Santiago, y por videollamada en todo Chile. Ansiedad, depresión, duelos, autoestima y desarrollo personal.',
-  alternates: { canonical: `${BASE_URL}/terapia-individual` },
+    'Psicoterapia para adolescentes en Ñuñoa, Santiago, y por videollamada en todo Chile. Ansiedad, ánimo, autoestima, identidad y vínculos familiares, con enfoque sistémico.',
+  alternates: { canonical: `${BASE_URL}/terapia-adolescentes` },
   openGraph: {
-    title: 'Terapia Individual en Santiago y online | SUBJETIVIDADES',
+    title: 'Terapia para Adolescentes en Santiago y online | SUBJETIVIDADES',
     description:
-      'Terapia psicológica individual para adultos en Ñuñoa, Santiago, y online para todo Chile.',
-    url: `${BASE_URL}/terapia-individual`,
+      'Psicoterapia para adolescentes en Ñuñoa, Santiago, y online para todo Chile, con enfoque sistémico.',
+    url: `${BASE_URL}/terapia-adolescentes`,
     siteName: 'Subjetividades. PsicologÃ­a ClÃ­nica',
     locale: 'es_CL',
     type: 'website',
     images: [
       {
-        url: `${BASE_URL}/daniel-reyes/photos/consultation-session.png`,
+        url: `${BASE_URL}/daniel-reyes/photos/couples-therapy-room.png`,
         width: 1200,
         height: 630,
-        alt: 'Terapia individual en SUBJETIVIDADES, Ñuñoa, Santiago',
+        alt: 'Terapia para adolescentes en SUBJETIVIDADES, Ñuñoa, Santiago',
       },
     ],
   },
@@ -58,20 +59,20 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    q: '¿Para qué sirve la terapia individual?',
-    a: 'Ayuda a comprender y abordar dificultades personales —ansiedad, estados depresivos, duelos, autoestima— y a desarrollar herramientas para los desafíos cotidianos. No requiere un umbral de gravedad: el malestar, por sí solo, es un motivo de consulta legítimo.',
+    q: '¿El adolescente asiste solo o con su familia?',
+    a: 'Habitualmente el proceso es individual, con espacios de conversación con la familia cuando aportan al tratamiento. La modalidad se define en la evaluación inicial, según la edad y el motivo de consulta.',
   },
   {
-    q: '¿Cuántas sesiones dura?',
-    a: 'Depende del motivo y de los objetivos. Algunos procesos son focalizados y breves; otros, más extensos. La estimación se define en la evaluación inicial y se revisa durante el proceso.',
+    q: '¿Qué se conversa con los padres o cuidadores?',
+    a: 'El proceso resguarda la confianza del adolescente. Con la familia se comparte lo necesario para acompañar el tratamiento y su bienestar, cuidando siempre la confidencialidad del espacio terapéutico.',
+  },
+  {
+    q: '¿A partir de qué edad?',
+    a: 'El servicio está orientado a adolescentes. Si tienes dudas sobre si es el espacio adecuado para tu hijo o hija, escríbenos y te orientamos sin compromiso.',
   },
   {
     q: '¿La modalidad online es efectiva?',
-    a: 'Sí. La evidencia muestra resultados comparables a la atención presencial para la mayoría de los motivos de consulta.',
-  },
-  {
-    q: '¿Tiene cobertura de Isapre?',
-    a: 'Se emite boleta de honorarios para solicitar reembolso en Isapre y en seguros complementarios de salud.',
+    a: 'Sí. La atención por videollamada permite desarrollar el proceso con resultados comparables a la atención presencial, y suele ser cómoda para las y los adolescentes.',
   },
 ];
 
@@ -82,14 +83,14 @@ const schemaData = {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Inicio', item: BASE_URL },
-        { '@type': 'ListItem', position: 2, name: 'Terapia individual', item: `${BASE_URL}/terapia-individual` },
+        { '@type': 'ListItem', position: 2, name: 'Terapia para adolescentes', item: `${BASE_URL}/terapia-adolescentes` },
       ],
     },
     {
       '@type': 'Service',
-      serviceType: 'Terapia psicológica individual',
-      name: 'Terapia individual en Santiago',
-      url: `${BASE_URL}/terapia-individual`,
+      serviceType: 'Terapia psicológica para adolescentes',
+      name: 'Terapia para adolescentes en Santiago',
+      url: `${BASE_URL}/terapia-adolescentes`,
       inLanguage: 'es-CL',
       areaServed: [
         { '@type': 'City', name: 'Santiago' },
@@ -120,24 +121,24 @@ const schemaData = {
 };
 
 const motivos = [
-  'Ansiedad, crisis de pánico y estrés sostenido.',
-  'Estados depresivos, desánimo y pérdida de motivación.',
-  'Duelos y pérdidas.',
-  'Autoestima y autoconocimiento.',
-  'Manejo de emociones difíciles: agobio, frustración, ira o tristeza.',
-  'Desarrollo personal y decisiones vitales.',
+  'Ansiedad, angustia o estrés escolar.',
+  'Ánimo bajo, desmotivación o tristeza persistente.',
+  'Autoestima, identidad y cambios propios de esta etapa.',
+  'Conflictos familiares y dificultades de comunicación.',
+  'Relaciones con pares, pertenencia y uso de redes sociales.',
+  'Regulación emocional y manejo de la frustración.',
 ];
 
 const trustItems = [
-  { icon: Award, title: '+20 años', text: 'de experiencia clínica' },
-  { icon: ShieldCheck, title: 'Psicólogos colegiados', text: 'con especialización' },
+  { icon: Award, title: 'Enfoque sistémico', text: 'y familiar' },
+  { icon: ShieldCheck, title: 'Psicóloga colegiada', text: 'U. de Chile' },
   { icon: HeartHandshake, title: 'Reembolso Isapre', text: 'boleta de honorarios' },
   { icon: Monitor, title: 'Presencial y online', text: 'Ñuñoa y todo Chile' },
 ];
 
-const equipo = teamByIds(['daniel-reyes', 'fernando-bravo', 'allison-rowe']);
+const equipo = teamByIds(['allison-rowe']);
 
-export default function TerapiaIndividualPage() {
+export default function TerapiaAdolescentesPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
@@ -150,14 +151,14 @@ export default function TerapiaIndividualPage() {
                 <nav className="mb-5 text-[13px] text-slate-400">
                   <a href="/" className="no-underline text-slate-400 hover:text-teal-400 transition-colors">Inicio</a>
                   {' / '}
-                  <span className="text-slate-300">Terapia individual</span>
+                  <span className="text-slate-300">Terapia para adolescentes</span>
                 </nav>
                 <div className="mb-4 text-[13px] font-semibold uppercase tracking-widest text-teal-400">Servicio</div>
                 <h1 className="text-[clamp(30px,5vw,48px)] font-bold leading-tight tracking-tight">
-                  Terapia individual en Santiago
+                  Terapia para adolescentes en Santiago
                 </h1>
                 <p className="mt-5 max-w-[560px] text-base leading-relaxed text-slate-300">
-                  Psicoterapia para adultos orientada a comprender y abordar el malestar, desarrollar herramientas y proyectar la vida con mayor bienestar. Presencial en Ñuñoa y por videollamada en todo Chile.
+                  Psicoterapia para adolescentes orientada a acompañar esta etapa de cambios, comprender el malestar y desarrollar recursos emocionales. Presencial en Ñuñoa y por videollamada en todo Chile.
                 </p>
                 <div className="mt-7">
                   <div className="flex flex-col gap-3 sm:flex-row">
@@ -180,8 +181,8 @@ export default function TerapiaIndividualPage() {
               </div>
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl ring-1 ring-white/10">
                 <Image
-                  src="/daniel-reyes/photos/daniel-reyes-consulta.jpg"
-                  alt="Daniel Reyes en sesión de terapia individual en SUBJETIVIDADES, Ñuñoa"
+                  src="/daniel-reyes/photos/couples-therapy-room.png"
+                  alt="Sala de consulta para terapia de adolescentes en SUBJETIVIDADES, Ñuñoa"
                   fill
                   priority
                   className="object-cover object-center"
@@ -212,7 +213,7 @@ export default function TerapiaIndividualPage() {
             <div className="mx-auto max-w-[820px]">
               <h2 className="text-[clamp(24px,3vw,32px)] font-bold leading-tight text-slate-900 mb-6">Cuándo consultar</h2>
               <p className="text-base leading-relaxed text-slate-600 mb-6">
-                La terapia individual aborda una amplia variedad de motivos de consulta. Entre los más frecuentes:
+                La adolescencia trae cambios intensos y desafíos nuevos. Consultar a tiempo ayuda a transitarlos mejor. Entre los motivos más frecuentes:
               </p>
               <ul className="space-y-3">
                 {motivos.map((m) => (
@@ -229,13 +230,13 @@ export default function TerapiaIndividualPage() {
             <div className="mx-auto max-w-[820px]">
               <h2 className="text-[clamp(24px,3vw,32px)] font-bold leading-tight text-slate-900 mb-6">En qué consiste</h2>
               <p className="text-[16px] leading-relaxed text-slate-600 mb-5">
-                La terapia individual es un espacio de interacción dialógica en el que la persona explora sus procesos personales en un ambiente de comprensión, acogida y libertad. La psicoterapia permite un trabajo de introspección, guiado y contenido por un profesional con experiencia clínica, que ayuda a comprenderse y apreciarse mejor a sí mismo y a los demás.
+                La terapia para adolescentes es un espacio propio, confidencial y de confianza, donde cada joven puede expresar lo que le ocurre a su ritmo. El trabajo respeta su autonomía y, al mismo tiempo, considera el contexto familiar y escolar en el que vive.
               </p>
               <p className="text-[16px] leading-relaxed text-slate-600 mb-5">
-                Los procesos psicoterapéuticos promueven habilidades para resolver los problemas y desafíos cotidianos, y entregan herramientas para el manejo de situaciones difíciles —agobio, frustración, ansiedad, ira o tristeza—. El trabajo respeta los ritmos de cada persona y se orienta a alcanzar un bienestar emocional significativo, que permita proyectar la vida en la dirección deseada.
+                Desde un enfoque sistémico, la psicoterapia ayuda a comprender el malestar en relación con los vínculos importantes —familia, amistades, colegio— y a desarrollar recursos emocionales para enfrentar los desafíos propios de esta etapa.
               </p>
               <p className="text-[16px] leading-relaxed text-slate-600 mb-5">
-                Es psicoterapia conducida por un psicólogo clínico. Comienza con una evaluación del motivo de consulta y la historia relevante, define objetivos y revisa periódicamente el avance.
+                Es psicoterapia conducida por una psicóloga clínica. Comienza con una evaluación del motivo de consulta, define objetivos junto al adolescente y su familia cuando corresponde, y revisa periódicamente el avance.
               </p>
               <a href="/blog/cuando-ir-al-psicologo" className="inline-flex items-center gap-2 text-sm font-semibold text-teal-700 no-underline hover:text-teal-800">
                 ¿Cuándo conviene consultar? 7 señales
@@ -258,17 +259,17 @@ export default function TerapiaIndividualPage() {
           <section className="bg-[#f7f8fa] px-6 py-16">
             <DanielReyes_ServiceTeam
               members={equipo}
-              intro="El equipo clínico de SUBJETIVIDADES atiende terapia individual de adultos. Todos son psicólogos clínicos con formación de excelencia y experiencia."
+              intro="La terapia para adolescentes en SUBJETIVIDADES la atiende Allison Rowe Carrasco, psicóloga clínica con formación en terapia sistémica y familiar y experiencia en la atención de adolescentes."
             />
             <div className="mx-auto mt-8 max-w-[820px]">
               <SchedulingLink className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
-                Agendar con un profesional
+                Agendar primera consulta
                 <ArrowRight className="h-4 w-4" />
               </SchedulingLink>
             </div>
           </section>
 
-          <DanielReyes_GoogleReviews />
+          <DanielReyes_GoogleReviews reviews={googleReviewSets.centro} />
 
           <section className="px-6 py-16">
             <div className="mx-auto max-w-[820px]">
@@ -287,7 +288,7 @@ export default function TerapiaIndividualPage() {
           <section className="px-6 pb-20">
             <div className="mx-auto max-w-[820px]">
               <div className="rounded-[14px] bg-slate-900 p-8 text-center">
-                <h2 className="text-xl font-bold text-white mb-2">Da el primer paso</h2>
+                <h2 className="text-xl font-bold text-white mb-2">Acompañamiento para esta etapa</h2>
                 <p className="text-slate-400 text-sm mb-5">Primera consulta presencial en Ñuñoa, Santiago, u online para todo Chile.</p>
                 <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
                   <SchedulingLink className={ctaPrimaryClass}>
