@@ -14,7 +14,7 @@ const WHATSAPP_URL =
 
 export default function DanielReyes_HeroSection() {
   return (
-    <section id="inicio" className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
+    <section id="inicio" className="relative min-h-[92vh] flex items-end justify-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -24,21 +24,21 @@ export default function DanielReyes_HeroSection() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(26,35,50,0.72)] via-[rgba(26,35,50,0.65)] to-[rgba(26,35,50,0.8)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(26,35,50,0.22)] via-[rgba(26,35,50,0.34)] to-[rgba(26,35,50,0.82)]" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-[780px] text-center px-6 pt-[120px] pb-20 md:pt-[120px] md:pb-20">
+      <div className="relative z-10 w-full max-w-[960px] text-center px-6 pb-16 md:pb-24">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15, ease: 'easeOut' }}
           className="mb-5"
         >
-          <span className="block text-[clamp(34px,5.5vw,54px)] font-bold text-white leading-[1.15] tracking-tight">
+          <span className="block text-[clamp(40px,9vw,92px)] font-bold text-white leading-[1.02] tracking-tight [text-shadow:0_2px_24px_rgba(15,23,42,0.35)]">
             SUBJETIVIDADES
           </span>
-          <span className="block mt-2.5 text-[clamp(12px,1.5vw,15px)] font-semibold uppercase tracking-[0.18em] text-teal-300/90">
+          <span className="block mt-3 text-[clamp(12px,1.6vw,16px)] font-semibold uppercase tracking-[0.18em] text-teal-300/90">
             Psicología clínica · Ñuñoa, Santiago
           </span>
         </motion.h1>
