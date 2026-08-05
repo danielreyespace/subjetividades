@@ -3,7 +3,7 @@ import { Star, ArrowUpRight } from 'lucide-react';
 // Ficha de Google Business (Google Maps) de SUBJETIVIDADES.
 export const GOOGLE_PROFILE_URL = 'https://maps.google.com/?cid=12037037789320556678';
 export const GOOGLE_RATING = '5,0';
-export const GOOGLE_REVIEW_COUNT = 35;
+export const GOOGLE_REVIEW_COUNT = 40;
 
 // Reseñas reales seleccionadas desde la ficha de Google (nombre abreviado por
 // discreción). Se curan por servicio para no repetir personas entre páginas ni

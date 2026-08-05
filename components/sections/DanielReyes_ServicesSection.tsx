@@ -34,7 +34,7 @@ const services: ServiceData[] = [
     title: 'Terapia Sexual',
     description: 'Un área que afecta a muchas personas, pero que tiene soluciones concretas y basadas en evidencia. Atención profesional y sin prejuicios.',
     topics: ['Disfunciones sexuales', 'Deseo e intimidad', 'Identidad sexual', 'Salud sexual integral'],
-    price: 'desde $50.000 CLP / sesión',
+    price: 'desde $60.000 CLP / sesión',
     href: '/terapia-sexual',
   },
   {
