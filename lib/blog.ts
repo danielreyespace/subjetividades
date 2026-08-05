@@ -15,6 +15,16 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'adolescencia-cambios-sociales-redes',
+    title: 'Ser adolescente hoy: cambios sociales, redes y cuándo pedir ayuda',
+    excerpt:
+      'La adolescencia transcurre hoy dentro de una sociedad que cambia a gran velocidad, algo exigente para todos. Por qué las redes son un desafío compartido —el uso intensivo de pantallas no es solo de los jóvenes— y cuándo conviene consultar con especialistas.',
+    date: '4 de agosto, 2026',
+    readTime: '6 min',
+    category: 'Salud mental',
+    lastModified: '2026-08-04',
+  },
+  {
     slug: 'tratamiento-eyaculacion-precoz',
     title: 'Tratamiento de la eyaculación precoz: qué funciona según la evidencia',
     excerpt:
