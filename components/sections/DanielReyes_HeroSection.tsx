@@ -28,7 +28,7 @@ export default function DanielReyes_HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-[960px] text-center px-6 pb-16 md:pb-24">
+      <div className="relative z-10 w-full max-w-[1140px] mx-auto text-left px-6 pb-16 md:pb-24">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -47,7 +47,7 @@ export default function DanielReyes_HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
-          className="text-[clamp(16px,2vw,19px)] text-white/75 max-w-[600px] mx-auto mb-9 leading-relaxed font-normal"
+          className="text-[clamp(16px,2vw,19px)] text-white/80 max-w-[560px] mb-9 leading-relaxed font-normal"
         >
           Terapia individual, de pareja, sexual y para adolescentes. Más de 20 años de experiencia en salud mental.
         </motion.h2>
@@ -56,7 +56,7 @@ export default function DanielReyes_HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.45, ease: 'easeOut' }}
-          className="flex flex-col sm:flex-row gap-3.5 justify-center"
+          className="flex flex-col sm:flex-row gap-3.5 sm:justify-start"
         >
           <SchedulingLink
             className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-7 py-3.5 border border-transparent bg-teal-600 text-white rounded-[9px] text-[15px] font-semibold transition-all hover:bg-teal-700 hover:-translate-y-px hover:shadow-[0_4px_14px_rgba(13,148,136,0.3)]"
@@ -76,9 +76,9 @@ export default function DanielReyes_HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6, ease: 'easeOut' }}
-          className="mt-8 flex flex-col items-center gap-4"
+          className="mt-8 flex flex-col items-start gap-4"
         >
-          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[13px] text-white/70">
+          <div className="flex flex-wrap items-center justify-start gap-x-5 gap-y-2 text-[13px] text-white/70">
             <span className="inline-flex items-center gap-1.5"><MapPin className="h-4 w-4 text-teal-400" /> Presencial en Ñuñoa</span>
             <span className="inline-flex items-center gap-1.5"><Monitor className="h-4 w-4 text-teal-400" /> Online en todo Chile</span>
           </div>
