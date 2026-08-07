@@ -96,7 +96,7 @@ const schemaData = {
         { '@type': 'Country', name: 'Chile' },
       ],
       provider: {
-        '@type': 'MedicalBusiness',
+        '@type': 'MedicalClinic',
         '@id': `${BASE_URL}/#clinic`,
         name: 'Subjetividades. Psicología Clínica',
         url: BASE_URL,

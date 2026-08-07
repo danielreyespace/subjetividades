@@ -81,7 +81,7 @@ const schemaData = {
     // Sin "telephone" a propósito: el número del centro es solo WhatsApp y no recibe llamadas.
     // El Rich Results Test lo reporta como campo opcional faltante; es esperado, no corregir.
     {
-      '@type': 'MedicalBusiness',
+      '@type': 'MedicalClinic',
       '@id': `${BASE_URL}/#clinic`,
       name: 'Subjetividades. Psicología Clínica',
       alternateName: ['Subjetividades', 'Centro Subjetividades', 'Subjetividades Ñuñoa'],
@@ -107,7 +107,6 @@ const schemaData = {
         latitude: -33.4518691,
         longitude: -70.5990791,
       },
-      medicalSpecialty: 'Clinical Psychology',
       availableService: [
         { '@type': 'MedicalTherapy', name: 'Terapia Individual' },
         { '@type': 'MedicalTherapy', name: 'Terapia de Pareja' },
