@@ -97,6 +97,7 @@ const schemaData = {
       ],
       provider: {
         '@type': 'MedicalBusiness',
+        '@id': `${BASE_URL}/#clinic`,
         name: 'Subjetividades. Psicología Clínica',
         url: BASE_URL,
         address: {
@@ -104,6 +105,7 @@ const schemaData = {
           streetAddress: 'Alonso de Ercilla 2959',
           addressLocality: 'Ñuñoa',
           addressRegion: 'Región Metropolitana',
+          postalCode: '7770465',
           addressCountry: 'CL',
         },
       },

@@ -95,12 +95,13 @@ const schemaData = {
         streetAddress: 'Alonso de Ercilla 2959',
         addressLocality: 'Ñuñoa',
         addressRegion: 'Región Metropolitana',
+        postalCode: '7770465',
         addressCountry: 'CL',
       },
       geo: {
         '@type': 'GeoCoordinates',
-        latitude: -33.4537,
-        longitude: -70.6113,
+        latitude: -33.4518691,
+        longitude: -70.5990791,
       },
       medicalSpecialty: 'Clinical Psychology',
       availableService: [
@@ -115,14 +116,14 @@ const schemaData = {
         {
           '@type': 'OpeningHoursSpecification',
           dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-          opens: '09:00',
-          closes: '19:00',
+          opens: '08:00',
+          closes: '18:00',
         },
       ],
-      serviceArea: {
-        '@type': 'AdministrativeArea',
-        name: 'Santiago, Chile',
-      },
+      areaServed: [
+        { '@type': 'City', name: 'Santiago' },
+        { '@type': 'Country', name: 'Chile' },
+      ],
       hasMap: 'https://maps.google.com/?cid=12037037789320556678',
     },
     {
