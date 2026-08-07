@@ -78,6 +78,8 @@ export const metadata: Metadata = {
 const schemaData = {
   '@context': 'https://schema.org',
   '@graph': [
+    // Sin "telephone" a propósito: el número del centro es solo WhatsApp y no recibe llamadas.
+    // El Rich Results Test lo reporta como campo opcional faltante; es esperado, no corregir.
     {
       '@type': ['MedicalBusiness', 'LocalBusiness'],
       '@id': `${BASE_URL}/#clinic`,
@@ -86,6 +88,8 @@ const schemaData = {
       description:
         'Centro de psicología clínica en Ñuñoa, Santiago. Psicoterapia individual, de pareja y sexual con enfoque basado en evidencia. Más de 20 años de experiencia.',
       url: BASE_URL,
+      image: `${BASE_URL}/daniel-reyes/photos/waiting-room.png`,
+      logo: `${BASE_URL}/daniel-reyes/assets/logos/brand/subjetividades-logo-cuadrado.png`,
       sameAs: [
         'https://www.instagram.com/subjetividades.cl/',
         'https://maps.google.com/?cid=12037037789320556678',
@@ -127,9 +131,11 @@ const schemaData = {
       hasMap: 'https://maps.google.com/?cid=12037037789320556678',
     },
     {
-      '@type': 'Physician',
+      '@type': 'Person',
       '@id': `${BASE_URL}/#dr-daniel-reyes`,
       name: 'Daniel Reyes Pace',
+      url: `${BASE_URL}/#equipo`,
+      image: `${BASE_URL}/daniel-reyes/photos/team-daniel-reyes.webp`,
       jobTitle: 'Director Clínico',
       description:
         'Psicólogo clínico con doctorado de la Universidad de Chile y más de 20 años de experiencia. Consultor internacional especializado en psicoterapia basada en evidencia.',
@@ -155,9 +161,11 @@ const schemaData = {
       ],
     },
     {
-      '@type': 'Physician',
+      '@type': 'Person',
       '@id': `${BASE_URL}/#fernando-bravo`,
       name: 'Fernando Bravo Matheu',
+      url: `${BASE_URL}/#equipo`,
+      image: `${BASE_URL}/daniel-reyes/photos/team-fernando-bravo.webp`,
       jobTitle: 'Psicólogo Clínico',
       description:
         'Psicólogo de la Universidad Diego Portales con formación en clínica psicoanalítica de Winnicott. Especializado en adolescentes, adultos y terapia de pareja.',
@@ -165,9 +173,11 @@ const schemaData = {
       knowsAbout: ['Terapia individual', 'Terapia de pareja', 'Psicología adolescente'],
     },
     {
-      '@type': 'Physician',
+      '@type': 'Person',
       '@id': `${BASE_URL}/#allison-rowe`,
       name: 'Allison Rowe Carrasco',
+      url: `${BASE_URL}/#equipo`,
+      image: `${BASE_URL}/daniel-reyes/photos/team-allison-rowe.webp`,
       jobTitle: 'Psicóloga Clínica',
       description:
         'Psicóloga de la Universidad de Chile, diplomada en Terapia Sistémica y Familiar. 8 años de experiencia en atención individual y de parejas.',
