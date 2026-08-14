@@ -80,13 +80,10 @@ function ServiceCard({ service }: { service: ServiceData }) {
           </li>
         ))}
       </ul>
-      <div className="inline-block text-sm font-semibold text-teal-700 bg-teal-50 px-3.5 py-[7px] rounded-lg">
-        {service.price}
-      </div>
       {service.href && (
         <a
           href={service.href}
-          className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-teal-600 no-underline transition-colors hover:text-teal-700"
+          className="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-600 no-underline transition-colors hover:text-teal-700"
         >
           Conocer más
           <span aria-hidden>→</span>

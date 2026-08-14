@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import SchedulingLink from '@/components/SchedulingLink';
+import WhatsAppLink from '@/components/WhatsAppLink';
+import { waHref, WA_MESSAGES, CTA_LABEL } from '@/lib/whatsapp';
 
 // Absolute links so the menu works from any subpage (Ads landing pages,
 // blog, prensa). Hash targets resolve to the corresponding home sections.
@@ -53,9 +54,12 @@ export default function DanielReyes_SubpageNav() {
                 {link.label}
               </a>
             ))}
-            <SchedulingLink className="text-sm font-semibold text-white bg-teal-600 px-[22px] py-2.5 rounded-lg transition-all hover:bg-teal-700 hover:-translate-y-px no-underline">
-              Agendar
-            </SchedulingLink>
+            <WhatsAppLink
+              href={waHref(WA_MESSAGES.home)}
+              className="text-sm font-semibold text-white bg-teal-600 px-[22px] py-2.5 rounded-lg transition-all hover:bg-teal-700 hover:-translate-y-px no-underline"
+            >
+              {CTA_LABEL}
+            </WhatsAppLink>
           </div>
 
           {/* Hamburger */}
@@ -84,9 +88,12 @@ export default function DanielReyes_SubpageNav() {
               {link.label}
             </a>
           ))}
-          <SchedulingLink className="block py-3 text-base font-medium text-teal-600 no-underline transition-colors hover:text-teal-700">
-            Agendar
-          </SchedulingLink>
+          <WhatsAppLink
+            href={waHref(WA_MESSAGES.home)}
+            className="block py-3 text-base font-medium text-teal-600 no-underline transition-colors hover:text-teal-700"
+          >
+            {CTA_LABEL}
+          </WhatsAppLink>
         </div>
       )}
     </>

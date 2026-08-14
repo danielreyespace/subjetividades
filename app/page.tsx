@@ -23,18 +23,6 @@ export const metadata: Metadata = {
   title: 'Psicólogo clínico en Ñuñoa, Santiago | Subjetividades. Psicología Clínica',
   description:
     'Centro de psicología clínica en Ñuñoa, Santiago. Terapia individual, de pareja, sexual y para adolescentes con más de 20 años de experiencia. Atención presencial y online en todo Chile.',
-  keywords: [
-    'psicólogo Ñuñoa',
-    'psicólogo Santiago',
-    'terapia de pareja Santiago',
-    'psicología clínica Santiago',
-    'terapia sexual Santiago',
-    'terapia adolescentes Santiago',
-    'psicoterapia online Chile',
-    'psicólogo clínico',
-    'salud mental Santiago',
-    'Subjetividades. Psicología Clínica',
-  ],
   openGraph: {
     title: 'Psicólogo clínico en Ñuñoa, Santiago | Subjetividades. Psicología Clínica',
     description:
@@ -232,7 +220,7 @@ const schemaData = {
           name: '¿Qué pasa si necesito cancelar una sesión?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Pedimos aviso con al menos 24 horas de anticipación. Las cancelaciones con menos de 24 horas se cobran como sesión tomada, salvo emergencias justificadas.',
+            text: 'Pedimos aviso con al menos 24 horas de anticipación. Las cancelaciones con menos de 24 horas se cobran como sesión tomada.',
           },
         },
       ],

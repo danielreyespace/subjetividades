@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { ArrowRight, Calendar, MapPin, Monitor, Award, ShieldCheck, HeartHandshake } from 'lucide-react';
+import { ArrowRight, MessageCircle, MapPin, Monitor, Award, ShieldCheck, HeartHandshake } from 'lucide-react';
 import {
   DanielReyes_Footer,
   DanielReyes_WhatsAppFloat,
@@ -10,23 +10,18 @@ import {
   GoogleRatingBadge,
   googleReviewSets,
 } from '@/components/sections';
-import SchedulingLink from '@/components/SchedulingLink';
 import WhatsAppLink from '@/components/WhatsAppLink';
+import { waHref, WA_MESSAGES, CTA_LABEL } from '@/lib/whatsapp';
 import { teamByIds } from '@/lib/team';
 
 const BASE_URL = 'https://subjetividades.cl';
 
 // URL de WhatsApp con mensaje pre-escrito propio de este servicio.
-const WHATSAPP_URL =
-  'https://wa.me/56937389719?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20consulta%20de%20terapia%20para%20adolescentes.';
+const WHATSAPP_URL = waHref(WA_MESSAGES.adolescentes);
 
-// Botón primario (Agendar) y secundario (WhatsApp) para el par de CTA de hero y
-// cierre. Misma altura y ancho: primario relleno, secundario contorno. El
-// borde transparente del primario iguala la altura del contorno del secundario.
+// Único CTA de hero y cierre: enlace a WhatsApp, relleno teal.
 const ctaPrimaryClass =
   'inline-flex w-full items-center justify-center gap-2 rounded-lg border border-transparent bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700 sm:w-auto';
-const ctaWhatsAppClass =
-  'inline-flex w-full items-center justify-center gap-2 rounded-lg border border-teal-400 bg-transparent px-6 py-3 text-sm font-semibold text-teal-300 no-underline transition-colors hover:bg-teal-400/10 sm:w-auto';
 
 export const metadata: Metadata = {
   title: 'Terapia para Adolescentes en Santiago y online | SUBJETIVIDADES',
@@ -164,13 +159,10 @@ export default function TerapiaAdolescentesPage() {
                 </p>
                 <div className="mt-7">
                   <div className="flex flex-col gap-3 sm:flex-row">
-                    <SchedulingLink className={ctaPrimaryClass}>
-                      <Calendar className="h-[18px] w-[18px]" />
-                      Agendar primera consulta
-                    </SchedulingLink>
-                    <WhatsAppLink href={WHATSAPP_URL} className={ctaWhatsAppClass}>
-                      Escríbenos por WhatsApp
-                    </WhatsAppLink>
+                    <WhatsAppLink href={WHATSAPP_URL} className={ctaPrimaryClass}>
+                    <MessageCircle className="h-[18px] w-[18px]" />
+                    {CTA_LABEL}
+                  </WhatsAppLink>
                   </div>
                   <div className="mt-5 flex flex-wrap items-center gap-4 text-[13px] text-slate-400">
                     <span className="inline-flex items-center gap-1.5"><MapPin className="h-4 w-4 text-teal-400" /> Presencial en Ñuñoa</span>
@@ -264,10 +256,10 @@ export default function TerapiaAdolescentesPage() {
               intro="La terapia para adolescentes en SUBJETIVIDADES la atienden Allison Rowe Carrasco y Fernando Bravo Matheu, psicólogos clínicos con experiencia en la atención de adolescentes."
             />
             <div className="mx-auto mt-8 max-w-[820px]">
-              <SchedulingLink className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
-                Agendar con un profesional
+              <WhatsAppLink href={WHATSAPP_URL} className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
+                {CTA_LABEL}
                 <ArrowRight className="h-4 w-4" />
-              </SchedulingLink>
+              </WhatsAppLink>
             </div>
           </section>
 
@@ -293,12 +285,9 @@ export default function TerapiaAdolescentesPage() {
                 <h2 className="text-xl font-bold text-white mb-2">Acompañamiento para esta etapa</h2>
                 <p className="text-slate-400 text-sm mb-5">Primera consulta presencial en Ñuñoa, Santiago, u online para todo Chile.</p>
                 <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
-                  <SchedulingLink className={ctaPrimaryClass}>
-                    <Calendar className="h-[18px] w-[18px]" />
-                    Agendar primera consulta
-                  </SchedulingLink>
-                  <WhatsAppLink href={WHATSAPP_URL} className={ctaWhatsAppClass}>
-                    Escríbenos por WhatsApp
+                  <WhatsAppLink href={WHATSAPP_URL} className={ctaPrimaryClass}>
+                    <MessageCircle className="h-[18px] w-[18px]" />
+                    {CTA_LABEL}
                   </WhatsAppLink>
                 </div>
               </div>

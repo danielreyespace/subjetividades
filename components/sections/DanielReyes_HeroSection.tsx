@@ -1,16 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Monitor } from 'lucide-react';
+import { MessageCircle, MapPin, Monitor } from 'lucide-react';
 import Image from 'next/image';
-import SchedulingLink from '@/components/SchedulingLink';
 import WhatsAppLink from '@/components/WhatsAppLink';
+import { waHref, WA_MESSAGES, CTA_LABEL } from '@/lib/whatsapp';
 import { GoogleRatingBadge } from './DanielReyes_GoogleReviews';
 
-// URL de WhatsApp con mensaje pre-escrito para el hero del home (distinto del
-// botón flotante para poder diferenciarlos en la medición).
-const WHATSAPP_URL =
-  'https://wa.me/56937389719?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20primera%20consulta.';
+// URL de WhatsApp con mensaje pre-escrito propio del home.
+const WHATSAPP_URL = waHref(WA_MESSAGES.home);
 
 export default function DanielReyes_HeroSection() {
   return (
@@ -58,17 +56,12 @@ export default function DanielReyes_HeroSection() {
           transition={{ duration: 0.6, delay: 0.45, ease: 'easeOut' }}
           className="flex flex-col sm:flex-row gap-3.5 sm:justify-start"
         >
-          <SchedulingLink
-            className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-7 py-3.5 border border-transparent bg-teal-600 text-white rounded-[9px] text-[15px] font-semibold transition-all hover:bg-teal-700 hover:-translate-y-px hover:shadow-[0_4px_14px_rgba(13,148,136,0.3)]"
-          >
-            <Calendar className="w-[18px] h-[18px]" />
-            Agendar primera consulta
-          </SchedulingLink>
           <WhatsAppLink
             href={WHATSAPP_URL}
-            className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-7 py-3.5 rounded-[9px] text-[15px] font-semibold border border-teal-400 text-teal-200 bg-transparent transition-all hover:bg-teal-400/10 hover:-translate-y-px"
+            className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-7 py-3.5 border border-transparent bg-teal-600 text-white rounded-[9px] text-[15px] font-semibold transition-all hover:bg-teal-700 hover:-translate-y-px hover:shadow-[0_4px_14px_rgba(13,148,136,0.3)]"
           >
-            Escríbenos por WhatsApp
+            <MessageCircle className="w-[18px] h-[18px]" />
+            {CTA_LABEL}
           </WhatsAppLink>
         </motion.div>
 
