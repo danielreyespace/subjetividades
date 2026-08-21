@@ -23,8 +23,8 @@
 
 /* NAV */
 .sj .nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:15px 34px;border-bottom:1px solid var(--rl);background:rgba(241,239,234,.92);backdrop-filter:blur(10px)}
-.sj .brand{font-size:14px;letter-spacing:1px;text-transform:uppercase;font-weight:800;line-height:1.05;color:var(--ink)}
-.sj .brand span{display:block;font-family:-apple-system,system-ui,sans-serif;font-size:8.5px;letter-spacing:1.8px;text-transform:uppercase;font-weight:700;color:var(--ac);margin-top:3px}
+.sj .brand{display:inline-block;font-size:14px;letter-spacing:1px;text-transform:uppercase;font-weight:800;line-height:1.05;color:var(--ink)}
+.sj .brand span{display:block;width:100%;font-family:-apple-system,system-ui,sans-serif;font-size:8.5px;text-transform:uppercase;font-weight:700;color:var(--ac);margin-top:4px;letter-spacing:1px;text-align:justify;text-align-last:justify}
 .sj .nl{display:flex;gap:24px;font-size:12.5px;color:var(--mu);align-items:center}
 .sj .nl a:hover{color:var(--ink)}
 .sj .navcta{font-size:11px;letter-spacing:1.4px;text-transform:uppercase;font-weight:700;background:var(--ink);color:#fff;padding:10px 16px}
