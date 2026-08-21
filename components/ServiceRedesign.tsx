@@ -97,7 +97,7 @@ export default function ServiceRedesign({ c }: { c: ServiceContent }) {
           <h2>Modalidad y valor</h2>
           <ul className="mlist">
             <li><strong>Presencial</strong> en Ñuñoa, Santiago, o <strong>por videollamada</strong> para todo Chile, con resultados comparables.</li>
-            <li><strong>Valor:</strong> desde {c.valor} por sesión.</li>
+            <li><strong>Valor:</strong> desde {c.valor} por sesión. <a className="tlink" href={c.waUrl} target="_blank" rel="noopener noreferrer">Consultar valores especiales Fonasa.</a></li>
             <li>Se emite <strong>boleta de honorarios</strong> para solicitar reembolso en Isapre y seguro complementario. <a className="tlink" href="/blog/reembolso-psicologo-isapre-fonasa">Cómo funciona el reembolso</a>.</li>
           </ul>
         </div>
