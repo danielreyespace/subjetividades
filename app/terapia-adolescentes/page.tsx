@@ -1,27 +1,12 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
-import { ArrowRight, MessageCircle, MapPin, Monitor, Award, ShieldCheck, HeartHandshake } from 'lucide-react';
-import {
-  DanielReyes_Footer,
-  DanielReyes_WhatsAppFloat,
-  DanielReyes_SubpageNav,
-  DanielReyes_ServiceTeam,
-  DanielReyes_GoogleReviews,
-  GoogleRatingBadge,
-  googleReviewSets,
-} from '@/components/sections';
-import WhatsAppLink from '@/components/WhatsAppLink';
-import { waHref, WA_MESSAGES, CTA_LABEL } from '@/lib/whatsapp';
+import ServiceRedesign from '@/components/ServiceRedesign';
+import { waHref, WA_MESSAGES } from '@/lib/whatsapp';
 import { teamByIds } from '@/lib/team';
+import { googleReviewSets } from '@/components/sections/DanielReyes_GoogleReviews';
 
 const BASE_URL = 'https://subjetividades.cl';
 
-// URL de WhatsApp con mensaje pre-escrito propio de este servicio.
 const WHATSAPP_URL = waHref(WA_MESSAGES.adolescentes);
-
-// Único CTA de hero y cierre: enlace a WhatsApp, relleno teal.
-const ctaPrimaryClass =
-  'inline-flex w-full items-center justify-center gap-2 rounded-lg border border-transparent bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700 sm:w-auto';
 
 export const metadata: Metadata = {
   title: 'Terapia para Adolescentes en Santiago y online | SUBJETIVIDADES',
@@ -126,177 +111,43 @@ const motivos = [
   'Regulación emocional y manejo de la frustración.',
 ];
 
-const trustItems = [
-  { icon: Award, title: 'Experiencia clínica', text: 'con adolescentes' },
-  { icon: ShieldCheck, title: 'Psicólogos colegiados', text: 'con especialización' },
-  { icon: HeartHandshake, title: 'Reembolso Isapre', text: 'boleta de honorarios' },
-  { icon: Monitor, title: 'Presencial y online', text: 'Ñuñoa y todo Chile' },
-];
-
 const equipo = teamByIds(['allison-rowe', 'fernando-bravo']);
 
 export default function TerapiaAdolescentesPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
-      <div className="min-h-screen bg-white text-slate-700" style={{ fontFamily: "'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}>
-        <DanielReyes_SubpageNav />
-        <main className="pt-[72px]">
-          <header className="bg-slate-900 px-6 py-16 text-white md:py-20">
-            <div className="mx-auto grid max-w-[1140px] items-center gap-10 md:grid-cols-[1fr_minmax(0,440px)] lg:gap-16">
-              <div>
-                <nav className="mb-5 text-[13px] text-slate-400">
-                  <a href="/" className="no-underline text-slate-400 hover:text-teal-400 transition-colors">Inicio</a>
-                  {' / '}
-                  <span className="text-slate-300">Terapia para adolescentes</span>
-                </nav>
-                <div className="mb-4 text-[13px] font-semibold uppercase tracking-widest text-teal-400">Servicio</div>
-                <h1 className="text-[clamp(30px,5vw,48px)] font-bold leading-tight tracking-tight">
-                  Terapia para adolescentes en Santiago
-                </h1>
-                <p className="mt-5 max-w-[560px] text-base leading-relaxed text-slate-300">
-                  Psicoterapia para adolescentes orientada a acompañar esta etapa de cambios, comprender el malestar y desarrollar recursos emocionales. Presencial en Ñuñoa y por videollamada en todo Chile.
-                </p>
-                <div className="mt-7">
-                  <div className="flex flex-col gap-3 sm:flex-row">
-                    <WhatsAppLink href={WHATSAPP_URL} className={ctaPrimaryClass}>
-                    <MessageCircle className="h-[18px] w-[18px]" />
-                    {CTA_LABEL}
-                  </WhatsAppLink>
-                  </div>
-                  <div className="mt-5 flex flex-wrap items-center gap-4 text-[13px] text-slate-400">
-                    <span className="inline-flex items-center gap-1.5"><MapPin className="h-4 w-4 text-teal-400" /> Presencial en Ñuñoa</span>
-                    <span className="inline-flex items-center gap-1.5"><Monitor className="h-4 w-4 text-teal-400" /> Online en todo Chile</span>
-                  </div>
-                </div>
-                <div className="mt-5">
-                  <GoogleRatingBadge variant="dark" />
-                </div>
-              </div>
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl ring-1 ring-white/10">
-                <Image
-                  src="/daniel-reyes/photos/adolescente-consulta.jpg"
-                  alt="Adolescente en sesión de psicoterapia en SUBJETIVIDADES, Ñuñoa, Santiago"
-                  fill
-                  priority
-                  className="object-cover object-center"
-                  sizes="(max-width: 768px) 100vw, 440px"
-                />
-              </div>
-            </div>
-          </header>
-
-          {/* Barra de confianza */}
-          <section className="border-b border-slate-100 bg-white px-6 py-6">
-            <div className="mx-auto grid max-w-[1140px] grid-cols-2 gap-x-6 gap-y-5 md:grid-cols-4">
-              {trustItems.map(({ icon: Icon, title, text }) => (
-                <div key={title} className="flex items-center gap-3">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal-50 text-teal-600">
-                    <Icon className="h-5 w-5" />
-                  </span>
-                  <div className="leading-tight">
-                    <div className="text-sm font-bold text-slate-900">{title}</div>
-                    <div className="text-[12px] text-slate-500">{text}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section className="px-6 py-16">
-            <div className="mx-auto max-w-[820px]">
-              <h2 className="text-[clamp(24px,3vw,32px)] font-bold leading-tight text-slate-900 mb-6">Cuándo consultar</h2>
-              <p className="text-base leading-relaxed text-slate-600 mb-6">
-                La adolescencia trae cambios intensos y desafíos nuevos. Consultar a tiempo ayuda a transitarlos mejor. Entre los motivos más frecuentes:
-              </p>
-              <ul className="space-y-3">
-                {motivos.map((m) => (
-                  <li key={m} className="flex items-start gap-3 text-[16px] leading-relaxed text-slate-700">
-                    <span className="mt-2 h-[6px] w-[6px] shrink-0 rounded-full bg-teal-500" />
-                    {m}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </section>
-
-          <section className="bg-[#f7f8fa] px-6 py-16">
-            <div className="mx-auto max-w-[820px]">
-              <h2 className="text-[clamp(24px,3vw,32px)] font-bold leading-tight text-slate-900 mb-6">En qué consiste</h2>
-              <p className="text-[16px] leading-relaxed text-slate-600 mb-5">
-                La terapia para adolescentes es un espacio propio, confidencial y de confianza, donde cada joven puede expresar lo que le ocurre a su ritmo. El trabajo respeta su autonomía y, al mismo tiempo, considera el contexto familiar y escolar en el que vive.
-              </p>
-              <p className="text-[16px] leading-relaxed text-slate-600 mb-5">
-                La psicoterapia considera al adolescente en relación con sus vínculos importantes —familia, amistades, colegio— y ayuda a comprender el malestar y a desarrollar recursos emocionales para enfrentar los desafíos propios de esta etapa.
-              </p>
-              <p className="text-[16px] leading-relaxed text-slate-600 mb-5">
-                Es psicoterapia conducida por un psicólogo o psicóloga clínica. Comienza con una evaluación del motivo de consulta, define objetivos junto al adolescente y su familia cuando corresponde, y revisa periódicamente el avance.
-              </p>
-              <a href="/blog/cuando-ir-al-psicologo" className="inline-flex items-center gap-2 text-sm font-semibold text-teal-700 no-underline hover:text-teal-800">
-                ¿Cuándo conviene consultar? 7 señales
-                <ArrowRight className="h-4 w-4" />
-              </a>
-            </div>
-          </section>
-
-          <section className="px-6 py-16">
-            <div className="mx-auto max-w-[820px]">
-              <h2 className="text-[clamp(24px,3vw,32px)] font-bold leading-tight text-slate-900 mb-6">Modalidad y valor</h2>
-              <ul className="space-y-3 text-[16px] leading-relaxed text-slate-700">
-                <li className="flex items-start gap-3"><span className="mt-2 h-[6px] w-[6px] shrink-0 rounded-full bg-teal-500" /><span><strong>Presencial</strong> en Ñuñoa, Santiago, o <strong>por videollamada</strong> para todo Chile, con resultados comparables.</span></li>
-                <li className="flex items-start gap-3"><span className="mt-2 h-[6px] w-[6px] shrink-0 rounded-full bg-teal-500" /><span><strong>Valor:</strong> desde $50.000 por sesión.</span></li>
-                <li className="flex items-start gap-3"><span className="mt-2 h-[6px] w-[6px] shrink-0 rounded-full bg-teal-500" /><span>Se emite <strong>boleta de honorarios</strong> para solicitar reembolso en Isapre y seguro complementario. <a href="/blog/reembolso-psicologo-isapre-fonasa" className="text-teal-700 underline hover:text-teal-800">Cómo funciona el reembolso</a>.</span></li>
-              </ul>
-            </div>
-          </section>
-
-          <section className="bg-[#f7f8fa] px-6 py-16">
-            <DanielReyes_ServiceTeam
-              members={equipo}
-              intro="La terapia para adolescentes en SUBJETIVIDADES la atienden Allison Rowe Carrasco y Fernando Bravo Matheu, psicólogos clínicos con experiencia en la atención de adolescentes."
-            />
-            <div className="mx-auto mt-8 max-w-[820px]">
-              <WhatsAppLink href={WHATSAPP_URL} className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
-                {CTA_LABEL}
-                <ArrowRight className="h-4 w-4" />
-              </WhatsAppLink>
-            </div>
-          </section>
-
-          <DanielReyes_GoogleReviews reviews={googleReviewSets.centro} />
-
-          <section className="px-6 py-16">
-            <div className="mx-auto max-w-[820px]">
-              <h2 className="text-[clamp(24px,3vw,32px)] font-bold leading-tight text-slate-900 mb-8">Preguntas frecuentes</h2>
-              <div className="space-y-6">
-                {faqs.map((f) => (
-                  <div key={f.q}>
-                    <h3 className="text-base font-semibold text-slate-800 mb-2">{f.q}</h3>
-                    <p className="text-[15px] leading-relaxed text-slate-500">{f.a}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          <section className="px-6 pb-20">
-            <div className="mx-auto max-w-[820px]">
-              <div className="rounded-[14px] bg-slate-900 p-8 text-center">
-                <h2 className="text-xl font-bold text-white mb-2">Acompañamiento para esta etapa</h2>
-                <p className="text-slate-400 text-sm mb-5">Primera consulta presencial en Ñuñoa, Santiago, u online para todo Chile.</p>
-                <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
-                  <WhatsAppLink href={WHATSAPP_URL} className={ctaPrimaryClass}>
-                    <MessageCircle className="h-[18px] w-[18px]" />
-                    {CTA_LABEL}
-                  </WhatsAppLink>
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
-        <DanielReyes_Footer />
-        <DanielReyes_WhatsAppFloat />
-      </div>
+      <ServiceRedesign
+        c={{
+          crumb: 'Terapia para adolescentes',
+          h1: 'Terapia para adolescentes en Santiago',
+          lead: 'Psicoterapia para adolescentes orientada a acompañar esta etapa de cambios, comprender el malestar y desarrollar recursos emocionales. Presencial en Ñuñoa y por videollamada en todo Chile.',
+          waUrl: WHATSAPP_URL,
+          heroImg: '/daniel-reyes/photos/adolescente-consulta.jpg',
+          trust: [
+            ['Experiencia clínica', 'con adolescentes'],
+            ['Psicólogos colegiados', 'con especialización'],
+            ['Reembolso Isapre', 'boleta de honorarios'],
+            ['Presencial y online', 'Ñuñoa y todo Chile'],
+          ],
+          s1h: 'Cuándo consultar',
+          s1intro: 'La adolescencia trae cambios intensos y desafíos nuevos. Consultar a tiempo ayuda a transitarlos mejor. Entre los motivos más frecuentes:',
+          motivos,
+          consiste: [
+            'La terapia para adolescentes es un espacio propio, confidencial y de confianza, donde cada joven puede expresar lo que le ocurre a su ritmo. El trabajo respeta su autonomía y, al mismo tiempo, considera el contexto familiar y escolar en el que vive.',
+            'La psicoterapia considera al adolescente en relación con sus vínculos importantes —familia, amistades, colegio— y ayuda a comprender el malestar y a desarrollar recursos emocionales para enfrentar los desafíos propios de esta etapa.',
+            'Es psicoterapia conducida por un psicólogo o psicóloga clínica. Comienza con una evaluación del motivo de consulta, define objetivos junto al adolescente y su familia cuando corresponde, y revisa periódicamente el avance.',
+          ],
+          moreTxt: '¿Cuándo conviene consultar? 7 señales',
+          moreHref: '/blog/cuando-ir-al-psicologo',
+          valor: '$50.000',
+          teamIntro: 'La terapia para adolescentes en SUBJETIVIDADES la atienden Allison Rowe Carrasco y Fernando Bravo Matheu, psicólogos clínicos con experiencia en la atención de adolescentes.',
+          team: equipo,
+          reviews: googleReviewSets.centro,
+          faqs,
+          ctaH: 'Acompañamiento para esta etapa',
+        }}
+      />
     </>
   );
 }

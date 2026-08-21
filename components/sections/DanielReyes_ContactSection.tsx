@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, type FormEvent } from 'react';
-import { motion } from 'framer-motion';
 import { trackContactFormConversion } from '@/lib/gtag';
 
 interface FormData {
@@ -53,80 +52,38 @@ export default function DanielReyes_ContactSection() {
   };
 
   return (
-    <section id="contacto" className="py-24 px-6 bg-slate-900 text-white relative overflow-hidden">
-      {/* Decorative circles */}
-      <div className="absolute -top-[200px] -right-[200px] w-[500px] h-[500px] rounded-full bg-teal-600 opacity-[0.06]" />
-      <div className="absolute -bottom-[150px] -left-[100px] w-[400px] h-[400px] rounded-full bg-teal-500 opacity-[0.04]" />
+    <section id="contacto" className="cont">
+      <div className="inner">
+        <div className="lab" style={{ color: '#93E0CE' }}>Contacto</div>
+        <h2>Agenda tu primera consulta o déjanos tus datos.</h2>
+        <p className="csub">Te contactamos dentro de 2 horas en día hábil.</p>
 
-      <div className="max-w-[1140px] mx-auto relative z-10">
-        <div className="text-center mb-10">
-          <div className="text-[13px] font-semibold text-teal-500 tracking-widest uppercase mb-3.5">
-            Contacto
-          </div>
-          <h2 className="text-[clamp(32px,4.5vw,48px)] font-bold text-white leading-tight tracking-tight max-w-[720px] mx-auto">
-            Agenda tu primera consulta o déjanos tus datos.
-          </h2>
-          <p className="text-base text-white/60 mt-3.5 max-w-[580px] mx-auto leading-relaxed mb-10">
-            Te contactamos dentro de 2 horas en día hábil.
-          </p>
-        </div>
-
-        {/* Contact Form */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.15 }}
-          className="max-w-[480px] mx-auto bg-white rounded-[14px] p-9 text-left"
-        >
+        <div className="formcard">
           {submitted ? (
-            <div className="text-center py-8">
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Consulta enviada</h3>
-              <p className="text-sm text-slate-500">Te contactaremos dentro de 2 horas en día hábil.</p>
+            <div style={{ textAlign: 'center', padding: '10px 0' }}>
+              <div className="fh">Consulta enviada</div>
+              <div className="fsub" style={{ marginTop: 8 }}>Te contactaremos dentro de 2 horas en día hábil.</div>
             </div>
           ) : (
             <>
-              <div className="text-xl font-bold text-slate-900 mb-1">Formulario de contacto</div>
-              <div className="text-sm text-slate-400 mb-6">Te respondemos dentro de 2 horas en día hábil.</div>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label className="block text-[13px] font-semibold text-slate-700 mb-1.5">Nombre completo</label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="Tu nombre"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-lg text-[15px] text-slate-800 bg-white transition-all focus:outline-none focus:border-teal-600 focus:ring-[3px] focus:ring-teal-600/10"
-                  />
+              <div className="fh">Formulario de contacto</div>
+              <div className="fsub">Te respondemos dentro de 2 horas en día hábil.</div>
+              <form onSubmit={handleSubmit}>
+                <div className="fld">
+                  <label>Nombre completo</label>
+                  <input type="text" required placeholder="Tu nombre" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
                 </div>
-                <div>
-                  <label className="block text-[13px] font-semibold text-slate-700 mb-1.5">Email (opcional si dejas teléfono)</label>
-                  <input
-                    type="email"
-                    placeholder="tu@email.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-lg text-[15px] text-slate-800 bg-white transition-all focus:outline-none focus:border-teal-600 focus:ring-[3px] focus:ring-teal-600/10"
-                  />
+                <div className="fld">
+                  <label>Email (opcional si dejas teléfono)</label>
+                  <input type="email" placeholder="tu@email.com" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
                 </div>
-                <div>
-                  <label className="block text-[13px] font-semibold text-slate-700 mb-1.5">Teléfono (opcional si dejas email)</label>
-                  <input
-                    type="tel"
-                    placeholder="+56 9 1234 5678"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-lg text-[15px] text-slate-800 bg-white transition-all focus:outline-none focus:border-teal-600 focus:ring-[3px] focus:ring-teal-600/10"
-                  />
+                <div className="fld">
+                  <label>Teléfono (opcional si dejas email)</label>
+                  <input type="tel" placeholder="+56 9 1234 5678" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
                 </div>
-                <div>
-                  <label className="block text-[13px] font-semibold text-slate-700 mb-1.5">Tipo de consulta</label>
-                  <select
-                    value={formData.consultationType}
-                    onChange={(e) => setFormData({ ...formData, consultationType: e.target.value })}
-                    className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-lg text-[15px] text-slate-800 bg-white transition-all focus:outline-none focus:border-teal-600 focus:ring-[3px] focus:ring-teal-600/10"
-                  >
+                <div className="fld">
+                  <label>Tipo de consulta</label>
+                  <select value={formData.consultationType} onChange={(e) => setFormData({ ...formData, consultationType: e.target.value })}>
                     <option value="">Selecciona una opción</option>
                     <option value="individual">Terapia individual</option>
                     <option value="pareja">Terapia de pareja</option>
@@ -134,32 +91,20 @@ export default function DanielReyes_ContactSection() {
                     <option value="no-seguro">No estoy seguro/a</option>
                   </select>
                 </div>
-                <div>
-                  <label className="block text-[13px] font-semibold text-slate-700 mb-1.5">Mensaje (opcional)</label>
-                  <textarea
-                    placeholder="Cuéntanos brevemente qué te motiva a buscar ayuda..."
-                    rows={3}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-lg text-[15px] text-slate-800 bg-white transition-all focus:outline-none focus:border-teal-600 focus:ring-[3px] focus:ring-teal-600/10 resize-y min-h-[80px]"
-                  />
+                <div className="fld">
+                  <label>Mensaje (opcional)</label>
+                  <textarea placeholder="Cuéntanos brevemente qué te motiva a buscar ayuda..." value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
                 </div>
                 {error && (
-                  <p className="text-[13px] font-medium text-red-600" role="alert">
-                    {error}
-                  </p>
+                  <p style={{ color: '#b91c1c', fontSize: 13, fontWeight: 600, marginBottom: 10 }} role="alert">{error}</p>
                 )}
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full py-3.5 bg-teal-600 text-white rounded-[9px] text-[15px] font-semibold transition-colors hover:bg-teal-700 disabled:opacity-60 disabled:cursor-not-allowed mt-2"
-                >
+                <button type="submit" className="fsubmit" disabled={isSubmitting}>
                   {isSubmitting ? 'Enviando...' : 'Enviar consulta'}
                 </button>
               </form>
             </>
           )}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
