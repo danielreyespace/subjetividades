@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import SchedulingLink from '@/components/SchedulingLink';
+import WhatsAppLink from '@/components/WhatsAppLink';
+import { waHref, WA_MESSAGES } from '@/lib/whatsapp';
 import { blogPosts } from '@/lib/blog';
 
 export const metadata: Metadata = {
@@ -35,44 +36,40 @@ export const metadata: Metadata = {
 };
 
 const posts = blogPosts;
+const WHATSAPP_URL = waHref(WA_MESSAGES.home);
 
 export default function BlogIndexPage() {
   return (
-    <main className="max-w-[760px] mx-auto px-6 py-16">
-      <div className="mb-14">
-        <div className="text-[13px] font-semibold text-teal-600 tracking-widest uppercase mb-3">Blog</div>
-        <h1 className="text-[clamp(28px,4vw,40px)] font-bold text-slate-900 leading-tight tracking-tight mb-4">
+    <section className="band" style={{ borderTop: 'none' }}>
+      <div className="wrap760">
+        <div className="lab">Blog</div>
+        <h1 style={{ fontSize: 'clamp(28px,4vw,42px)', fontWeight: 800, letterSpacing: '-1.4px', lineHeight: 1.05, marginTop: 12 }}>
           Psicología clínica para la vida cotidiana
         </h1>
-        <p className="text-base text-slate-500 leading-relaxed max-w-[560px]">
+        <p className="secdesc" style={{ fontSize: 16, maxWidth: 560, marginTop: 14 }}>
           Artículos escritos por el equipo de SUBJETIVIDADES para ayudarte a entender mejor tu salud mental y dar el primer paso hacia el bienestar.
         </p>
-      </div>
 
-      <div className="space-y-8">
-        {posts.map((post) => (
-          <a key={post.slug} href={`/blog/${post.slug}`} className="block group no-underline">
-            <article className="border border-slate-100 rounded-[14px] p-7 transition-all hover:border-teal-200 hover:shadow-[0_2px_12px_rgba(13,148,136,0.08)]">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="text-[12px] font-semibold text-teal-600 bg-teal-50 px-2.5 py-1 rounded-md">{post.category}</span>
-                <span className="text-[12px] text-slate-400">{post.date}</span>
-                <span className="text-[12px] text-slate-400">· {post.readTime} lectura</span>
+        <div style={{ marginTop: 36 }}>
+          {posts.map((post) => (
+            <a key={post.slug} className="bpost" href={`/blog/${post.slug}`}>
+              <div className="bmeta">
+                <span className="bcat">{post.category}</span>
+                <span className="bdate">{post.date} · {post.readTime} lectura</span>
               </div>
-              <h2 className="text-lg font-bold text-slate-900 leading-snug mb-2 group-hover:text-teal-700 transition-colors">{post.title}</h2>
-              <p className="text-[15px] text-slate-500 leading-relaxed">{post.excerpt}</p>
-              <div className="mt-4 text-sm font-semibold text-teal-600 group-hover:text-teal-700">Leer artículo →</div>
-            </article>
-          </a>
-        ))}
-      </div>
+              <h2>{post.title}</h2>
+              <p>{post.excerpt}</p>
+              <div className="rd">Leer artículo →</div>
+            </a>
+          ))}
+        </div>
 
-      <div className="mt-16 bg-slate-900 rounded-[14px] p-8 text-center">
-        <h2 className="text-xl font-bold text-white mb-2">¿Listo para dar el primer paso?</h2>
-        <p className="text-slate-400 text-sm mb-5">Agenda tu primera consulta en nuestro centro de Ñuñoa o en modalidad online.</p>
-        <SchedulingLink className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold text-sm no-underline hover:bg-teal-700 transition-colors">
-          Agendar consulta
-        </SchedulingLink>
+        <div className="ctabox" style={{ marginTop: 30 }}>
+          <h2>¿Listo para dar el primer paso?</h2>
+          <p>Agenda tu primera consulta en nuestro centro de Ñuñoa o en modalidad online.</p>
+          <WhatsAppLink href={WHATSAPP_URL} className="hcta">Agendar consulta</WhatsAppLink>
+        </div>
       </div>
-    </main>
+    </section>
   );
 }

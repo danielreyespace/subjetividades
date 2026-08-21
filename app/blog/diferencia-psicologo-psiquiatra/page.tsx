@@ -99,7 +99,7 @@ export default function DiferenciaPsicologoPsiquiatraPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
-      <main className="max-w-[760px] mx-auto px-6 py-16">
+      <main className="artpage max-w-[760px] mx-auto px-6 py-16">
         {/* Breadcrumb */}
         <nav className="text-[13px] text-slate-400 mb-8">
           <a href="/" className="hover:text-teal-600 no-underline transition-colors">Inicio</a>

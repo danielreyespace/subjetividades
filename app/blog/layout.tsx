@@ -1,6 +1,4 @@
 import type { Metadata } from 'next';
-import SchedulingLink from '@/components/SchedulingLink';
-import { Instagram } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: {
@@ -9,89 +7,43 @@ export const metadata: Metadata = {
   },
 };
 
+const navLinks: [string, string][] = [
+  ['/#centro', 'El Centro'],
+  ['/#servicios', 'Servicios'],
+  ['/#equipo', 'Equipo'],
+  ['/#resenas', 'Reseñas'],
+  ['/prensa', 'Prensa'],
+  ['/blog', 'Blog'],
+];
+
 export default function BlogLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div
-      className="min-h-screen bg-white text-slate-700"
-      style={{
-        fontFamily: "'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
-      }}
-    >
-      {/* Blog Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-[100] bg-white/95 backdrop-blur-2xl border-b border-slate-100 shadow-sm">
-        <div className="max-w-[760px] mx-auto flex items-center justify-between h-[64px] px-6">
-          <a href="/" className="flex flex-col leading-tight no-underline">
-            <span
-              className="text-[14px] font-bold text-slate-900 tracking-tight"
-              style={{ fontFamily: "'Courier Prime', Courier, monospace" }}
-            >
-              SUBJETIVIDADES
-            </span>
-            <span
-              className="font-medium text-teal-600 uppercase"
-              style={{ fontFamily: "'Courier Prime', Courier, monospace", fontSize: '10px', letterSpacing: '0em' }}
-            >
-              Psicología Clínica
-            </span>
-          </a>
-          <div className="flex items-center gap-5">
-            <a
-              href="/blog"
-              className="text-sm font-medium text-slate-500 no-underline hover:text-slate-900 transition-colors"
-            >
-              Blog
-            </a>
-            <SchedulingLink
-             
-              className="text-sm font-semibold text-white bg-teal-600 px-4 py-2 rounded-lg no-underline hover:bg-teal-700 transition-colors"
-            >
-              Agendar consulta
-            </SchedulingLink>
-          </div>
+    <div className="sj" style={{ minHeight: '100vh' }}>
+      {/* NAV */}
+      <div className="nav">
+        <a href="/" className="brand">Subjetividades<span>Psicología Clínica</span></a>
+        <div className="nl">
+          {navLinks.map(([href, label]) => (
+            <a key={href} href={href}>{label}</a>
+          ))}
+          <a href="/#contacto" className="navcta">Contacto</a>
         </div>
-      </nav>
+      </div>
 
-      <div className="pt-[64px]">{children}</div>
+      {children}
 
-      <footer className="bg-slate-900 text-slate-400 py-10 px-6 mt-20">
-        <div className="max-w-[760px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-          <div>
-            <div
-              className="text-base font-bold text-white"
-              style={{ fontFamily: "'Courier Prime', Courier, monospace" }}
-            >
-              SUBJETIVIDADES
-            </div>
-            <div
-              className="font-medium text-teal-500 uppercase mt-0.5"
-              style={{ fontFamily: "'Courier Prime', Courier, monospace", fontSize: '11px', letterSpacing: '0em' }}
-            >
-              Psicología Clínica
-            </div>
-            <div className="text-[13px] text-slate-400 mt-1">
-              Alonso de Ercilla 2959, Ñuñoa, Región Metropolitana, Chile · Atención online para todo Chile
-            </div>
-            <div className="text-[12px] text-slate-500 mt-2">
-              © 2026 SUBJETIVIDADES · Todos los derechos reservados.
-            </div>
-          </div>
-          <div className="flex items-center gap-5">
-            <a href="/" className="text-[13px] text-slate-400 no-underline hover:text-white transition-colors">
-              Volver al sitio
-            </a>
-            <a href="/blog" className="text-[13px] text-slate-400 no-underline hover:text-white transition-colors">
-              Blog
-            </a>
-            <a
-              href="https://www.instagram.com/subjetividades.cl/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram de SUBJETIVIDADES"
-              className="text-slate-400 transition-colors hover:text-white"
-            >
-              <Instagram className="w-[18px] h-[18px]" />
-            </a>
-          </div>
+      {/* FOOTER */}
+      <footer className="ftr2">
+        <div>
+          <div className="fbrand">Subjetividades</div>
+          <div className="fbrandsub">Psicología Clínica</div>
+          <div className="faddr">Alonso de Ercilla 2959, Ñuñoa, Región Metropolitana, Chile · Atención online para todo Chile · © 2026 SUBJETIVIDADES</div>
+        </div>
+        <div className="flinks">
+          <a href="/">Volver al sitio</a>
+          <a href="/prensa">Prensa</a>
+          <a href="/blog">Blog</a>
+          <a href="https://www.instagram.com/subjetividades.cl/" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
       </footer>
     </div>
