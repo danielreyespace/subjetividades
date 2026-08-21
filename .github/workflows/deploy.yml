@@ -1,8 +1,9 @@
 name: Deploy to Cloudflare Pages
 
-# Auto-deploys subjetividades.cl (Cloudflare Pages project "dreyes")
-# on every push to main. Anyone with push access (e.g. danielreyespace)
-# triggers a deploy — no local wrangler / no Alvaro in the loop.
+# Auto-deploy a la cuenta Cloudflare de Daniel (danielreyespace@gmail.com),
+# Pages project "subjetividades", en cada push a main.
+# Requiere UN secret en el repo: CLOUDFLARE_API_TOKEN (Pages:Edit).
+# El accountId no es secreto (es un identificador), va fijo abajo.
 
 on:
   push:
@@ -35,5 +36,5 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy .vercel/output/static --project-name=dreyes --branch=main
+          accountId: 2667e1c2e6669b8b78a6f6984921e41f
+          command: pages deploy .vercel/output/static --project-name=subjetividades --branch=main
