@@ -219,6 +219,6 @@ export const publications: PressItem[] = [
 
 export const homePressHighlights: PressItem[] = [
   featuredPublication,
-  pressSections[1].items[0],
+  pressSections[0].items[0], // El Mostrador — "Envejecer sin sindicato, sin partido y sin parroquia" (jul 2026)
   pressSections[2].items[2],
 ];
