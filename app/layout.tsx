@@ -1,6 +1,24 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import { Bricolage_Grotesque, Instrument_Serif } from 'next/font/google';
 import './globals.css';
+
+// Tipografías del rediseño. Bricolage para títulos/marca; Instrument Serif
+// (itálica) para citas editoriales. Se exponen como variables CSS y se usan
+// desde globals.css (scope .sj) y componentes.
+const bricolage = Bricolage_Grotesque({
+  subsets: ['latin'],
+  weight: ['400', '600', '800'],
+  variable: '--font-bricolage',
+  display: 'swap',
+});
+const instrumentSerif = Instrument_Serif({
+  subsets: ['latin'],
+  weight: '400',
+  style: 'italic',
+  variable: '--font-iserif',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'SUBJETIVIDADES — Psicoterapia basada en evidencia | Santiago, Chile',
@@ -16,7 +34,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es">
+    <html lang="es" className={`${bricolage.variable} ${instrumentSerif.variable}`}>
       <head>
         <Script id="google-tag-manager">
           {`

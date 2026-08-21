@@ -1,21 +1,16 @@
 import type { Metadata } from 'next';
+import WhatsAppLink from '@/components/WhatsAppLink';
+import { waHref, WA_MESSAGES, CTA_LABEL } from '@/lib/whatsapp';
+import { team } from '@/lib/team';
+import { homePressHighlights } from '@/lib/press';
+import DanielReyes_ContactSection from '@/components/sections/DanielReyes_ContactSection';
+import DanielReyes_WhatsAppFloat from '@/components/sections/DanielReyes_WhatsAppFloat';
 import {
-  DanielReyes_Navigation,
-  DanielReyes_HeroSection,
-  DanielReyes_CentroSection,
-  DanielReyes_ServicesSection,
-  DanielReyes_TeamSection,
-  DanielReyes_EnfoqueSection,
-  DanielReyes_GoogleReviews,
   googleReviewSets,
-  DanielReyes_IsapreGallery,
-  DanielReyes_FAQSection,
-  DanielReyes_ContactSection,
-  DanielReyes_Footer,
-  DanielReyes_MapSection,
-  DanielReyes_PressSection,
-  DanielReyes_WhatsAppFloat,
-} from '@/components/sections';
+  GOOGLE_PROFILE_URL,
+  GOOGLE_RATING,
+  GOOGLE_REVIEW_COUNT,
+} from '@/components/sections/DanielReyes_GoogleReviews';
 
 const BASE_URL = 'https://subjetividades.cl';
 
@@ -237,39 +232,272 @@ const schemaData = {
   ],
 };
 
+const WHATSAPP_URL = waHref(WA_MESSAGES.home);
+
+const navLinks: [string, string][] = [
+  ['#inicio', 'Inicio'],
+  ['#centro', 'El Centro'],
+  ['#servicios', 'Servicios'],
+  ['#equipo', 'Equipo'],
+  ['#resenas', 'Reseñas'],
+  ['/prensa', 'Prensa'],
+  ['/blog', 'Blog'],
+];
+
+const services = [
+  { title: 'Terapia Individual', desc: 'Un espacio seguro para trabajar en lo que necesitas cambiar, con objetivos claros desde la primera sesión y evaluación constante del proceso.', topics: ['Ansiedad y estrés', 'Depresión y duelos', 'Autoestima', 'Desarrollo personal'], href: '/terapia-individual' },
+  { title: 'Terapia de Pareja', desc: 'Un proceso de comunicación, observación y toma de conciencia conjunta que permite a la pareja establecer nuevas bases para la relación.', topics: ['Conflictos de comunicación', 'Crisis de pareja', 'Infidelidad', 'Distancia emocional'], href: '/terapia-de-pareja' },
+  { title: 'Terapia Sexual', desc: 'Un área que afecta a muchas personas, pero que tiene soluciones concretas y basadas en evidencia. Atención profesional y sin prejuicios.', topics: ['Disfunciones sexuales', 'Deseo e intimidad', 'Identidad sexual', 'Salud sexual integral'], href: '/terapia-sexual' },
+  { title: 'Terapia para Adolescentes', desc: 'Un espacio de confianza para que las y los adolescentes trabajen lo que les preocupa, con acompañamiento cercano y respeto por sus tiempos.', topics: ['Ansiedad y ánimo', 'Autoestima e identidad', 'Vínculos y familia', 'Etapa escolar'], href: '/terapia-adolescentes' },
+];
+
+const centroVals = ['Confidencialidad absoluta', 'Trato humano y respetuoso', 'Enfoque basado en evidencia', 'Atención presencial y online'];
+
+const enfoquePillars = [
+  { n: '1', t: 'Evaluación inicial rigurosa', d: 'Primera sesión de diagnóstico donde exploramos tu motivo de consulta, historia relevante y definimos objetivos terapéuticos.' },
+  { n: '2', t: 'Plan de tratamiento personalizado', d: 'Diseñamos un plan específico con herramientas y técnicas seleccionadas para tu caso particular.' },
+  { n: '3', t: 'Seguimiento y resultados medibles', d: 'Revisamos periódicamente el progreso y ajustamos el tratamiento. Sin procesos interminables.' },
+];
+
+const isapres: [string, string][] = [
+  ['banmedica.jpg', 'Banmédica'],
+  ['colmena.png', 'Colmena'],
+  ['consalud.png', 'Consalud'],
+  ['cruz-blanca.svg', 'Cruz Blanca'],
+  ['vida-tres.jpg', 'Vida Tres'],
+];
+
+const homeFaqs = [
+  { q: '¿Cómo es la primera sesión?', a: 'La primera sesión es una evaluación donde conversamos sobre lo que te trae a consulta, tu historia relevante y definimos juntos los objetivos del proceso. Dura entre 50 y 60 minutos. No hay compromiso de continuar si no te sientes cómodo o cómoda.' },
+  { q: '¿Cuánto dura un proceso terapéutico?', a: 'Depende de cada caso. Hay procesos focalizados de 8 a 12 sesiones y otros más extensos. Desde la primera sesión te damos una estimación honesta del tiempo que podríamos necesitar.' },
+  { q: '¿Atienden con Isapre?', a: 'Emitimos boleta de honorarios para que puedas solicitar reembolso parcial en tu Isapre (Banmédica, Colmena, Consalud, Cruz Blanca, Vida Tres) o Fonasa. El porcentaje de reembolso depende de tu plan.' },
+  { q: '¿La terapia online funciona igual que presencial?', a: 'Sí. La evidencia clínica muestra que la terapia por videollamada tiene la misma efectividad que la presencial para la mayoría de las condiciones. Atendemos pacientes online en todo Chile con excelentes resultados.' },
+  { q: '¿Puedo agendar sin llamar por teléfono?', a: 'Sí. Puedes agendar directamente con cada profesional desde la sección Equipo, o completando el formulario de contacto en esta página. Respondemos en menos de 2 horas en día hábil.' },
+  { q: '¿Qué pasa si necesito cancelar una sesión?', a: 'Pedimos aviso con al menos 24 horas de anticipación. Las cancelaciones con menos de 24 horas se cobran como sesión tomada.' },
+];
+
+const IMG = '/daniel-reyes';
+
 export default function HomePage() {
+  const reviews = googleReviewSets.centro;
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
-      <div
-        className="bg-white text-slate-700"
-        style={{
-          fontFamily:
-            "'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
-        }}
-      >
-        <DanielReyes_Navigation />
+      <div className="sj" style={{ minHeight: '100vh' }}>
+        {/* NAV */}
+        <div className="nav">
+          <a href="#inicio" className="brand">Subjetividades<span>Psicología Clínica</span></a>
+          <div className="nl">
+            {navLinks.map(([href, label]) => (
+              <a key={href} href={href}>{label}</a>
+            ))}
+            <a href="#contacto" className="navcta">Contacto</a>
+          </div>
+        </div>
+
         <main>
-          <DanielReyes_HeroSection />
-          <DanielReyes_CentroSection />
-          <DanielReyes_IsapreGallery />
-          <DanielReyes_ServicesSection />
-          <DanielReyes_TeamSection />
-          <DanielReyes_EnfoqueSection />
-          <DanielReyes_PressSection />
-          <DanielReyes_GoogleReviews
-            reviews={googleReviewSets.centro}
-            label="Reseñas"
-            heading="Reseñas verificadas en Google"
-          />
-          <DanielReyes_FAQSection />
+          {/* HERO */}
+          <section id="inicio" className="hero">
+            <div className="heroimg" style={{ backgroundImage: `url('${IMG}/photos/waiting-room.webp')` }} />
+            <div className="scrim" />
+            <div className="herotx">
+              <h1 className="hero-h1">SUBJETIVIDADES<span className="bajada">Psicología clínica · Ñuñoa, Santiago</span></h1>
+              <h2 className="hsub">Terapia individual, de pareja, sexual y para adolescentes. Más de 20 años de experiencia en salud mental.</h2>
+              <div className="hrow">
+                <WhatsAppLink href={WHATSAPP_URL} className="btn">{CTA_LABEL}</WhatsAppLink>
+                <span className="hmeta">Presencial en Ñuñoa · Online en todo Chile</span>
+              </div>
+              <div className="hmeta" style={{ marginTop: 14 }}>
+                <span className="stars">★★★★★</span> {GOOGLE_RATING} · {GOOGLE_REVIEW_COUNT} reseñas en Google
+              </div>
+            </div>
+          </section>
+
+          {/* EL CENTRO */}
+          <section id="centro" className="section">
+            <div className="two two-centro">
+              <div className="centro-img" style={{ backgroundImage: `url('${IMG}/assets/atmosphere-office.webp')` }} />
+              <div>
+                <div className="lab">Nuestro Centro</div>
+                <h2 style={{ marginTop: 10 }}>Un espacio pensado para tu bienestar</h2>
+                <p className="body" style={{ marginTop: 16 }}>El cuidado de la salud mental necesita un entorno profesional y reservado, y un trabajo guiado por la mejor evidencia disponible.</p>
+                <p className="body">En SUBJETIVIDADES reunimos experiencia clínica y una atención cercana a cada persona que consulta.</p>
+                <div className="vals">
+                  {centroVals.map((v, i) => (
+                    <div key={v}><i>{String(i + 1).padStart(2, '0')}</i>{v}</div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ISAPRES */}
+          <section id="isapres" className="isasec">
+            <div className="inner">
+              <h2 className="isah">Reembolso con tu Isapre</h2>
+              <p className="isap">Emitimos boleta para que puedas solicitar reembolso en tu Isapre y seguro complementario.</p>
+              <div className="logos">
+                {isapres.map(([file, name]) => (
+                  <span key={name} className="chip">
+                    <img src={`${IMG}/assets/logos/isapres/${file}`} alt={`Isapre ${name} — aceptamos reembolso`} />
+                  </span>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* SERVICIOS */}
+          <section id="servicios" className="section">
+            <div className="shead">
+              <div className="lab">Servicios</div>
+              <h2>Nuestros servicios clínicos</h2>
+              <div className="sub">Cuatro áreas de atención, con objetivos definidos desde la primera sesión.</div>
+            </div>
+            <div className="svc">
+              {services.map((s) => (
+                <div key={s.title} className="c">
+                  <h3>{s.title}</h3>
+                  <p>{s.desc}</p>
+                  <ul className="tp">{s.topics.map((t) => <li key={t}>{t}</li>)}</ul>
+                  <a className="clink" href={s.href}>Conocer más →</a>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* EQUIPO */}
+          <section id="equipo" className="section">
+            <div className="shead">
+              <div className="lab">Equipo</div>
+              <h2>Psicólogos clínicos con experiencia y especialización</h2>
+              <div className="sub">El equipo combina formación de excelencia, experiencia clínica y un trato dedicado con cada paciente.</div>
+            </div>
+            <div className="team">
+              {team.map((m) => (
+                <div key={m.id}>
+                  <div className="av" style={{ backgroundImage: `url('${m.photo}')` }} />
+                  <h3>{m.name}</h3>
+                  <div className="rol">{m.role}</div>
+                  <p>{m.bio}</p>
+                  <div className="tags">{m.specialties.map((sp) => <span key={sp}>{sp}</span>)}</div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* ENFOQUE */}
+          <section id="enfoque" className="section">
+            <div className="two two-enf">
+              <div>
+                <div className="lab">Nuestro Enfoque</div>
+                <h2 style={{ marginTop: 10 }}>Metodología clínica basada en evidencia</h2>
+                <p className="body" style={{ marginTop: 16 }}>Trabajamos con un enfoque integrativo que prioriza las intervenciones con mayor respaldo, adaptándolas a la realidad y necesidades de cada paciente.</p>
+                <p className="body">Cada proceso es único y se supervisa en equipo, con evaluación permanente orientada a resultados.</p>
+                <div className="pill3">
+                  {enfoquePillars.map((p) => (
+                    <div key={p.n} className="p"><i>{p.n}</i><div><h3>{p.t}</h3><p>{p.d}</p></div></div>
+                  ))}
+                </div>
+              </div>
+              <div className="enf-img" style={{ backgroundImage: `url('${IMG}/assets/atmosphere-calm.webp')` }} />
+            </div>
+          </section>
+
+          {/* PRENSA */}
+          <section id="prensa" className="section">
+            <div className="prwrap">
+              <div>
+                <div className="lab">Trayectoria pública</div>
+                <h2 style={{ marginTop: 10 }}>Presencia académica, institucional y en medios</h2>
+                <p className="body" style={{ marginTop: 16 }}>Además de su trabajo clínico, los profesionales del equipo han participado en el debate público sobre psicología, educación, y salud sexual desde medios, universidades y organismos internacionales.</p>
+                <a className="plink" href="/prensa">Ver trayectoria y apariciones →</a>
+              </div>
+              <div className="prcards">
+                {homePressHighlights.map((item) => (
+                  <a key={`${item.source}-${item.title}`} className="prc" href={item.href} target="_blank" rel="noopener noreferrer">
+                    <span className="src">{item.source}{item.date ? ` · ${item.date}` : ''}</span>
+                    <span className="ttl">{item.title}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* RESEÑAS */}
+          <section id="resenas" className="section">
+            <div className="revhead">
+              <div>
+                <div className="lab">Reseñas</div>
+                <h2 style={{ marginTop: 10 }}>Reseñas verificadas en Google</h2>
+              </div>
+              <a className="revrate" href={GOOGLE_PROFILE_URL} target="_blank" rel="noopener noreferrer">
+                <b>{GOOGLE_RATING}</b>
+                <span className="rr-sub"><span className="stars">★★★★★</span> · {GOOGLE_REVIEW_COUNT} reseñas en Google</span>
+              </a>
+            </div>
+            <div className="rev">
+              {reviews.map((r) => (
+                <div key={r.name}>
+                  <blockquote>{`“${r.text}”`}</blockquote>
+                  <div className="who"><span className="stars">★★★★★</span><span className="nm">{r.name} · vía Google</span></div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* FAQ */}
+          <section id="faq" className="section">
+            <div className="shead">
+              <div className="lab">Preguntas Frecuentes</div>
+              <h2>Resolvemos tus dudas</h2>
+            </div>
+            <div className="faq">
+              {homeFaqs.map((f) => (
+                <div key={f.q} className="qa"><h3>{f.q}</h3><p>{f.a}</p></div>
+              ))}
+            </div>
+          </section>
+
+          {/* CONTACTO */}
           <DanielReyes_ContactSection />
-          <DanielReyes_MapSection />
+
+          {/* UBICACIÓN */}
+          <section id="ubicacion" className="mapsec">
+            <div className="shead">
+              <div className="lab">Ubicación</div>
+              <h2>Encuéntranos en Ñuñoa</h2>
+              <div className="sub">Alonso de Ercilla 2959, Ñuñoa, Región Metropolitana, Chile</div>
+            </div>
+            <div className="mapbox">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6657.803275170859!2d-70.5990791!3d-33.451869099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf4a2e22282b%3A0xa70c26182c67b086!2sSubjetividades.%20Psicolog%C3%ADa%20Cl%C3%ADnica!5e0!3m2!1ses-419!2scl!4v1781881555733!5m2!1ses-419!2scl"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Subjetividades. Psicología Clínica — Alonso de Ercilla 2959, Ñuñoa"
+              />
+            </div>
+          </section>
         </main>
-        <DanielReyes_Footer />
+
+        {/* FOOTER */}
+        <footer className="ftr2">
+          <div>
+            <div className="fbrand">Subjetividades</div>
+            <div className="fbrandsub">Psicología Clínica</div>
+            <div className="faddr">Alonso de Ercilla 2959, Ñuñoa, Región Metropolitana, Chile · Atención online para todo Chile</div>
+          </div>
+          <div className="flinks">
+            <a href="/prensa">Prensa</a>
+            <a href="/blog">Blog</a>
+            <a href="/blog/cuando-ir-al-psicologo">¿Cuándo ir al psicólogo?</a>
+            <a href="/blog/terapia-de-pareja-como-funciona">Terapia de pareja</a>
+            <a href="https://www.instagram.com/subjetividades.cl/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </footer>
+
         <DanielReyes_WhatsAppFloat />
       </div>
     </>
