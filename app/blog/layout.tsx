@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import SjNav from '@/components/SjNav';
+import DanielReyes_WhatsAppFloat from '@/components/sections/DanielReyes_WhatsAppFloat';
 
 export const metadata: Metadata = {
   title: {
@@ -30,6 +31,8 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
           <a href="https://www.instagram.com/subjetividades.cl/" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
       </footer>
+
+      <DanielReyes_WhatsAppFloat />
     </div>
   );
 }
