@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { ArrowRight, Calendar, MapPin, Monitor, Award, ShieldCheck, HeartHandshake } from 'lucide-react';
+import { ArrowRight, MessageCircle, MapPin, Monitor, Award, ShieldCheck, HeartHandshake } from 'lucide-react';
 import {
   DanielReyes_Footer,
   DanielReyes_WhatsAppFloat,
@@ -11,10 +11,18 @@ import DanielReyes_GoogleReviews, {
   GoogleRatingBadge,
   googleReviewSets,
 } from '@/components/sections/DanielReyes_GoogleReviews';
-import SchedulingLink from '@/components/SchedulingLink';
+import WhatsAppLink from '@/components/WhatsAppLink';
+import { waHref, WA_MESSAGES, CTA_LABEL } from '@/lib/whatsapp';
 import { teamByIds } from '@/lib/team';
 
 const BASE_URL = 'https://subjetividades.cl';
+
+// URL de WhatsApp con mensaje pre-escrito propio de este servicio.
+const WHATSAPP_URL = waHref(WA_MESSAGES.pareja);
+
+// Único CTA de hero y cierre: enlace a WhatsApp, relleno teal.
+const ctaPrimaryClass =
+  'inline-flex w-full items-center justify-center gap-2 rounded-lg border border-transparent bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700 sm:w-auto';
 
 export const metadata: Metadata = {
   title: 'Terapia de Pareja en Santiago y online | SUBJETIVIDADES',
@@ -85,7 +93,8 @@ const schemaData = {
         { '@type': 'Country', name: 'Chile' },
       ],
       provider: {
-        '@type': 'MedicalBusiness',
+        '@type': 'MedicalClinic',
+        '@id': `${BASE_URL}/#clinic`,
         name: 'Subjetividades. Psicología Clínica',
         url: BASE_URL,
         address: {
@@ -93,6 +102,7 @@ const schemaData = {
           streetAddress: 'Alonso de Ercilla 2959',
           addressLocality: 'Ñuñoa',
           addressRegion: 'Región Metropolitana',
+          postalCode: '7770465',
           addressCountry: 'CL',
         },
       },
@@ -148,12 +158,14 @@ export default function TerapiaDeParejaPage() {
                 <p className="mt-5 max-w-[560px] text-base leading-relaxed text-slate-300">
                   Un proceso clínico orientado a comprender y modificar los patrones de interacción que sostienen el malestar en la relación. Presencial en Ñuñoa y por videollamada en todo Chile.
                 </p>
-                <div className="mt-7 flex flex-wrap items-center gap-4">
-                  <SchedulingLink className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
-                    <Calendar className="h-[18px] w-[18px]" />
-                    Agendar primera consulta
-                  </SchedulingLink>
-                  <div className="flex items-center gap-4 text-[13px] text-slate-400">
+                <div className="mt-7">
+                  <div className="flex flex-col gap-3 sm:flex-row">
+                    <WhatsAppLink href={WHATSAPP_URL} className={ctaPrimaryClass}>
+                    <MessageCircle className="h-[18px] w-[18px]" />
+                    {CTA_LABEL}
+                  </WhatsAppLink>
+                  </div>
+                  <div className="mt-5 flex flex-wrap items-center gap-4 text-[13px] text-slate-400">
                     <span className="inline-flex items-center gap-1.5"><MapPin className="h-4 w-4 text-teal-400" /> Presencial en Ñuñoa</span>
                     <span className="inline-flex items-center gap-1.5"><Monitor className="h-4 w-4 text-teal-400" /> Online en todo Chile</span>
                   </div>
@@ -233,7 +245,7 @@ export default function TerapiaDeParejaPage() {
               <h2 className="text-[clamp(24px,3vw,32px)] font-bold leading-tight text-slate-900 mb-6">Modalidad y valor</h2>
               <ul className="space-y-3 text-[16px] leading-relaxed text-slate-700">
                 <li className="flex items-start gap-3"><span className="mt-2 h-[6px] w-[6px] shrink-0 rounded-full bg-teal-500" /><span><strong>Presencial</strong> en Ñuñoa, Santiago, o <strong>por videollamada</strong> para todo Chile, con resultados comparables.</span></li>
-                <li className="flex items-start gap-3"><span className="mt-2 h-[6px] w-[6px] shrink-0 rounded-full bg-teal-500" /><span><strong>Valor:</strong> $60.000–$70.000 por sesión.</span></li>
+                <li className="flex items-start gap-3"><span className="mt-2 h-[6px] w-[6px] shrink-0 rounded-full bg-teal-500" /><span><strong>Valor:</strong> desde $60.000 por sesión.</span></li>
                 <li className="flex items-start gap-3"><span className="mt-2 h-[6px] w-[6px] shrink-0 rounded-full bg-teal-500" /><span>Se emite <strong>boleta de honorarios</strong> para solicitar reembolso en Isapre y seguro complementario. <a href="/blog/reembolso-psicologo-isapre-fonasa" className="text-teal-700 underline hover:text-teal-800">Cómo funciona el reembolso</a>.</span></li>
               </ul>
             </div>
@@ -246,10 +258,10 @@ export default function TerapiaDeParejaPage() {
               intro="El equipo clínico de SUBJETIVIDADES atiende terapia de pareja. Todos son psicólogos clínicos con formación de excelencia y experiencia."
             />
             <div className="mx-auto mt-8 max-w-[820px]">
-              <SchedulingLink className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
-                Agendar con un profesional
+              <WhatsAppLink href={WHATSAPP_URL} className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
+                {CTA_LABEL}
                 <ArrowRight className="h-4 w-4" />
-              </SchedulingLink>
+              </WhatsAppLink>
             </div>
           </section>
 
@@ -276,10 +288,12 @@ export default function TerapiaDeParejaPage() {
               <div className="rounded-[14px] bg-slate-900 p-8 text-center">
                 <h2 className="text-xl font-bold text-white mb-2">Atención profesional para tu relación</h2>
                 <p className="text-slate-400 text-sm mb-5">Primera consulta presencial en Ñuñoa, Santiago, u online para todo Chile.</p>
-                <SchedulingLink className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-teal-700">
-                  <Calendar className="h-[18px] w-[18px]" />
-                  Agendar primera consulta
-                </SchedulingLink>
+                <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
+                  <WhatsAppLink href={WHATSAPP_URL} className={ctaPrimaryClass}>
+                    <MessageCircle className="h-[18px] w-[18px]" />
+                    {CTA_LABEL}
+                  </WhatsAppLink>
+                </div>
               </div>
             </div>
           </section>

@@ -22,22 +22,11 @@ const BASE_URL = 'https://subjetividades.cl';
 export const metadata: Metadata = {
   title: 'Psicólogo clínico en Ñuñoa, Santiago | Subjetividades. Psicología Clínica',
   description:
-    'Centro de psicología clínica en Ñuñoa, Santiago. Terapia individual, de pareja y sexual con más de 20 años de experiencia. Atención presencial y online en todo Chile.',
-  keywords: [
-    'psicólogo Ñuñoa',
-    'psicólogo Santiago',
-    'terapia de pareja Santiago',
-    'psicología clínica Santiago',
-    'terapia sexual Santiago',
-    'psicoterapia online Chile',
-    'psicólogo clínico',
-    'salud mental Santiago',
-    'Subjetividades. Psicología Clínica',
-  ],
+    'Centro de psicología clínica en Ñuñoa, Santiago. Terapia individual, de pareja, sexual y para adolescentes con más de 20 años de experiencia. Atención presencial y online en todo Chile.',
   openGraph: {
     title: 'Psicólogo clínico en Ñuñoa, Santiago | Subjetividades. Psicología Clínica',
     description:
-      'Terapia individual, de pareja y sexual con más de 20 años de experiencia. Atención presencial y online en todo Chile.',
+      'Terapia individual, de pareja, sexual y para adolescentes con más de 20 años de experiencia. Atención presencial y online en todo Chile.',
     url: BASE_URL,
     siteName: 'Subjetividades. Psicología Clínica',
     locale: 'es_CL',
@@ -55,7 +44,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Psicólogo clínico en Ñuñoa, Santiago | Subjetividades. Psicología Clínica',
     description:
-      'Terapia individual, de pareja y sexual. Atención presencial en Ñuñoa y online en todo Chile.',
+      'Terapia individual, de pareja, sexual y para adolescentes. Atención presencial en Ñuñoa y online en todo Chile.',
     images: [`${BASE_URL}/daniel-reyes/photos/waiting-room.png`],
   },
   alternates: {
@@ -77,14 +66,18 @@ export const metadata: Metadata = {
 const schemaData = {
   '@context': 'https://schema.org',
   '@graph': [
+    // Sin "telephone" a propósito: el número del centro es solo WhatsApp y no recibe llamadas.
+    // El Rich Results Test lo reporta como campo opcional faltante; es esperado, no corregir.
     {
-      '@type': ['MedicalBusiness', 'LocalBusiness'],
+      '@type': 'MedicalClinic',
       '@id': `${BASE_URL}/#clinic`,
       name: 'Subjetividades. Psicología Clínica',
       alternateName: ['Subjetividades', 'Centro Subjetividades', 'Subjetividades Ñuñoa'],
       description:
         'Centro de psicología clínica en Ñuñoa, Santiago. Psicoterapia individual, de pareja y sexual con enfoque basado en evidencia. Más de 20 años de experiencia.',
       url: BASE_URL,
+      image: `${BASE_URL}/daniel-reyes/photos/waiting-room.png`,
+      logo: `${BASE_URL}/daniel-reyes/assets/logos/brand/subjetividades-logo-cuadrado.png`,
       sameAs: [
         'https://www.instagram.com/subjetividades.cl/',
         'https://maps.google.com/?cid=12037037789320556678',
@@ -94,46 +87,42 @@ const schemaData = {
         streetAddress: 'Alonso de Ercilla 2959',
         addressLocality: 'Ñuñoa',
         addressRegion: 'Región Metropolitana',
+        postalCode: '7770465',
         addressCountry: 'CL',
       },
       geo: {
         '@type': 'GeoCoordinates',
-        latitude: -33.4537,
-        longitude: -70.6113,
+        latitude: -33.4518691,
+        longitude: -70.5990791,
       },
-      medicalSpecialty: 'Clinical Psychology',
       availableService: [
         { '@type': 'MedicalTherapy', name: 'Terapia Individual' },
         { '@type': 'MedicalTherapy', name: 'Terapia de Pareja' },
         { '@type': 'MedicalTherapy', name: 'Terapia Sexual' },
+        { '@type': 'MedicalTherapy', name: 'Terapia para Adolescentes' },
       ],
       priceRange: '$$',
       currenciesAccepted: 'CLP',
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '17',
-        bestRating: '5',
-        worstRating: '1',
-      },
       openingHoursSpecification: [
         {
           '@type': 'OpeningHoursSpecification',
           dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-          opens: '09:00',
-          closes: '19:00',
+          opens: '08:00',
+          closes: '18:00',
         },
       ],
-      serviceArea: {
-        '@type': 'AdministrativeArea',
-        name: 'Santiago, Chile',
-      },
+      areaServed: [
+        { '@type': 'City', name: 'Santiago' },
+        { '@type': 'Country', name: 'Chile' },
+      ],
       hasMap: 'https://maps.google.com/?cid=12037037789320556678',
     },
     {
-      '@type': 'Physician',
+      '@type': 'Person',
       '@id': `${BASE_URL}/#dr-daniel-reyes`,
       name: 'Daniel Reyes Pace',
+      url: `${BASE_URL}/#equipo`,
+      image: `${BASE_URL}/daniel-reyes/photos/team-daniel-reyes.webp`,
       jobTitle: 'Director Clínico',
       description:
         'Psicólogo clínico con doctorado de la Universidad de Chile y más de 20 años de experiencia. Consultor internacional especializado en psicoterapia basada en evidencia.',
@@ -159,9 +148,11 @@ const schemaData = {
       ],
     },
     {
-      '@type': 'Physician',
+      '@type': 'Person',
       '@id': `${BASE_URL}/#fernando-bravo`,
       name: 'Fernando Bravo Matheu',
+      url: `${BASE_URL}/#equipo`,
+      image: `${BASE_URL}/daniel-reyes/photos/team-fernando-bravo.webp`,
       jobTitle: 'Psicólogo Clínico',
       description:
         'Psicólogo de la Universidad Diego Portales con formación en clínica psicoanalítica de Winnicott. Especializado en adolescentes, adultos y terapia de pareja.',
@@ -169,14 +160,16 @@ const schemaData = {
       knowsAbout: ['Terapia individual', 'Terapia de pareja', 'Psicología adolescente'],
     },
     {
-      '@type': 'Physician',
+      '@type': 'Person',
       '@id': `${BASE_URL}/#allison-rowe`,
       name: 'Allison Rowe Carrasco',
+      url: `${BASE_URL}/#equipo`,
+      image: `${BASE_URL}/daniel-reyes/photos/team-allison-rowe.webp`,
       jobTitle: 'Psicóloga Clínica',
       description:
         'Psicóloga de la Universidad de Chile, diplomada en Terapia Sistémica y Familiar. 8 años de experiencia en atención individual y de parejas.',
       worksFor: { '@id': `${BASE_URL}/#clinic` },
-      knowsAbout: ['Terapia individual', 'Terapia sistémica', 'Terapia de pareja'],
+      knowsAbout: ['Terapia individual', 'Terapia sistémica', 'Terapia de pareja', 'Terapia para adolescentes'],
     },
     {
       '@type': 'FAQPage',
@@ -227,7 +220,7 @@ const schemaData = {
           name: '¿Qué pasa si necesito cancelar una sesión?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Pedimos aviso con al menos 24 horas de anticipación. Las cancelaciones con menos de 24 horas se cobran como sesión tomada, salvo emergencias justificadas.',
+            text: 'Pedimos aviso con al menos 24 horas de anticipación. Las cancelaciones con menos de 24 horas se cobran como sesión tomada.',
           },
         },
       ],

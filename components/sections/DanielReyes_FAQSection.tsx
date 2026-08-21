@@ -31,7 +31,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: '¿Qué pasa si necesito cancelar una sesión?',
-    answer: 'Pedimos aviso con al menos 24 horas de anticipación. Las cancelaciones con menos de 24 horas se cobran como sesión tomada, salvo emergencias justificadas.',
+    answer: 'Pedimos aviso con al menos 24 horas de anticipación. Las cancelaciones con menos de 24 horas se cobran como sesión tomada.',
   },
 ];
 

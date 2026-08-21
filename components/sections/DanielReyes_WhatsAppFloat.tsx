@@ -3,7 +3,7 @@
 import { MessageCircle } from 'lucide-react';
 
 const WHATSAPP_NUMBER = '56937389719';
-const WHATSAPP_MSG = 'Hola, me gustaría agendar una consulta.';
+const WHATSAPP_MSG = 'Hola, me gustaría solicitar una hora.';
 
 export default function DanielReyes_WhatsAppFloat() {
   return (

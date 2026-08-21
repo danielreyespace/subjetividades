@@ -22,9 +22,17 @@ export default function DanielReyes_ContactSection() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+
+    // Solo se exige nombre + una vía de contacto (teléfono o email).
+    if (!formData.name.trim() || (!formData.email.trim() && !formData.phone.trim())) {
+      setError('Déjanos tu nombre y al menos una vía de contacto (teléfono o email).');
+      return;
+    }
+    setError('');
     setIsSubmitting(true);
 
     // Save lead to Fidelidapp + email notification via secure proxy
@@ -93,10 +101,9 @@ export default function DanielReyes_ContactSection() {
                   />
                 </div>
                 <div>
-                  <label className="block text-[13px] font-semibold text-slate-700 mb-1.5">Email</label>
+                  <label className="block text-[13px] font-semibold text-slate-700 mb-1.5">Email (opcional si dejas teléfono)</label>
                   <input
                     type="email"
-                    required
                     placeholder="tu@email.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -104,7 +111,7 @@ export default function DanielReyes_ContactSection() {
                   />
                 </div>
                 <div>
-                  <label className="block text-[13px] font-semibold text-slate-700 mb-1.5">Teléfono (opcional)</label>
+                  <label className="block text-[13px] font-semibold text-slate-700 mb-1.5">Teléfono (opcional si dejas email)</label>
                   <input
                     type="tel"
                     placeholder="+56 9 1234 5678"
@@ -137,6 +144,11 @@ export default function DanielReyes_ContactSection() {
                     className="w-full px-3.5 py-3 border-[1.5px] border-slate-200 rounded-lg text-[15px] text-slate-800 bg-white transition-all focus:outline-none focus:border-teal-600 focus:ring-[3px] focus:ring-teal-600/10 resize-y min-h-[80px]"
                   />
                 </div>
+                {error && (
+                  <p className="text-[13px] font-medium text-red-600" role="alert">
+                    {error}
+                  </p>
+                )}
                 <button
                   type="submit"
                   disabled={isSubmitting}
