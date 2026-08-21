@@ -1,3 +1,4 @@
+import SjNav from '@/components/SjNav';
 import WhatsAppLink from '@/components/WhatsAppLink';
 import { CTA_LABEL } from '@/lib/whatsapp';
 import type { TeamMember } from '@/lib/team';
@@ -45,15 +46,7 @@ export default function ServiceRedesign({ c }: { c: ServiceContent }) {
   return (
     <div className="sj" style={{ minHeight: '100vh' }}>
       {/* NAV */}
-      <div className="nav">
-        <a href="/" className="brand">Subjetividades<span>Psicología Clínica</span></a>
-        <div className="nl">
-          {navLinks.map(([href, label]) => (
-            <a key={href} href={href}>{label}</a>
-          ))}
-          <a href="/#contacto" className="navcta">Contacto</a>
-        </div>
-      </div>
+      <SjNav />
 
       {/* SUBHERO */}
       <section className="subhero">

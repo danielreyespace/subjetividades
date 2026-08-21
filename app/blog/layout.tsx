@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import SjNav from '@/components/SjNav';
 
 export const metadata: Metadata = {
   title: {
@@ -7,28 +8,11 @@ export const metadata: Metadata = {
   },
 };
 
-const navLinks: [string, string][] = [
-  ['/#centro', 'El Centro'],
-  ['/#servicios', 'Servicios'],
-  ['/#equipo', 'Equipo'],
-  ['/#resenas', 'Reseñas'],
-  ['/prensa', 'Prensa'],
-  ['/blog', 'Blog'],
-];
-
 export default function BlogLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="sj" style={{ minHeight: '100vh' }}>
       {/* NAV */}
-      <div className="nav">
-        <a href="/" className="brand">Subjetividades<span>Psicología Clínica</span></a>
-        <div className="nl">
-          {navLinks.map(([href, label]) => (
-            <a key={href} href={href}>{label}</a>
-          ))}
-          <a href="/#contacto" className="navcta">Contacto</a>
-        </div>
-      </div>
+      <SjNav />
 
       {children}
 

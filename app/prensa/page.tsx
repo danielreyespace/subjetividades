@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import SjNav from '@/components/SjNav';
 import {
   featuredPublication,
   pressIntro,
@@ -96,15 +97,7 @@ export default function PressPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       <div className="sj" style={{ minHeight: '100vh' }}>
         {/* NAV */}
-        <div className="nav">
-          <a href="/" className="brand">Subjetividades<span>Psicología Clínica</span></a>
-          <div className="nl">
-            {navLinks.map(([href, label]) => (
-              <a key={href} href={href}>{label}</a>
-            ))}
-            <a href="/#contacto" className="navcta">Contacto</a>
-          </div>
-        </div>
+        <SjNav />
 
         {/* HERO */}
         <section className="phero">

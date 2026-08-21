@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import SjNav from '@/components/SjNav';
 import WhatsAppLink from '@/components/WhatsAppLink';
 import { waHref, WA_MESSAGES, CTA_LABEL } from '@/lib/whatsapp';
 import { team } from '@/lib/team';
@@ -266,7 +267,6 @@ const isapres: [string, string][] = [
   ['cruz-blanca.webp', 'Cruz Blanca'],
   ['nueva-masvida.webp', 'Nueva Masvida'],
   ['vida-tres.webp', 'Vida Tres'],
-  ['esencial.webp', 'Esencial'],
 ];
 
 const homeFaqs = [
@@ -290,15 +290,7 @@ export default function HomePage() {
       />
       <div className="sj" style={{ minHeight: '100vh' }}>
         {/* NAV */}
-        <div className="nav">
-          <a href="#inicio" className="brand">Subjetividades<span>Psicología Clínica</span></a>
-          <div className="nl">
-            {navLinks.map(([href, label]) => (
-              <a key={href} href={href}>{label}</a>
-            ))}
-            <a href="#contacto" className="navcta">Contacto</a>
-          </div>
-        </div>
+        <SjNav />
 
         <main>
           {/* HERO */}
@@ -339,7 +331,8 @@ export default function HomePage() {
           {/* ISAPRES */}
           <section id="isapres" className="isasec">
             <div className="inner">
-              <h2 className="isah">Reembolso con tu Isapre</h2>
+              <div className="lab">Seguros de salud</div>
+              <h2 className="isah" style={{ marginTop: 8 }}>Reembolso con tu Isapre</h2>
               <p className="isap">Emitimos boleta para que puedas solicitar reembolso en tu Isapre y seguro complementario.</p>
               <div className="logos">
                 {isapres.map(([file, name]) => (
