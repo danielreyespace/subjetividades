@@ -260,11 +260,13 @@ const enfoquePillars = [
 ];
 
 const isapres: [string, string][] = [
-  ['banmedica.jpg', 'Banmédica'],
-  ['colmena.png', 'Colmena'],
-  ['consalud.png', 'Consalud'],
-  ['cruz-blanca.svg', 'Cruz Blanca'],
-  ['vida-tres.jpg', 'Vida Tres'],
+  ['banmedica.webp', 'Banmédica'],
+  ['colmena.webp', 'Colmena'],
+  ['consalud.webp', 'Consalud'],
+  ['cruz-blanca.webp', 'Cruz Blanca'],
+  ['nueva-masvida.webp', 'Nueva Masvida'],
+  ['vida-tres.webp', 'Vida Tres'],
+  ['esencial.webp', 'Esencial'],
 ];
 
 const homeFaqs = [
