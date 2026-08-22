@@ -26,6 +26,7 @@ const consultationLabels: Record<string, string> = {
   individual: 'Terapia individual',
   pareja: 'Terapia de pareja',
   sexual: 'Terapia sexual',
+  adolescentes: 'Terapia para adolescentes',
   'no-seguro': 'No estoy seguro/a',
 };
 

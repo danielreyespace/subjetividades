@@ -88,6 +88,7 @@ export default function DanielReyes_ContactSection() {
                     <option value="individual">Terapia individual</option>
                     <option value="pareja">Terapia de pareja</option>
                     <option value="sexual">Terapia sexual</option>
+                    <option value="adolescentes">Terapia para adolescentes</option>
                     <option value="no-seguro">No estoy seguro/a</option>
                   </select>
                 </div>
