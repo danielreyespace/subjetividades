@@ -2,21 +2,21 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export const runtime = 'edge';
 
-const FIDELIDAPP_API_URL = process.env.FIDELIDAPP_API_URL || 'https://fidelidapp.cl';
-const FIDELIDAPP_MCP_API_KEY = process.env.FIDELIDAPP_MCP_API_KEY || '';
-const FIDELIDAPP_SLUG = process.env.FIDELIDAPP_SLUG || 'daniel-reyes';
-const EMAILJS_SERVICE_ID = process.env.EMAILJS_SERVICE_ID || '';
-const EMAILJS_TEMPLATE_ID = process.env.EMAILJS_TEMPLATE_ID || '';
-const EMAILJS_PUBLIC_KEY = process.env.EMAILJS_PUBLIC_KEY || '';
-const EMAILJS_PRIVATE_KEY = process.env.EMAILJS_PRIVATE_KEY || '';
-const CONTACT_NOTIFY_TO = (process.env.CONTACT_NOTIFY_TO || 'danielreyespace@gmail.com,alvaro.villena@gmail.com')
+// Envío del formulario de contacto por email vía Resend.
+// Solo requiere UNA variable de entorno: RESEND_API_KEY.
+// Sin dominio verificado, Resend envía desde onboarding@resend.dev al correo
+// de la cuenta (danielreyespace@gmail.com). Cuando se verifique el dominio,
+// se puede cambiar CONTACT_FROM a algo como "Subjetividades <contacto@subjetividades.cl>".
+const RESEND_API_KEY = process.env.RESEND_API_KEY || '';
+const CONTACT_FROM = process.env.CONTACT_FROM || 'Subjetividades <onboarding@resend.dev>';
+const CONTACT_NOTIFY_TO = (process.env.CONTACT_NOTIFY_TO || 'danielreyespace@gmail.com')
   .split(',')
-  .map((email) => email.trim())
+  .map((e) => e.trim())
   .filter(Boolean);
 
 type ContactPayload = {
   name: string;
-  email: string;
+  email?: string;
   phone?: string;
   consultationType?: string;
   message?: string;
@@ -29,110 +29,71 @@ const consultationLabels: Record<string, string> = {
   'no-seguro': 'No estoy seguro/a',
 };
 
-function getConsultationLabel(value?: string) {
+function label(value?: string) {
   return value ? consultationLabels[value] || value : 'No especificado';
 }
 
-function splitName(fullName: string) {
-  const parts = fullName.trim().split(/\s+/).filter(Boolean);
-  const firstName = parts.shift() || fullName;
-  const lastName = parts.join(' ');
-  return { firstName, lastName };
-}
-
-async function sendContactNotification(payload: ContactPayload) {
-  if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
-    return { skipped: true };
-  }
-
-  const { firstName, lastName } = splitName(payload.name);
-  const consultationType = getConsultationLabel(payload.consultationType);
-  const submittedAt = new Date().toLocaleString('es-CL', { timeZone: 'America/Santiago' });
-
-  const results = await Promise.all(
-    CONTACT_NOTIFY_TO.map(async (toEmail) => {
-      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          service_id: EMAILJS_SERVICE_ID,
-          template_id: EMAILJS_TEMPLATE_ID,
-          user_id: EMAILJS_PUBLIC_KEY,
-          ...(EMAILJS_PRIVATE_KEY && { accessToken: EMAILJS_PRIVATE_KEY }),
-          template_params: {
-            to_email: toEmail,
-            subject: `Nuevo contacto desde subjetividades.cl: ${payload.name}`,
-            firstName,
-            lastName,
-            email: payload.email,
-            phone: payload.phone || 'No informado',
-            company: 'SUBJETIVIDADES',
-            role: consultationType,
-            services: consultationType,
-            from_name: payload.name,
-            from_email: payload.email,
-            reply_to: payload.email,
-            consultation_type: consultationType,
-            message: payload.message || 'Sin mensaje',
-            submitted_at: submittedAt,
-          },
-        }),
-      });
-
-      const text = await response.text();
-
-      if (!response.ok) {
-        throw new Error(text || `EmailJS error ${response.status}`);
-      }
-
-      return { toEmail, status: response.status, text };
-    })
-  );
-
-  return { sent: results.length, results };
+function esc(s: string) {
+  return s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c] as string));
 }
 
 export async function POST(req: NextRequest) {
   try {
     const { name, email, phone, consultationType, message } = (await req.json()) as ContactPayload;
 
-    if (!name || !email) {
-      return NextResponse.json({ error: 'Nombre y email son requeridos' }, { status: 400 });
+    if (!name || (!email && !phone)) {
+      return NextResponse.json({ error: 'Falta nombre y una vía de contacto' }, { status: 400 });
+    }
+    if (!RESEND_API_KEY) {
+      console.error('[contact] RESEND_API_KEY no configurada');
+      return NextResponse.json({ ok: false }, { status: 200 });
     }
 
-    const notification = sendContactNotification({ name, email, phone, consultationType, message })
-      .then((data) => ({ ok: true, data }))
-      .catch((error) => {
-        console.error('[contact] EmailJS error:', error);
-        return { ok: false };
-      });
+    const tipo = label(consultationType);
+    const submittedAt = new Date().toLocaleString('es-CL', { timeZone: 'America/Santiago' });
 
-    const response = await fetch(`${FIDELIDAPP_API_URL}/api/mcp/clients/add`, {
+    const rows = [
+      ['Nombre', name],
+      ['Email', email || '—'],
+      ['Teléfono', phone || '—'],
+      ['Tipo de consulta', tipo],
+      ['Mensaje', message || '—'],
+      ['Fecha', submittedAt],
+    ]
+      .map(
+        ([k, v]) =>
+          `<tr><td style="padding:6px 12px;font-weight:600;color:#111;white-space:nowrap;vertical-align:top">${k}</td><td style="padding:6px 12px;color:#333">${esc(String(v))}</td></tr>`
+      )
+      .join('');
+
+    const html = `<div style="font-family:-apple-system,Segoe UI,sans-serif;max-width:560px">
+      <h2 style="color:#0E6B60;margin:0 0 4px">Nuevo contacto desde subjetividades.cl</h2>
+      <p style="color:#666;margin:0 0 16px;font-size:14px">Formulario de contacto</p>
+      <table style="border-collapse:collapse;border:1px solid #e5e5e5;border-radius:6px">${rows}</table>
+    </div>`;
+
+    const r = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
+        Authorization: `Bearer ${RESEND_API_KEY}`,
         'Content-Type': 'application/json',
-        'X-MCP-API-Key': FIDELIDAPP_MCP_API_KEY,
       },
       body: JSON.stringify({
-        slug: FIDELIDAPP_SLUG,
-        clientData: {
-          name,
-          email,
-          ...(phone && { phoneNumber: phone }),
-          ...(consultationType && { notes: `Tipo consulta: ${consultationType}${message ? ` | ${message}` : ''}` }),
-        },
+        from: CONTACT_FROM,
+        to: CONTACT_NOTIFY_TO,
+        ...(email && { reply_to: email }),
+        subject: `Nuevo contacto: ${name}${consultationType ? ` (${tipo})` : ''}`,
+        html,
       }),
     });
 
-    const data = await response.json().catch(() => ({}));
-
-    if (!response.ok) {
-      console.error('[contact] Fidelidapp error:', response.status, data);
-      // Don't block the user — the email notification still goes out
-      return NextResponse.json({ ok: false, fidelidapp: data, notification: await notification }, { status: 200 });
+    if (!r.ok) {
+      const t = await r.text().catch(() => '');
+      console.error('[contact] Resend error', r.status, t);
+      return NextResponse.json({ ok: false }, { status: 200 });
     }
 
-    return NextResponse.json({ ok: true, fidelidapp: data, notification: await notification }, { status: 200 });
+    return NextResponse.json({ ok: true }, { status: 200 });
   } catch (err) {
     console.error('[contact] Error:', err);
     return NextResponse.json({ ok: false }, { status: 200 });
