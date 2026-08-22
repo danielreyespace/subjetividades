@@ -192,7 +192,7 @@ const schemaData = {
           name: '¿Atienden con Isapre?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Emitimos boleta de honorarios para que puedas solicitar reembolso parcial en tu Isapre (Banmédica, Colmena, Consalud, Cruz Blanca, Vida Tres) o Fonasa. El porcentaje de reembolso depende de tu plan.',
+            text: 'Emitimos boleta para que puedas solicitar reembolso en tu Isapre y seguros complementarios. Para usuarios de Fonasa tenemos valores especiales dependiendo del tramo.',
           },
         },
         {
@@ -205,10 +205,10 @@ const schemaData = {
         },
         {
           '@type': 'Question',
-          name: '¿Puedo agendar sin llamar por teléfono?',
+          name: '¿Cómo puedo agendar?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Sí. Puedes agendar directamente con cada profesional desde la sección Equipo, o completando el formulario de contacto en esta página. Respondemos en menos de 2 horas en día hábil.',
+            text: 'Escribiéndonos a través de WhatsApp o bien completando el formulario de contacto. Un humano te responderá a la brevedad.',
           },
         },
         {
@@ -272,9 +272,9 @@ const isapres: [string, string][] = [
 const homeFaqs = [
   { q: '¿Cómo es la primera sesión?', a: 'La primera sesión es una evaluación donde conversamos sobre lo que te trae a consulta, tu historia relevante y definimos juntos los objetivos del proceso. Dura entre 50 y 60 minutos. No hay compromiso de continuar si no te sientes cómodo o cómoda.' },
   { q: '¿Cuánto dura un proceso terapéutico?', a: 'Depende de cada caso. Hay procesos focalizados de 8 a 12 sesiones y otros más extensos. Desde la primera sesión te damos una estimación honesta del tiempo que podríamos necesitar.' },
-  { q: '¿Atienden con Isapre?', a: 'Emitimos boleta de honorarios para que puedas solicitar reembolso parcial en tu Isapre (Banmédica, Colmena, Consalud, Cruz Blanca, Vida Tres) o Fonasa. El porcentaje de reembolso depende de tu plan.' },
+  { q: '¿Atienden con Isapre?', a: 'Emitimos boleta para que puedas solicitar reembolso en tu Isapre y seguros complementarios. Para usuarios de Fonasa tenemos valores especiales dependiendo del tramo.' },
   { q: '¿La terapia online funciona igual que presencial?', a: 'Sí. La evidencia clínica muestra que la terapia por videollamada tiene la misma efectividad que la presencial para la mayoría de las condiciones. Atendemos pacientes online en todo Chile con excelentes resultados.' },
-  { q: '¿Puedo agendar sin llamar por teléfono?', a: 'Sí. Puedes agendar directamente con cada profesional desde la sección Equipo, o completando el formulario de contacto en esta página. Respondemos en menos de 2 horas en día hábil.' },
+  { q: '¿Cómo puedo agendar?', a: 'Escribiéndonos a través de WhatsApp o bien completando el formulario de contacto. Un humano te responderá a la brevedad.' },
   { q: '¿Qué pasa si necesito cancelar una sesión?', a: 'Pedimos aviso con al menos 24 horas de anticipación. Las cancelaciones con menos de 24 horas se cobran como sesión tomada.' },
 ];
 
