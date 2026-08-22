@@ -367,7 +367,7 @@ export default function HomePage() {
           <section id="equipo" className="section">
             <div className="shead">
               <div className="lab">Equipo</div>
-              <h2>Psicólogos clínicos con experiencia y especialización</h2>
+              <h2>Psicólogos clínicos con especialización</h2>
               <div className="sub">El equipo combina formación de excelencia, experiencia clínica y un trato dedicado con cada paciente.</div>
             </div>
             <div className="team">
