@@ -61,7 +61,7 @@
 .sj .isah{font-size:20px;font-weight:800;letter-spacing:-.5px}
 .sj .isap{font-size:14.5px;color:var(--mu);margin:8px auto 22px;max-width:52ch}
 .sj .logos{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center}
-.sj .chip{background:#fff;border:1px solid #E3DED4;border-radius:8px;width:132px;height:58px;display:flex;align-items:center;justify-content:center;padding:0 12px}
+.sj .chip{background:#fff;border:1px solid #E3DED4;border-radius:2px;width:132px;height:58px;display:flex;align-items:center;justify-content:center;padding:0 12px}
 .sj .chip img{max-height:30px;max-width:104px;width:auto;object-fit:contain}
 
 /* SECTION HEADER centrado */
