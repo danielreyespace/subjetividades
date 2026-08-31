@@ -15,6 +15,16 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'el-paciente-estoico',
+    title: 'El paciente estoico: por qué el estoicismo seduce y qué se ve en la consulta',
+    excerpt:
+      'Una escuela que pareció extinta es hoy una de las filosofías más leídas, con particular arraigo entre hombres jóvenes. Sus raíces son sociales —incertidumbre, individuación, un mandato de autosuficiencia— y en la consulta se ve tanto lo que ofrece como lo que esconde cuando se vive como supresión emocional.',
+    date: '31 de agosto, 2026',
+    readTime: '5 min',
+    category: 'Salud mental',
+    lastModified: '2026-08-31',
+  },
+  {
     slug: 'adolescencia-cambios-sociales-redes',
     title: 'Ser adolescente hoy: cambios sociales, redes y cuándo pedir ayuda',
     excerpt:
