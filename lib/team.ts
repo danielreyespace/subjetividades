@@ -10,6 +10,8 @@ export interface TeamMember {
   photo: string | null;
   specialties: string[];
   bio: string;
+  // Enlace opcional al perfil profesional externo (hub-and-spoke → pcc).
+  profileUrl?: string;
 }
 
 export const team: TeamMember[] = [
@@ -19,7 +21,8 @@ export const team: TeamMember[] = [
     role: 'Director Clínico',
     photo: '/daniel-reyes/photos/team-daniel-reyes.webp',
     specialties: ['Terapeuta para adultos', 'Terapia de pareja', 'Sexualidad y deseo'],
-    bio: 'Psicólogo y Doctor en Psicología de la Universidad de Chile, con más de 20 años de experiencia como terapeuta, investigador, docente universitario y consultor para organismos nacionales (MINEDUC) e internacionales (UNESCO). Coordinó la Comisión de Sexualidades y Género del Colegio de Psicólogos de Chile A.G.',
+    bio: 'Psicólogo y Doctor en Psicología de la Universidad de Chile, con más de 20 años de experiencia como terapeuta, investigador, docente universitario y consultor para organismos nacionales (MINEDUC) e internacionales (UNESCO). Coordinó la Comisión de Sexualidades y Género del Colegio de Psicólogos de Chile.',
+    profileUrl: 'https://psicologiaclinicachile.cl/',
   },
   {
     id: 'fernando-bravo',

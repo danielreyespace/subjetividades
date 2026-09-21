@@ -114,7 +114,7 @@ export default function ServiceRedesign({ c }: { c: ServiceContent }) {
                 {m.photo && <div className="av" style={{ backgroundImage: `url('${m.photo}')` }} />}
                 <h3>{m.name}</h3>
                 <div className="rol">{m.role}</div>
-                <p>{m.bio}</p>
+                <p>{m.bio}{m.profileUrl && (<>{' '}<a href={m.profileUrl} style={{ color: '#0f766e', textDecoration: 'underline' }}>(Ver más)</a></>)}</p>
               </div>
             ))}
           </div>

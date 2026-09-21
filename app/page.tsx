@@ -376,7 +376,7 @@ export default function HomePage() {
                   <div className="av" style={{ backgroundImage: `url('${m.photo}')` }} />
                   <h3>{m.name}</h3>
                   <div className="rol">{m.role}</div>
-                  <p>{m.bio}</p>
+                  <p>{m.bio}{m.profileUrl && (<>{' '}<a href={m.profileUrl} style={{ color: '#0f766e', textDecoration: 'underline' }}>(Ver más)</a></>)}</p>
                   <div className="tags">{m.specialties.map((sp) => <span key={sp}>{sp}</span>)}</div>
                 </div>
               ))}
