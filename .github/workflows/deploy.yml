@@ -29,6 +29,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # Sitemap publicado ANTES del deploy, para que IndexNow envíe solo lo que cambió.
+      - name: Save previous sitemap
+        run: curl -fsS "https://subjetividades.cl/sitemap.xml?t=$(date +%s)" -o /tmp/sitemap-before.xml || true
+
       - name: Build (Next.js → Cloudflare Pages)
         run: npx @cloudflare/next-on-pages@1
 
@@ -38,3 +42,10 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 2667e1c2e6669b8b78a6f6984921e41f
           command: pages deploy .vercel/output/static --project-name=subjetividades --branch=main
+
+      # Avisa a Bing (IndexNow) de las URLs nuevas o modificadas. No bloquea el deploy si falla.
+      - name: Notify IndexNow
+        continue-on-error: true
+        run: |
+          sleep 20
+          node scripts/indexnow.mjs /tmp/sitemap-before.xml
