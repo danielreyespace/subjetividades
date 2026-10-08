@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import SchedulingLink from '@/components/SchedulingLink';
 
 export const metadata: Metadata = {
@@ -98,6 +99,20 @@ export default function NarcisismoPage() {
             <div className="text-[13px] text-slate-400">Psicólogo clínico · Doctor en Psicología, U. de Chile · Director de SUBJETIVIDADES</div>
           </div>
         </header>
+
+        <figure className="mb-12">
+          <Image
+            src="/blog/narciso-caravaggio.webp"
+            alt="Narciso, pintura atribuida a Caravaggio: un joven se inclina sobre el agua y contempla su reflejo"
+            width={1280}
+            height={1552}
+            className="w-full max-w-[380px] mx-auto h-auto rounded-[12px]"
+            priority
+          />
+          <figcaption className="text-center text-[13px] text-slate-400 mt-3">
+            Narciso, atribuido a Caravaggio (c. 1597-1599). Galleria Nazionale d&apos;Arte Antica, Roma.
+          </figcaption>
+        </figure>
 
         <article className="prose prose-slate max-w-none">
           <p className={`${p} mb-8`}>
