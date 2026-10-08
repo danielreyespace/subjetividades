@@ -2,6 +2,7 @@
 // La usan el listado del blog (app/blog/page.tsx) y el sitemap (app/sitemap.ts).
 // Al agregar un artículo nuevo: crea su página en app/blog/<slug>/page.tsx
 // y añade una entrada aquí. Aparecerá automáticamente en el listado y en el sitemap.
+// Además, agrega el artículo a public/llms.txt y public/llms-full.txt (los leen las IAs).
 
 export interface BlogPost {
   slug: string;

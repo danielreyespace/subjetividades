@@ -357,7 +357,7 @@ export default function HomePage() {
                   <h3>{s.title}</h3>
                   <p>{s.desc}</p>
                   <ul className="tp">{s.topics.map((t) => <li key={t}>{t}</li>)}</ul>
-                  <a className="clink" href={s.href}>Conocer más →</a>
+                  <a className="clink" href={s.href}>Más sobre {s.title.toLowerCase()} →</a>
                 </div>
               ))}
             </div>
@@ -485,10 +485,14 @@ export default function HomePage() {
             <div className="faddr">Alonso de Ercilla 2959, Ñuñoa, Región Metropolitana, Chile · Atención online para todo Chile</div>
           </div>
           <div className="flinks">
+            <a href="/terapia-individual">Terapia individual</a>
+            <a href="/terapia-de-pareja">Terapia de pareja</a>
+            <a href="/terapia-sexual">Terapia sexual</a>
+            <a href="/terapia-adolescentes">Terapia para adolescentes</a>
             <a href="/prensa">Prensa</a>
             <a href="/blog">Blog</a>
             <a href="/blog/cuando-ir-al-psicologo">¿Cuándo ir al psicólogo?</a>
-            <a href="/blog/terapia-de-pareja-como-funciona">Terapia de pareja</a>
+            <a href="/blog/terapia-de-pareja-como-funciona">Cómo funciona la terapia de pareja</a>
             <a href="https://www.instagram.com/subjetividades.cl/" target="_blank" rel="noopener noreferrer">Instagram</a>
           </div>
         </footer>

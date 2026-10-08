@@ -1,75 +1,34 @@
 # SUBJETIVIDADES — Contenido completo del sitio
 
-> Este archivo contiene el contenido textual completo del sitio web de SUBJETIVIDADES para uso por sistemas de inteligencia artificial y large language models.
+> Este archivo contiene el contenido textual del sitio web de SUBJETIVIDADES (https://subjetividades.cl) para uso por sistemas de inteligencia artificial y large language models. Actualizado: octubre de 2026.
 
 ---
 
 ## Página principal
 
-**Título:** Psicólogo clínico en Ñuñoa, Santiago | SUBJETIVIDADES
+**Título:** Psicólogo clínico en Ñuñoa, Santiago | Subjetividades. Psicología Clínica
 **URL:** https://subjetividades.cl/
-**Descripción:** Centro de psicología clínica en Ñuñoa, Santiago. Terapia individual, de pareja y sexual con más de 20 años de experiencia. Atención presencial y online en todo Chile.
+**Descripción:** Centro de psicología clínica en Ñuñoa, Santiago. Terapia individual, de pareja, sexual y para adolescentes con más de 20 años de experiencia. Atención presencial y online en todo Chile.
 
-### Hero
+### Nuestro centro
 
-SUBJETIVIDADES. Atendiendo presencial y online.
+Centro de psicología clínica en Ñuñoa, Santiago, dirigido por Daniel Reyes Pace, Doctor en Psicología de la Universidad de Chile, con más de 20 años de experiencia clínica.
 
-Psicólogo clínico en Ñuñoa, Santiago. Psicoterapia individual, de pareja y sexual con enfoque clínico basado en evidencia. Más de 20 años de experiencia al servicio de tu salud mental.
-
-### Nuestro Centro
-
-Un espacio pensado para tu bienestar.
-
-SUBJETIVIDADES nació con una convicción: que cada persona merece un acompañamiento psicológico riguroso, personalizado y libre de juicios. Nuestro centro combina más de 20 años de experiencia clínica con metodologías basadas en evidencia científica actualizada.
-
-Valores fundamentales:
-1. Evidencia clínica — Cada proceso terapéutico se sustenta en metodologías validadas y actualizadas por la investigación psicológica contemporánea.
-2. Confidencialidad absoluta — Tu privacidad es sagrada. Todo lo que compartes en sesión permanece en el espacio terapéutico, sin excepciones.
-3. Sin juicios — Nuestro espacio es libre de prejuicios. Tu historia, identidad y experiencias son bienvenidas exactamente como son.
+Valores: confidencialidad absoluta · trato humano y respetuoso · enfoque basado en evidencia · atención presencial y online.
 
 ### Servicios clínicos
 
-**Terapia Individual**
-Un espacio para explorar y transformar los patrones que te limitan. Trabajamos ansiedad, depresión, autoestima, crisis vitales, duelo, trauma y cualquier motivo de consulta que afecte tu bienestar emocional. Enfoque cognitivo-conductual, integrativo y basado en evidencia.
+Cuatro áreas de atención, con objetivos definidos desde la primera sesión: terapia individual, terapia de pareja, terapia sexual y terapia para adolescentes. Detalle de cada una más abajo.
 
-**Terapia de Pareja**
-Las relaciones de pareja son uno de los vínculos más complejos e importantes de la vida. Acompañamos a parejas en todas las etapas: comunicación, confianza, intimidad, crisis, y cuando es necesario, también en procesos de separación consciente. Enfoque sistémico y focalizado en las emociones.
+### Enfoque clínico
 
-**Terapia Sexual**
-La sexualidad es una dimensión fundamental del bienestar humano. Trabajamos disfunciones sexuales, problemas de deseo, dificultades en la intimidad, diversidad sexual y cualquier motivo de consulta relacionado con la vida sexual. Enfoque clínico especializado, sin tabúes.
+1. Evaluación inicial rigurosa — Primera sesión de diagnóstico donde exploramos tu motivo de consulta, historia relevante y definimos objetivos terapéuticos.
+2. Plan de tratamiento personalizado — Diseñamos un plan específico con herramientas y técnicas seleccionadas para tu caso particular.
+3. Seguimiento y resultados medibles — Revisamos periódicamente el progreso y ajustamos el tratamiento. Sin procesos interminables.
 
-### Equipo Clínico
+### Isapres
 
-**Daniel Reyes Pace** — Director Clínico y Fundador
-Psicólogo y Doctor en Psicología de la Universidad de Chile, con más de 20 años de experiencia como terapeuta de adultos en modalidad individual y de parejas. Ha trabajado en la Clínica Psiquiátrica de la Universidad de Chile y en la Clínica de Atención Psicológica (CAPs). Además, ha sido profesor e investigador universitario y consultor para organismos nacionales (MINEDUC) e internacionales (UNESCO) en educación en sexualidad, género y derechos sexuales y reproductivos. Coordinó la Comisión de Sexualidades y Género del Colegio de Psicólogos de Chile A.G. Especialidades: ansiedad y crisis vitales, terapia de pareja, sexualidad y deseo.
-
-**Fernando Bravo Matheu** — Psicólogo Clínico
-Psicólogo clínico de la Universidad Diego Portales, con formación en clínica psicoanalítica de Winnicott. Cuenta con experiencia en la atención de adolescentes, adultos y parejas, tanto en modalidad presencial como online. Su enfoque pone especial énfasis en la creación de un espacio confiable que permita el establecimiento de un vínculo auténtico. Especialidades: adolescentes y adultos, vínculos y emociones, terapia de pareja.
-
-**Allison Rowe Carrasco** — Psicóloga Clínica
-Psicóloga de la Universidad de Chile, con diplomado en Terapia Sistémica y Familiar en la misma institución. Cuenta con 8 años de experiencia en terapia para población adulta y adolescente, tanto en modalidad individual como en terapia de parejas. Especialidades: adultos y adolescentes, terapia de pareja, enfoque sistémico.
-
-### Metodología clínica
-
-Evaluación inicial rigurosa: La primera sesión es una evaluación diagnóstica que establece las bases del proceso. Identificamos patrones, historia relevante y definimos objetivos concretos.
-
-Enfoque integrativo basado en evidencia: Integramos las mejores herramientas de distintas escuelas terapéuticas — cognitivo-conductual, psicodinámica, sistémica — según lo que cada caso requiere.
-
-Seguimiento y ajuste continuo: El proceso terapéutico no es rígido. Evaluamos el progreso en cada sesión y ajustamos el enfoque cuando es necesario.
-
-### Testimonios (selección de 17 reseñas Google)
-
-- "Una experiencia de un profesional de excelencia. El Dr. Daniel Reyes Pace es un profesional del que aprendes siempre: buena escucha, adecuada reflexión y sugerencias pertinentes. Recomendado." — Marco Antonio Ossandón
-
-- "Llevo varios meses en terapia con Allison y ha sido una experiencia muy positiva. Se nota que le importa el bienestar del paciente." — Javiera Monje
-
-- "Excelente profesional, me ayudó a entender y trabajar situaciones muy complejas de mi vida. 100% recomendado." — Verónica Sepúlveda
-
-- "Buen lugar, cómodo y bien ubicado. Los profesionales son muy amables y atentos." — Valentina Arce
-
-### Isapres aceptadas
-
-Banmédica, Colmena, Consalud, Cruz Blanca, Vida Tres. Se emite boleta de honorarios para reembolso parcial según plan.
+Se emite boleta para reembolso en Banmédica, Colmena, Consalud, Cruz Blanca, Nueva Masvida y Vida Tres, y en seguros complementarios. Para usuarios de Fonasa hay valores especiales dependiendo del tramo.
 
 ### Preguntas frecuentes
 
@@ -80,24 +39,203 @@ La primera sesión es una evaluación donde conversamos sobre lo que te trae a c
 Depende de cada caso. Hay procesos focalizados de 8 a 12 sesiones y otros más extensos. Desde la primera sesión te damos una estimación honesta del tiempo que podríamos necesitar.
 
 **¿Atienden con Isapre?**
-Emitimos boleta de honorarios para que puedas solicitar reembolso parcial en tu Isapre (Banmédica, Colmena, Consalud, Cruz Blanca, Vida Tres) o Fonasa. El porcentaje de reembolso depende de tu plan.
+Emitimos boleta para que puedas solicitar reembolso en tu Isapre y seguros complementarios. Para usuarios de Fonasa tenemos valores especiales dependiendo del tramo.
 
 **¿La terapia online funciona igual que presencial?**
 Sí. La evidencia clínica muestra que la terapia por videollamada tiene la misma efectividad que la presencial para la mayoría de las condiciones. Atendemos pacientes online en todo Chile con excelentes resultados.
 
-**¿Puedo agendar sin llamar por teléfono?**
-Sí. Puedes agendar completando el formulario de contacto en esta página o escribiéndonos directamente por WhatsApp al +56 9 3738 9719. Respondemos en menos de 2 horas en día hábil.
+**¿Cómo puedo agendar?**
+Escribiéndonos a través de WhatsApp o bien completando el formulario de contacto. Un humano te responderá a la brevedad.
 
 **¿Qué pasa si necesito cancelar una sesión?**
-Pedimos aviso con al menos 24 horas de anticipación. Las cancelaciones con menos de 24 horas se cobran como sesión tomada, salvo emergencias justificadas.
+Pedimos aviso con al menos 24 horas de anticipación. Las cancelaciones con menos de 24 horas se cobran como sesión tomada.
 
-### Contacto
+---
 
-Formulario de contacto disponible en el sitio web. WhatsApp: +56 9 3738 9719.
+## Servicio: Terapia individual
 
-**Dirección:** Alonso de Ercilla 2959, Ñuñoa, Santiago, Chile
-**Atención online:** Para todo Chile
-**Respuesta:** Menos de 2 horas en día hábil
+**URL:** https://subjetividades.cl/terapia-individual
+
+Terapia psicológica individual para adultos en Ñuñoa, Santiago, y por videollamada en todo Chile. Un espacio seguro para trabajar en lo que necesitas cambiar, con objetivos claros desde la primera sesión y evaluación constante del proceso.
+
+**Motivos de consulta:** Ansiedad y estrés · Depresión y duelos · Autoestima · Desarrollo personal
+**Profesionales:** Daniel Reyes Pace, Fernando Bravo Matheu, Allison Rowe Carrasco
+**Modalidad:** Presencial en Ñuñoa u online para todo Chile.
+
+### Preguntas frecuentes
+
+**¿Para qué sirve la terapia individual?**
+Ayuda a comprender y abordar dificultades personales —ansiedad, estados depresivos, duelos, autoestima— y a desarrollar herramientas para los desafíos cotidianos. No requiere un umbral de gravedad: el malestar, por sí solo, es un motivo de consulta legítimo.
+
+**¿Cuántas sesiones dura?**
+Depende del motivo y de los objetivos. Algunos procesos son focalizados y breves; otros, más extensos. La estimación se define en la evaluación inicial y se revisa durante el proceso.
+
+**¿La modalidad online es efectiva?**
+Sí. La evidencia muestra resultados comparables a la atención presencial para la mayoría de los motivos de consulta.
+
+**¿Tiene cobertura de Isapre?**
+Se emite boleta de honorarios para solicitar reembolso en Isapre y en seguros complementarios de salud.
+
+---
+
+## Servicio: Terapia de pareja
+
+**URL:** https://subjetividades.cl/terapia-de-pareja
+
+Terapia de pareja con psicólogos clínicos en Ñuñoa, Santiago, y por videollamada en todo Chile. Un proceso de comunicación, observación y toma de conciencia conjunta que permite a la pareja establecer nuevas bases para la relación.
+
+**Motivos de consulta:** Conflictos de comunicación · Crisis de pareja · Infidelidad · Distancia emocional
+**Profesionales:** Daniel Reyes Pace, Fernando Bravo Matheu, Allison Rowe Carrasco
+**Modalidad:** Presencial en Ñuñoa u online para todo Chile.
+
+### Preguntas frecuentes
+
+**¿Es necesario que asistan ambos integrantes?**
+Sí. La terapia de pareja requiere la participación de ambos integrantes; un proceso con una sola persona corresponde a terapia individual, que también ofrecemos.
+
+**¿Cuántas sesiones dura?**
+Depende de los objetivos. Un proceso focalizado puede resolverse en algunos meses; otros, más complejos, requieren más tiempo. La estimación se define en la evaluación inicial.
+
+**¿La modalidad online es efectiva?**
+Sí. La evidencia muestra resultados comparables a la atención presencial, y permite atender a parejas que están en distintas ciudades.
+
+**¿Tiene cobertura de Isapre?**
+Se emite boleta de honorarios para solicitar reembolso en Isapre y en seguros complementarios de salud.
+
+---
+
+## Servicio: Terapia sexual
+
+**URL:** https://subjetividades.cl/terapia-sexual
+
+Terapia sexual y consejería sexual con un psicólogo especialista en Ñuñoa, Santiago, y por videollamada en todo Chile. Un área que afecta a muchas personas, pero que tiene soluciones concretas y basadas en evidencia. Atención profesional, confidencial y sin prejuicios.
+
+**Motivos de consulta:** Disfunciones sexuales · Deseo e intimidad · Identidad sexual · Salud sexual integral
+**Profesionales:** Daniel Reyes Pace
+**Modalidad:** Presencial en Ñuñoa u online para todo Chile.
+
+### Preguntas frecuentes
+
+**¿La terapia sexual incluye algún tipo de contacto físico?**
+No. Es psicoterapia: trabajo conversacional y estructurado en consulta. Los ejercicios prácticos que en ocasiones se indican se realizan en privado, nunca en sesión.
+
+**¿Es necesario asistir en pareja?**
+No. Existen procesos individuales y de pareja; la modalidad se define según el motivo de consulta y los objetivos.
+
+**¿Cuándo corresponde una evaluación médica?**
+Las dificultades sexuales suelen tener componentes físicos y psicológicos a la vez. Ante señales de causa orgánica —dolor, cambios bruscos, enfermedades o efectos de medicamentos— la derivación médica forma parte del tratamiento.
+
+**¿La modalidad online es efectiva?**
+Sí. Como el trabajo en sesión es conversacional y los ejercicios se realizan en privado, la videollamada permite desarrollar el proceso completo con resultados comparables a la atención presencial.
+
+---
+
+## Servicio: Terapia para adolescentes
+
+**URL:** https://subjetividades.cl/terapia-adolescentes
+
+Psicoterapia para adolescentes en Ñuñoa, Santiago, y por videollamada en todo Chile. Un espacio de confianza para que las y los adolescentes trabajen lo que les preocupa, con acompañamiento cercano y respeto por sus tiempos.
+
+**Motivos de consulta:** Ansiedad y ánimo · Autoestima e identidad · Vínculos y familia · Etapa escolar
+**Profesionales:** Fernando Bravo Matheu, Allison Rowe Carrasco
+**Modalidad:** Presencial en Ñuñoa u online para todo Chile.
+
+### Preguntas frecuentes
+
+**¿El adolescente asiste solo o con su familia?**
+Habitualmente el proceso es individual, con espacios de conversación con la familia cuando aportan al tratamiento. La modalidad se define en la evaluación inicial, según la edad y el motivo de consulta.
+
+**¿Qué se conversa con los padres o cuidadores?**
+El proceso resguarda la confianza del adolescente. Con la familia se comparte lo necesario para acompañar el tratamiento y su bienestar, cuidando siempre la confidencialidad del espacio terapéutico.
+
+**¿A partir de qué edad?**
+El servicio está orientado a adolescentes. Si tienes dudas sobre si es el espacio adecuado para tu hijo o hija, escríbenos y te orientamos sin compromiso.
+
+**¿La modalidad online es efectiva?**
+Sí. La atención por videollamada permite desarrollar el proceso con resultados comparables a la atención presencial, y suele ser cómoda para las y los adolescentes.
+
+---
+
+## Equipo clínico
+
+**Daniel Reyes Pace** — Director Clínico y fundador
+Psicólogo y Doctor en Psicología de la Universidad de Chile, con más de 20 años de experiencia como terapeuta, investigador, docente universitario y consultor para organismos nacionales (MINEDUC) e internacionales (UNESCO). Coordinó la Comisión de Sexualidades y Género del Colegio de Psicólogos de Chile. Áreas: terapia de adultos, terapia de pareja, sexualidad y deseo. Publicaciones y columnas: https://subjetividades.cl/prensa
+
+**Fernando Bravo Matheu** — Psicólogo clínico
+Psicólogo clínico de la Universidad Diego Portales, con formación en clínica psicoanalítica de Winnicott. Con experiencia en la atención de adolescentes, adultos y parejas, en contextos comunitarios y en centros de salud mental. Áreas: adolescentes y adultos, vínculos y emociones, terapia de pareja.
+
+**Allison Rowe Carrasco** — Psicóloga clínica
+Psicóloga de la Universidad de Chile, con diplomado en Terapia Sistémica y Familiar. Trabaja con población adulta y adolescente, en modalidad individual y en terapia de parejas. Áreas: adultos y adolescentes, terapia de pareja, enfoque sistémico.
+
+---
+
+## Blog: El narcisismo fuera de la clínica: sobre el uso popular de un concepto
+
+**URL:** https://subjetividades.cl/blog/narcisismo-egoismo-diferencia
+**Autor:** Daniel Reyes Pace
+**Publicado:** 8 de octubre, 2026
+
+Ensayo sobre el uso popular del término "narcisista". Sostiene que ese uso toma una dimensión presente en todo funcionamiento psíquico (la regulación de la autoestima, según Freud, Kohut y Kernberg) y la convierte en una categoría de personas. Distingue narcisismo, egoísmo y torpeza relacional: la diferencia entre lo corriente y lo patológico está en la rigidez del patrón y su extensión al conjunto de los vínculos; un indicador clínico útil es cómo responde la persona cuando se le señala el daño que causó. Reconoce que una relación puede causar daño real y justificar una separación sin que la otra persona tenga un diagnóstico, y advierte los costos de la etiqueta. Referencias: Haslam (2016), Pincus y Lukowitsky (2010), Miller, Widiger y Campbell (2014), Day et al. (2020).
+
+---
+
+## Blog: El paciente estoico: por qué el estoicismo seduce y qué se ve en la consulta
+
+**URL:** https://subjetividades.cl/blog/el-paciente-estoico
+**Autor:** Daniel Reyes Pace
+**Publicado:** 31 de agosto, 2026
+
+Una escuela que pareció extinta es hoy una de las filosofías más leídas, con particular arraigo entre hombres jóvenes. Sus raíces son sociales —incertidumbre, individuación, un mandato de autosuficiencia— y en la consulta se ve tanto lo que ofrece como lo que esconde cuando se vive como supresión emocional.
+
+---
+
+## Blog: Ser adolescente hoy: cambios sociales, redes y cuándo pedir ayuda
+
+**URL:** https://subjetividades.cl/blog/adolescencia-cambios-sociales-redes
+**Autor:** Daniel Reyes Pace
+**Publicado:** 4 de agosto, 2026
+
+La adolescencia transcurre hoy dentro de una sociedad que cambia a gran velocidad, algo exigente para todos. Por qué las redes son un desafío compartido —el uso intensivo de pantallas no es solo de los jóvenes— y cuándo conviene consultar con especialistas.
+
+---
+
+## Blog: Tratamiento de la eyaculación precoz: qué funciona según la evidencia
+
+**URL:** https://subjetividades.cl/blog/tratamiento-eyaculacion-precoz
+**Autor:** Daniel Reyes Pace
+**Publicado:** 15 de julio, 2026
+
+La eyaculación precoz es la dificultad sexual masculina más frecuente y, al mismo tiempo, una de las que menos se consulta. Hoy existen tratamientos con respaldo científico —psicológicos, sexológicos y médicos— que funcionan, sobre todo cuando se combinan.
+
+---
+
+## Blog: Hombres sin amigos: la soledad masculina en la adultez
+
+**URL:** https://subjetividades.cl/blog/soledad-masculina-adulta
+**Autor:** Daniel Reyes Pace
+**Publicado:** 4 de julio, 2026
+
+Muchos hombres llegan a los cuarenta, cincuenta o sesenta años sin amigos y con el trabajo como único contacto social. No es una falla personal: las instituciones que organizaban el encuentro adulto se desmantelaron sin reemplazo.
+
+---
+
+## Blog: Reembolso del psicólogo en Isapre: cómo funciona y qué dice la ley
+
+**URL:** https://subjetividades.cl/blog/reembolso-psicologo-isapre-fonasa
+**Autor:** Daniel Reyes Pace
+**Publicado:** 16 de junio, 2026
+
+Una parte del costo es recuperable mediante el reembolso del seguro de salud. Y desde la Ley 21.331 de Salud Mental, la cobertura de la psicología no puede ser menor que la de cualquier otra consulta de salud.
+
+---
+
+## Blog: Terapia sexual: medio siglo de una disciplina clínica
+
+**URL:** https://subjetividades.cl/blog/terapia-sexual
+**Autor:** Daniel Reyes Pace
+**Publicado:** 15 de junio, 2026
+
+La terapia sexual suele cargar con una imagen difusa, entre el tabú y la curiosidad. Tiene, sin embargo, más de medio siglo de desarrollo científico, un cuerpo de técnicas propio y resultados bien documentados.
 
 ---
 
@@ -182,13 +320,15 @@ Rangos de precio (sesión individual 50–60 min, vigentes 2026):
 
 ## Información institucional
 
-**Nombre legal:** SUBJETIVIDADES — Centro de Psicología Clínica
-**Dirección:** Alonso de Ercilla 2959, Ñuñoa, Santiago, Chile
-**Teléfono:** +56 9 3738 9719
-**Email de contacto:** Disponible vía formulario web
-**Horario:** Lunes a viernes, 09:00–19:00
+**Nombre:** Subjetividades. Psicología Clínica
+**Sitio web:** https://subjetividades.cl
+**Dirección:** Alonso de Ercilla 2959, Ñuñoa, Región Metropolitana, Chile (código postal 7770465)
+**Coordenadas:** -33.4519, -70.5991
+**WhatsApp:** +56 9 3738 9719 (solo WhatsApp; no recibe llamadas)
+**Contacto:** WhatsApp o formulario en https://subjetividades.cl/#contacto
+**Horario:** Lunes a viernes, 08:00–18:00
 **Modalidades:** Presencial (Ñuñoa, Santiago) y online (todo Chile)
-**Especialidades:** Psicología clínica, psicoterapia individual, terapia de pareja, terapia sexual
-**Isapres:** Banmédica, Colmena, Consalud, Cruz Blanca, Vida Tres
-**Reseñas Google:** 17 reseñas, promedio 4.9/5
-**Coordinadas:** -33.4537, -70.6113 (Ñuñoa, Santiago)
+**Servicios:** Terapia individual, terapia de pareja, terapia sexual, terapia para adolescentes
+**Isapres:** Banmédica, Colmena, Consalud, Cruz Blanca, Nueva Masvida, Vida Tres
+**Reseñas:** Más de 60 reseñas en Google Maps (https://maps.google.com/?cid=12037037789320556678)
+**Instagram:** https://www.instagram.com/subjetividades.cl/

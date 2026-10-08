@@ -26,6 +26,10 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
         </div>
         <div className="flinks">
           <a href="/">Volver al sitio</a>
+          <a href="/terapia-individual">Terapia individual</a>
+          <a href="/terapia-de-pareja">Terapia de pareja</a>
+          <a href="/terapia-sexual">Terapia sexual</a>
+          <a href="/terapia-adolescentes">Terapia para adolescentes</a>
           <a href="/prensa">Prensa</a>
           <a href="/blog">Blog</a>
           <a href="https://www.instagram.com/subjetividades.cl/" target="_blank" rel="noopener noreferrer">Instagram</a>
