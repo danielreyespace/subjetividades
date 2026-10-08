@@ -248,6 +248,10 @@ export default function TerapiaDeParejaPage() {
               <div className="text-sm font-semibold text-slate-800 group-hover:text-teal-700 transition-colors mb-1">¿Cuánto cuesta una sesión de psicología en Santiago 2026?</div>
               <div className="text-[13px] text-teal-600">Leer →</div>
             </a>
+            <a href="/blog/narcisismo-egoismo-diferencia" className="block p-5 border border-slate-100 rounded-[12px] no-underline hover:border-teal-200 transition-colors group">
+              <div className="text-sm font-semibold text-slate-800 group-hover:text-teal-700 transition-colors mb-1">El narcisismo fuera de la clínica: sobre el uso popular de un concepto</div>
+              <div className="text-[13px] text-teal-600">Leer →</div>
+            </a>
           </div>
         </section>
 

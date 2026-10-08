@@ -91,7 +91,7 @@ export default function NarcisismoPage() {
             El narcisismo fuera de la clínica: sobre el uso popular de un concepto
           </h1>
           <p className="text-lg text-slate-500 leading-relaxed">
-            El término narcisismo ocupa hoy en el lenguaje cotidiano un lugar que hace dos décadas pertenecía casi exclusivamente a la clínica. Circula en redes sociales y organiza el relato con que muchas personas describen a una ex pareja o a un padre al iniciar una psicoterapia. Sostengo aquí que ese uso toma una dimensión presente en todo funcionamiento psíquico y la convierte en una categoría de personas. Sostengo también que la crítica habitual, según la cual el narcisismo se confunde con rasgos comunes como el egoísmo o la defensividad, requiere una formulación más precisa.
+            El término narcisismo ocupa hoy en el lenguaje cotidiano un lugar que hace dos décadas pertenecía casi exclusivamente a la clínica. Circula en redes sociales y organiza el relato con que muchas personas describen a una ex pareja o a un padre al iniciar una <a href="/terapia-individual" className="text-teal-700 hover:text-teal-800 underline underline-offset-2">psicoterapia</a>. Sostengo aquí que ese uso toma una dimensión presente en todo funcionamiento psíquico y la convierte en una categoría de personas. Sostengo también que la crítica habitual, según la cual el narcisismo se confunde con rasgos comunes como el egoísmo o la defensividad, requiere una formulación más precisa.
           </p>
           <div className="mt-5 pt-5 border-t border-slate-100">
             <div className="text-sm font-semibold text-slate-800">Daniel Reyes Pace</div>
@@ -131,7 +131,7 @@ export default function NarcisismoPage() {
             La etiqueta tiene además costos para quien la emplea. La versión popular incluye la premisa de que el narcisista no cambia, lo que descarta de antemano la conversación y la reparación. El diagnóstico se formula a partir del relato de una de las partes y tiende a atribuir a la personalidad del otro lo que depende también de la dinámica del vínculo.
           </p>
           <p className={p}>
-            En el trabajo clínico resulta más productivo describir qué se repite en la relación y cómo responde el otro cuando se le muestra el efecto de sus actos. Esas descripciones permiten decidir sobre el vínculo con mejor información que la que entrega un diagnóstico hecho a distancia.
+            En el trabajo clínico resulta más productivo describir qué se repite en <a href="/terapia-de-pareja" className="text-teal-700 hover:text-teal-800 underline underline-offset-2">la relación</a> y cómo responde el otro cuando se le muestra el efecto de sus actos. Esas descripciones permiten decidir sobre el vínculo con mejor información que la que entrega un diagnóstico hecho a distancia.
           </p>
         </article>
 
@@ -167,6 +167,21 @@ export default function NarcisismoPage() {
               </a>
             </li>
           </ul>
+        </section>
+
+        {/* Internal links */}
+        <section className="mt-12 border-t border-slate-100 pt-10">
+          <h2 className="text-base font-bold text-slate-900 mb-5">Artículos relacionados</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <a href="/blog/terapia-de-pareja-como-funciona" className="block p-5 border border-slate-100 rounded-[12px] no-underline hover:border-teal-200 transition-colors group">
+              <div className="text-sm font-semibold text-slate-800 group-hover:text-teal-700 transition-colors mb-1">Terapia de pareja en Santiago: cómo funciona y qué esperar</div>
+              <div className="text-[13px] text-teal-600">Leer →</div>
+            </a>
+            <a href="/blog/el-paciente-estoico" className="block p-5 border border-slate-100 rounded-[12px] no-underline hover:border-teal-200 transition-colors group">
+              <div className="text-sm font-semibold text-slate-800 group-hover:text-teal-700 transition-colors mb-1">El paciente estoico: por qué el estoicismo seduce y qué se ve en la consulta</div>
+              <div className="text-[13px] text-teal-600">Leer →</div>
+            </a>
+          </div>
         </section>
 
         <div className="mt-12 bg-slate-900 rounded-[14px] p-8 text-center">
