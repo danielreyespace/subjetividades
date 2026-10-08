@@ -64,7 +64,7 @@ const schemaData = {
 };
 
 const p = 'text-[16px] text-slate-600 leading-relaxed mb-6';
-const h2 = 'text-[22px] font-bold text-slate-900 mt-10 mb-4';
+const h2 = 'text-[22px] font-bold text-slate-900 mt-10 mb-4 clear-both';
 const doiLink = 'text-teal-700 hover:text-teal-800 underline underline-offset-2 break-all';
 
 export default function NarcisismoPage() {
@@ -100,26 +100,25 @@ export default function NarcisismoPage() {
           </div>
         </header>
 
-        <figure className="mb-12">
-          <Image
-            src="/blog/narciso-caravaggio.webp"
-            alt="Narciso, pintura atribuida a Caravaggio: un joven se inclina sobre el agua y contempla su reflejo"
-            width={1280}
-            height={1552}
-            className="w-full max-w-[380px] mx-auto h-auto rounded-[12px]"
-            priority
-          />
-          <figcaption className="text-center text-[13px] text-slate-400 mt-3">
-            Narciso, atribuido a Caravaggio (c. 1597-1599). Galleria Nazionale d&apos;Arte Antica, Roma.
-          </figcaption>
-        </figure>
-
         <article className="prose prose-slate max-w-none">
           <p className={`${p} mb-8`}>
             Haslam (2016) llamó concept creep a la tendencia de los conceptos psicológicos vinculados al daño a ampliar su significado con el tiempo. El narcisismo ofrece un caso claro: el término pasa de designar una organización de la personalidad a designar conductas aisladas de desconsideración. Haslam reconoce que esta ampliación permitió nombrar daños antes desatendidos y advierte que favorece una lectura del mundo social en términos de víctimas y victimarios.
           </p>
 
           <h2 className={h2}>Qué designa el narcisismo en la clínica</h2>
+          <figure className="my-6 sm:float-right sm:w-[42%] sm:ml-8 sm:mt-1 sm:mb-4">
+            <Image
+              src="/blog/narciso-caravaggio.webp"
+              alt="Narciso, pintura atribuida a Caravaggio: un joven se inclina sobre el agua y contempla su reflejo"
+              width={1280}
+              height={1552}
+              sizes="(min-width: 640px) 290px, 100vw"
+              className="w-full max-w-[380px] mx-auto h-auto rounded-[12px] !my-0"
+            />
+            <figcaption className="text-center sm:text-left text-[13px] text-slate-400 mt-3 leading-snug">
+              Narciso, atribuido a Caravaggio (c. 1597-1599). Galleria Nazionale d&apos;Arte Antica, Roma.
+            </figcaption>
+          </figure>
           <p className={p}>
             Criticar el mal uso de un concepto supone un uso correcto, y en este caso el campo especializado carece de acuerdo. Pincus y Lukowitsky (2010) mostraron que la teoría clínica y el diagnóstico psiquiátrico trabajan con descripciones del narcisismo que no coinciden entre sí ni con las de la psicología de la personalidad. Conviene entonces explicitar el referente. En lo que sigue adopto el de la tradición psicoanalítica, que es además la que introdujo el término en la clínica.
           </p>
