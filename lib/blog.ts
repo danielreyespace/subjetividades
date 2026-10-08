@@ -15,6 +15,16 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'narcisismo-egoismo-diferencia',
+    title: 'El narcisismo fuera de la clínica: sobre el uso popular de un concepto',
+    excerpt:
+      "Por qué el uso de 'narcisista' en redes confunde una dimensión de toda persona con un diagnóstico, y qué observar en una relación que hace daño.",
+    date: '8 de octubre, 2026',
+    readTime: '5 min',
+    category: 'Salud mental',
+    lastModified: '2026-10-08',
+  },
+  {
     slug: 'el-paciente-estoico',
     title: 'El paciente estoico: por qué el estoicismo seduce y qué se ve en la consulta',
     excerpt:
