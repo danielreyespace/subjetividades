@@ -15,7 +15,7 @@ export default function SjNav() {
   const [open, setOpen] = useState(false);
   return (
     <div className="nav">
-      <a href="/" className="brand">Subjetividades<span>Psicología Clínica</span></a>
+      <a href="/" className="brand">Subjetividades <span>Psicología Clínica</span></a>
 
       <div className="nl">
         {links.map(([href, label]) => (

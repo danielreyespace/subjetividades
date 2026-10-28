@@ -298,7 +298,7 @@ export default function HomePage() {
             <div className="heroimg" style={{ backgroundImage: `url('${IMG}/photos/waiting-room.webp')` }} />
             <div className="scrim" />
             <div className="herotx">
-              <h1 className="hero-h1">SUBJETIVIDADES<span className="bajada">Psicología clínica · Ñuñoa, Santiago</span></h1>
+              <h1 className="hero-h1">SUBJETIVIDADES <span className="bajada">Psicología clínica · Ñuñoa, Santiago</span></h1>
               <h2 className="hsub">Terapia individual, de pareja, sexual y para adolescentes. Más de 20 años de experiencia en salud mental.</h2>
               <div className="hrow">
                 <WhatsAppLink href={WHATSAPP_URL} className="btn">{CTA_LABEL}</WhatsAppLink>
