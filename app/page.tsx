@@ -208,7 +208,7 @@ const schemaData = {
           name: '¿Cómo puedo agendar?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Escribiéndonos a través de WhatsApp o bien completando el formulario de contacto. Un humano te responderá a la brevedad.',
+            text: 'Escribiéndonos a través de WhatsApp o bien completando el formulario de contacto. Te responderemos inmediatamente.',
           },
         },
         {
@@ -274,7 +274,7 @@ const homeFaqs = [
   { q: '¿Cuánto dura un proceso terapéutico?', a: 'Depende de cada caso. Hay procesos focalizados de 8 a 12 sesiones y otros más extensos. Desde la primera sesión te damos una estimación honesta del tiempo que podríamos necesitar.' },
   { q: '¿Atienden con Isapre?', a: 'Emitimos boleta para que puedas solicitar reembolso en tu Isapre y seguros complementarios. Para usuarios de Fonasa tenemos valores especiales dependiendo del tramo.' },
   { q: '¿La terapia online funciona igual que presencial?', a: 'Sí. La evidencia clínica muestra que la terapia por videollamada tiene la misma efectividad que la presencial para la mayoría de las condiciones. Atendemos pacientes online en todo Chile con excelentes resultados.' },
-  { q: '¿Cómo puedo agendar?', a: 'Escribiéndonos a través de WhatsApp o bien completando el formulario de contacto. Un humano te responderá a la brevedad.' },
+  { q: '¿Cómo puedo agendar?', a: 'Escribiéndonos a través de WhatsApp o bien completando el formulario de contacto. Te responderemos inmediatamente.' },
   { q: '¿Qué pasa si necesito cancelar una sesión?', a: 'Pedimos aviso con al menos 24 horas de anticipación. Las cancelaciones con menos de 24 horas se cobran como sesión tomada.' },
 ];
 
