@@ -16,6 +16,16 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'que-es-un-sexologo-cuando-consultar',
+    title: 'Qué es un sexólogo y cuándo conviene consultar',
+    excerpt:
+      'En Chile «sexólogo» no es un título regulado. Qué formación hay detrás del término, qué hace cada profesional de la salud sexual, qué ocurre en una terapia sexual y por dónde empezar.',
+    date: '11 de noviembre, 2026',
+    readTime: '7 min',
+    category: 'Terapia sexual',
+    lastModified: '2026-11-11',
+  },
+  {
     slug: 'narcisismo-egoismo-diferencia',
     title: 'El narcisismo fuera de la clínica: sobre el uso popular de un concepto',
     excerpt:
