@@ -275,6 +275,10 @@ export default function TratamientoEyaculacionPrecozPage() {
         <section className="mt-12 border-t border-slate-100 pt-10">
           <h2 className="text-base font-bold text-slate-900 mb-5">Artículos relacionados</h2>
           <div className="grid sm:grid-cols-2 gap-4">
+            <a href="/blog/que-es-un-sexologo-cuando-consultar" className="block p-5 border border-slate-100 rounded-[12px] no-underline hover:border-teal-200 transition-colors group">
+              <div className="text-sm font-semibold text-slate-800 group-hover:text-teal-700 transition-colors mb-1">Qué es un sexólogo y cuándo conviene consultar</div>
+              <div className="text-[13px] text-teal-600">Leer →</div>
+            </a>
             <a href="/terapia-sexual" className="block p-5 border border-slate-100 rounded-[12px] no-underline hover:border-teal-200 transition-colors group">
               <div className="text-sm font-semibold text-slate-800 group-hover:text-teal-700 transition-colors mb-1">Terapia sexual en Santiago: cómo funciona y qué esperar</div>
               <div className="text-[13px] text-teal-600">Leer →</div>
