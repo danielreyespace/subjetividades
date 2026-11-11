@@ -140,6 +140,9 @@ export default function TerapiaSexualPage() {
           ],
           moreTxt: 'Qué es la terapia sexual: medio siglo de una disciplina clínica',
           moreHref: '/blog/terapia-sexual',
+          extraLinks: [
+            { txt: 'Qué es un sexólogo y cuándo conviene consultar', href: '/blog/que-es-un-sexologo-cuando-consultar' },
+          ],
           valor: '$60.000',
           teamIntro: 'La terapia sexual en SUBJETIVIDADES la atiende Daniel Reyes Pace, psicólogo clínico especialista en terapia de pareja y sexual.',
           team: equipo,

@@ -141,6 +141,9 @@ export default function TerapiaIndividualPage() {
           ],
           moreTxt: '¿Cuándo conviene consultar? 7 señales',
           moreHref: '/blog/cuando-ir-al-psicologo',
+          extraLinks: [
+            { txt: 'Estrés laboral y burnout: qué son y cuándo consultar', href: '/blog/estres-laboral-burnout-cuando-consultar' },
+          ],
           valor: '$50.000',
           teamIntro: 'El equipo clínico de SUBJETIVIDADES atiende terapia individual de adultos. Todos son psicólogos clínicos con formación de excelencia y experiencia.',
           team: equipo,

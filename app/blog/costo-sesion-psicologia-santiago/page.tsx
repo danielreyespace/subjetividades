@@ -79,7 +79,7 @@ const schemaData = {
           name: '¿Cubre FONASA las sesiones de psicología privada?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'FONASA no cubre consultas en centros privados directamente. Sin embargo, si eres FONASA modalidad libre elección (tramo C o D), puedes atenderte con prestadores privados acreditados y recibir un reembolso parcial. Consulta con tu FONASA para conocer los beneficios de tu tramo.',
+            text: 'En la red pública (CESFAM), la atención psicológica es gratuita para todos los tramos de FONASA. Además, los tramos B, C y D pueden comprar bonos de la Modalidad Libre Elección para atenderse con psicólogos particulares que tengan convenio con FONASA, pagando solo el copago. La boleta de honorarios sirve para el reembolso en Isapres y seguros complementarios, no en FONASA.',
           },
         },
       ],

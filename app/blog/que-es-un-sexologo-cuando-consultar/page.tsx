@@ -204,7 +204,7 @@ export default function QueEsUnSexologoPage() {
           <p className={P}>
             En SUBJETIVIDADES la{' '}
             <a href="/terapia-sexual" className={LINK}>terapia sexual</a>{' '}
-            está a cargo de psicólogos clínicos con formación de posgrado en sexualidad. Atendemos de forma presencial en Ñuñoa y por videollamada para todo Chile, en procesos individuales o de pareja, y trabajamos en coordinación con médicos tratantes cuando el caso lo requiere.
+            la atiendo personalmente, como psicólogo clínico especialista en terapia de pareja y sexual. Atendemos de forma presencial en Ñuñoa y por videollamada para todo Chile, en procesos individuales o de pareja, y trabajamos en coordinación con médicos tratantes cuando el caso lo requiere.
           </p>
         </article>
 

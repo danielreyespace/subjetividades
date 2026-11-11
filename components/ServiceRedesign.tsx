@@ -23,6 +23,7 @@ export interface ServiceContent {
   consiste: string[];
   moreTxt: string;
   moreHref: string;
+  extraLinks?: { txt: string; href: string }[]; // enlaces adicionales a artículos del blog
   valor: string; // incluye el símbolo, ej. "$50.000"
   teamIntro: string;
   team: TeamMember[];
@@ -88,6 +89,11 @@ export default function ServiceRedesign({ c }: { c: ServiceContent }) {
           <h2>En qué consiste</h2>
           {c.consiste.map((p, i) => <p key={i} className="body">{p}</p>)}
           <a className="morelink" href={c.moreHref}>{c.moreTxt} →</a>
+          {c.extraLinks?.map((l) => (
+            <div key={l.href}>
+              <a className="morelink" href={l.href}>{l.txt} →</a>
+            </div>
+          ))}
         </div>
       </section>
 
