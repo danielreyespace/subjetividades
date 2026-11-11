@@ -223,6 +223,10 @@ export default function PacienteEstoicoPage() {
         <section className="mt-12 border-t border-slate-100 pt-10">
           <h2 className="text-base font-bold text-slate-900 mb-5">Artículos relacionados</h2>
           <div className="grid sm:grid-cols-2 gap-4">
+            <a href="/blog/estres-laboral-burnout-cuando-consultar" className="block p-5 border border-slate-100 rounded-[12px] no-underline hover:border-teal-200 transition-colors group">
+              <div className="text-sm font-semibold text-slate-800 group-hover:text-teal-700 transition-colors mb-1">Estrés laboral y burnout: qué son y cuándo consultar</div>
+              <div className="text-[13px] text-teal-600">Leer →</div>
+            </a>
             <a href="/blog/soledad-masculina-adulta" className="block p-5 border border-slate-100 rounded-[12px] no-underline hover:border-teal-200 transition-colors group">
               <div className="text-sm font-semibold text-slate-800 group-hover:text-teal-700 transition-colors mb-1">Hombres sin amigos: la soledad masculina en la adultez</div>
               <div className="text-[13px] text-teal-600">Leer →</div>

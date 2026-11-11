@@ -16,6 +16,16 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'estres-laboral-burnout-cuando-consultar',
+    title: 'Estrés laboral y burnout: qué son y cuándo consultar',
+    excerpt:
+      'Tres de cada cuatro enfermedades profesionales en Chile son de salud mental. Qué es el burnout según la OMS, cómo se distingue de la depresión, qué depende del trabajo y cuándo conviene consultar.',
+    date: '11 de noviembre, 2026',
+    readTime: '7 min',
+    category: 'Salud mental',
+    lastModified: '2026-11-11',
+  },
+  {
     slug: 'que-es-un-sexologo-cuando-consultar',
     title: 'Qué es un sexólogo y cuándo conviene consultar',
     excerpt:
